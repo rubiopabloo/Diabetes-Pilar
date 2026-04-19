@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Información - Diabetes Pilar</title>
+    
+    <!-- Fuente: Outfit (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Script de Iconos: Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* --- VARIABLES DE DISEÑO --- */
+        :root {
+            --primary-color: #0288D1;
+            --primary-dark: #01579B;
+            --secondary-color: #8BC34A;
+            --accent-color: #F57C00;
+            --bg-light: #F8FAFC;
+            --bg-white: #FFFFFF;
+            --text-dark: #1E293B;
+            --text-muted: #475569;
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --container-width: 1440px;
+        }
+
+        /* --- ESTILOS BASE (Para que se vea igual) --- */
+        .tarjetas-standalone-container {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-light); /* Fondo suave como en la web original */
+            padding: 100px 20px;
+            margin: 0;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- SECCIÓN QUICK INFO --- */
+        .quick-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .info-card {
+            background: white;
+            padding: 50px 40px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+        }
+
+        .info-card.highlight {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        /* Forzar color blanco en textos de la tarjeta destacada */
+        .info-card.highlight h3, 
+        .info-card.highlight p, 
+        .info-card.highlight strong {
+            color: #ffffff !important;
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .info-card:hover .icon-circle {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .info-card.highlight .icon-circle {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .info-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .info-card p {
+            font-size: 16px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            color: #25D366;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .whatsapp-link:hover {
+            opacity: 0.8;
+        }
+
+        .info-tag {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 12px;
+            font-style: italic;
+            opacity: 0.7;
+        }
+
+        /* --- AVISO DE PARTICULARES --- */
+        .particulars-notice {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background: #E3F2FD;
+            border-radius: var(--radius-md);
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 18px;
+            border: 1px dashed var(--secondary-color);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .quick-info { 
+                grid-template-columns: 1fr; 
+                gap: 20px;
+            }
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjetas-standalone-container">
+        <!-- Quick Info Section -->
+        <section class="quick-info container">
+            
+            <!-- Tarjeta Turnos -->
+            <div class="info-card">
+                <div class="icon-circle"><i data-lucide="phone-call"></i></div>
+                <h3>Turnos</h3>
+                <p>+54 9 11 2166-1818</p>
+                <p>+54 11 2470-6777</p>
+                <a href="https://wa.me/5491121661818" class="whatsapp-link" target="_blank">
+                    <i data-lucide="message-circle"></i> WhatsApp
+                </a>
+            </div>
+
+            <!-- Tarjeta Horarios (Destacada) -->
+            <div class="info-card highlight">
+                <div class="icon-circle"><i data-lucide="clock"></i></div>
+                <h3>Horarios</h3>
+                <p><strong>Lun - Vie:</strong> 08:00 a 20:00</p>
+                <p><strong>Sábados:</strong> 09:00 a 13:00</p>
+            </div>
+
+            <!-- Tarjeta Dirección -->
+            <div class="info-card">
+                <div class="icon-circle"><i data-lucide="map-pin"></i></div>
+                <h3>Dirección</h3>
+                <p><strong>SEDE San Miguel:</strong> Italia 1184 Piso 2</p>
+                <p><strong>SEDE Pilar:</strong> Victor Vergani 575</p>
+                <span class="info-tag">*Seguro de salud</span>
+            </div>
+
+            <!-- Aviso Particular (Opcional) -->
+            <div class="particulars-notice">
+                PARTICULARES: Arancel hospitalario - Consultar por Obras Sociales y Prepagas
+            </div>
+            
+        </section>
+    </div>
+
+    <!-- Inicializar Iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Pilar | Centro de Especialidades Médicas</title>
+    <meta name="description" content="Diabetes Pilar. Centro de Especialidades Médicas. Endocrinología, Cardiología, Nutrición, Pie Diabético, Úlceras.">
+    <!-- Preconnect to external origins for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+<style>header.glass-header { top: 40px; } header.glass-header.scrolled { top: 0; } .top-bar { position: absolute; z-index: 1001; width: 100%; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }</style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <img src="assets/logo-white.png" alt="Diabetes Pilar" class="loading-logo">
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+                <a href="tel:+5491121661818"><i data-lucide="phone"></i> +54 9 11 2166-1818</a>
+                <a href="mailto:pilardiabetes@gmail.com"><i data-lucide="mail"></i> pilardiabetes@gmail.com</a>
+            </div>
+            <div class="top-bar-social">
+                <span>Diabetes Pilar | Centro de Especialidades Médicas</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="glass-header">
+        <nav>
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                <h1>Centro Médico<br><span>Diabetes Pilar</span></h1>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="#servicios">Nuestros Servicios</a></li>
+                <li><a href="diabetologos.html">Diabetólogos</a></li>
+                <li><a href="#club">Club Nutridia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="#" class="nav-icon-btn nav-icon-dark"><i data-lucide="shopping-cart"></i></a>
+                <a href="#" class="nav-icon-btn nav-icon-dark"><i data-lucide="user"></i></a>
+                <a href="diabetologos.html" class="btn-consulta-virtual">Consulta Virtual</a>
+            </div>
+            <div class="mobile-menu-btn mobile-menu-dark">
+                <i data-lucide="menu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Redesigned Hero Section with Carousel -->
+        <section class="hero-carousel swiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide hero-slide">
+                    <div class="hero-bg" style="background-image: url('assets/NUEVOHERO1.jpg');"></div>
+                    <div class="hero-overlay"></div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide hero-slide">
+                    <div class="hero-bg" style="background-image: url('assets/NUEVOHERO2.jpg');"></div>
+                    <div class="hero-overlay"></div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide hero-slide">
+                    <div class="hero-bg" style="background-image: url('assets/NUEVOHERO3.jpg');"></div>
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+
+            <!-- Unified Static Content -->
+            <div class="hero-static-overlay">
+                <div class="container hero-container">
+                    <div class="hero-content-inner">
+                        <h1 class="hero-title">Te ayudamos a <span id="typewriter" class="accent-typing"></span><span class="typing-cursor">|</span><br>tu diabetes</h1>
+                        <p class="hero-subtitle">Medicina centrada en el paciente desde el 2010</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <i data-lucide="chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- Quick Info Section -->
+        <section class="quick-info container">
+            <div class="info-card">
+                <div class="icon-circle"><i data-lucide="phone-call"></i></div>
+                <h3>Turnos</h3>
+                <p>Tel Pilar: 0230 4644558</p>
+                <p>Tel San Miguel: 11 2470-6777</p>
+                <a href="https://wa.me/5491121661818" class="whatsapp-link"><i data-lucide="message-circle"></i> WhatsApp</a>
+            </div>
+            <div class="info-card highlight">
+                <div class="icon-circle"><i data-lucide="clock"></i></div>
+                <h3>Horarios</h3>
+                <p><strong>Lun - Vie:</strong> 08:00 a 20:00</p>
+                <p><strong>Sábados:</strong> 09:00 a 13:00</p>
+            </div>
+            <div class="info-card">
+                <div class="icon-circle"><i data-lucide="map-pin"></i></div>
+                <h3>Dirección</h3>
+                <p><strong>SEDE Pilar:</strong> Víctor Vergani 575 (08 a 20 hs)</p>
+                <p><strong>SEDE San Miguel:</strong> Italia 1184 Piso 2 (08 a 20 hs)</p>
+                <span class="info-tag">*Seguro de salud</span>
+            </div>
+            <div class="particulars-notice" style="text-align: center; margin-top: 20px; font-weight: 500;">
+                ADMINISTRACIÓN: Virrey Arredondo 2698 Piso 3 Dpto. C - (B1426) Ciudad Autónoma de Buenos Aires.
+            </div>
+        </section>
+
+        <!-- Services Section (Interactive Accordion) -->
+        <section id="servicios" class="services">
+            <div class="container">
+                <div class="services-split-layout">
+                    <!-- Left Side: Text Content -->
+                    <div class="services-text-col">
+                        <h2 class="services-main-title">Nuestros Servicios</h2>
+                        <p class="services-description">
+                            Atención médica especializada, tecnología de vanguardia y un equipo humano dedicado a mejorar tu calidad de vida.
+                        </p>
+                        <div class="services-cta-wrapper">
+                            <a href="#contacto" class="btn-primary">Contáctanos</a>
+                            
+                            <!-- Global Navigation Arrows moved here -->
+                            <div class="accordion-nav">
+                                <button class="nav-arrow prev" onclick="prevService(event)" aria-label="Anterior">
+                                    <i data-lucide="chevron-left"></i>
+                                </button>
+                                <button class="nav-arrow next" onclick="nextService(event)" aria-label="Siguiente">
+                                    <i data-lucide="chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Image Accordion -->
+                    <div class="services-accordion-col">
+                        <div class="interactive-accordion" id="serviceAccordion">
+                            <!-- Diabetología -->
+                            <div class="accordion-item active" data-service="diabetologia" onclick="handleServiceClick('diabetologia', this)">
+                                <img src="assets/service-diabetologia-v2.png" alt="Diabetología" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Diabetología</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Cardiología -->
+                            <div class="accordion-item" data-service="cardiologia" onclick="handleServiceClick('cardiologia', this)">
+                                <img src="assets/service-cardiologia-v2.png" alt="Cardiología" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Cardiología</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Endocrinología -->
+                            <div class="accordion-item" data-service="endocrinologia" onclick="handleServiceClick('endocrinologia', this)">
+                                <img src="assets/service-endocrinologia-v2.png" alt="Endocrinología" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Endocrinología</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Diagnóstico por Imágenes -->
+                            <div class="accordion-item" data-service="imagenes" onclick="handleServiceClick('imagenes', this)">
+                                <img src="assets/diagnosticoporimagenes.jpg" alt="Diagnóstico" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Imágenes</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Traumatología -->
+                            <div class="accordion-item" data-service="traumatologia" onclick="handleServiceClick('traumatologia', this)">
+                                <img src="assets/traumatologia.jpg" alt="Traumatología" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Traumatología</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Pie Diabético -->
+                            <div class="accordion-item" data-service="piediabetico" onclick="handleServiceClick('piediabetico', this)">
+                                <img src="assets/piediabetico.jpg" alt="Pie Diabético" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Pie Diabético</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+
+                            </div>
+
+                            <!-- Oftalmología -->
+                            <div class="accordion-item" data-service="oftalmologia" onclick="handleServiceClick('oftalmologia', this)">
+                                <img src="assets/diagnosticoporimagenes.jpg" alt="Oftalmología" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Oftalmología</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Ginecología -->
+                            <div class="accordion-item" data-service="ginecologia" onclick="handleServiceClick('ginecologia', this)">
+                                <img src="assets/diagnosticoporimagenes.jpg" alt="Ginecología" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Ginecología</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Gastroenterología -->
+                            <div class="accordion-item" data-service="gastroenterologia" onclick="handleServiceClick('gastroenterologia', this)">
+                                <img src="assets/diagnosticoporimagenes.jpg" alt="Gastroenterología" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Gastro</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News / Actualidad Médica Section -->
+        <section class="news-section-alt">
+            <div class="container">
+                <div class="news-header">
+                    <h2 class="news-main-title">Noticias</h2>
+                    <a href="noticias.html" class="news-blog-link">Ver Blog</a>
+                </div>
+                <div class="news-bento">
+                    <!-- Main big card -->
+                    <a href="noticias.html" class="news-bento-main">
+                        <div class="news-bento-img" style="background-image: url('assets/noticiachequeomedicopreventivo.jpg');"></div>
+                        <div class="news-bento-overlay"></div>
+                        <div class="news-bento-content">
+                            <span class="news-tag">PREVENCIÓN</span>
+                            <h3>Chequeos Médicos Preventivos</h3>
+                            <p>La detección temprana es clave para mantener tu salud cardiovascular y metabólica bajo control.</p>
+                        </div>
+                    </a>
+                    <!-- Right side stacked cards -->
+                    <div class="news-bento-side">
+                        <a href="noticias.html" class="news-bento-card">
+                            <div class="news-bento-card-img" style="background-image: url('assets/noticiaclubnutridia.jpg');"></div>
+                            <div class="news-bento-card-body">
+                                <h4>Beneficios Club Nutridia</h4>
+                                <p>Descubrí los descuentos exclusivos y servicios que tenemos para nuestros socios.</p>
+                            </div>
+                        </a>
+                        <a href="noticias.html" class="news-bento-card">
+                            <div class="news-bento-card-img" style="background-image: url('assets/noticiacursosytalleres.jpg');"></div>
+                            <div class="news-bento-card-body">
+                                <h4>Cursos y Talleres para Pacientes</h4>
+                                <p>Educación diabetológica estructurada para mejorar tu calidad de vida.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Nutridia Banner Section -->
+<section id="club" class="nutridia-banner">
+    <!-- Leaf watermark background -->
+    <div class="nutridia-leaf-bg">
+        <img src="assets/nutridia-leaf.png" alt="" class="nutridia-leaf-watermark">
+    </div>
+    <div class="nutridia-banner-bg">
+        <div class="nutridia-cross cross-1">✚</div>
+        <div class="nutridia-cross cross-2">✚</div>
+        <div class="nutridia-cross cross-3">✚</div>
+        <div class="nutridia-cross cross-4">✚</div>
+    </div>
+    <!-- Family photo with green blend -->
+    <div class="nutridia-family-bg" style="background-image: url('assets/noticiaclubnutridia.jpg');"></div>
+
+    <div class="container nutridia-banner-container">
+
+        <!-- LEFT: Text + Logo + CTA -->
+        <div class="nutridia-banner-text">
+            <p class="nutridia-tagline">
+                Llevá tu bienestar al<br>
+                <span class="highlight-yellow">siguiente nivel.</span>
+            </p>
+            <div class="nutridia-logo-block">
+                <img src="assets/nutridia-logo-full.png" alt="Nutridia" class="nutridia-logo-img">
+            </div>
+
+            <a href="https://nutridia.ar" target="_blank" class="btn-nutridia">Quiero Asociarme</a>
+        </div>
+
+        <!-- RIGHT: Benefit Cards -->
+        <div class="nutridia-benefits-list">
+            <div class="nutridia-benefit-card">
+                <div class="nutridia-benefit-icon"><i data-lucide="percent"></i></div>
+                <div class="nutridia-benefit-text">
+                    <h4>Descuentos en Farmacias</h4>
+                    <p>Hasta un 40% off en la red farmacéutica local.</p>
+                </div>
+            </div>
+            <div class="nutridia-benefit-card">
+                <div class="nutridia-benefit-icon"><i data-lucide="calendar-check"></i></div>
+                <div class="nutridia-benefit-text">
+                    <h4>Atención Prioritaria</h4>
+                    <p>Overbooking habilitado y agenda preferencial.</p>
+                </div>
+            </div>
+            <div class="nutridia-benefit-card">
+                <div class="nutridia-benefit-icon"><i data-lucide="gift"></i></div>
+                <div class="nutridia-benefit-text">
+                    <h4>Talleres Gratuitos</h4>
+                    <p>Acceso a clases de cocina saludable y nutricionales.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+        <!-- Locations -->
+        <section id="sedes" class="locations-section">
+            <div class="container">
+                <div class="section-title center-title">
+                    <h2>Nuestras Sedes</h2>
+                    <p class="subtitle">Estamos cerca tuyo con la mejor tecnología médica.</p>
+                </div>
+                
+                <div class="sedes-bento">
+                    <!-- Sede Pilar -->
+                    <div class="sede-card">
+                        <div class="sede-visual">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.471671569476!2d-58.9189334!3d-34.457904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb610f760246a3%3A0x67399430c5e63767!2sVictor%20Vergani%20575%2C%20B1629%20ALC%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1712423455123!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="sede-info">
+                            <h3>Sede Pilar</h3>
+                            <div class="sede-details">
+                                <p><i data-lucide="map-pin"></i> Víctor Vergani 575 - Pilar Bs. As.</p>
+                                <p><i data-lucide="phone"></i> 11 2166-1818</p>
+                                <p><i data-lucide="clock"></i> Lun a Vie 08:00 - 20:00hs</p>
+                            </div>
+                            <a href="#" class="btn-sede">Cómo llegar</a>
+                        </div>
+                    </div>
+
+                    <!-- Sede San Miguel -->
+                    <div class="sede-card">
+                        <div class="sede-visual">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3286.082717088998!2d-58.7184234!3d-34.551466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc0236a617637b%3A0xe74984360e637e63!2sItalia%201184%2C%20B1663%20San%20Miguel%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1712423488456!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="sede-info">
+                            <h3>Sede San Miguel</h3>
+                            <div class="sede-details">
+                                <p><i data-lucide="map-pin"></i> Italia 1184 Piso 2 - San Miguel Bs. As.</p>
+                                <p><i data-lucide="phone"></i> 11 2470-6777</p>
+                                <p><i data-lucide="clock"></i> Lun a Vie 08:00 - 20:00hs</p>
+                            </div>
+                            <a href="#" class="btn-sede">Cómo llegar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="particulars-notice-footer">
+                    ADMINISTRACIÓN: Virrey Arredondo 2698 Piso 3 Dpto. C - (B1426) Ciudad Autónoma de Buenos Aires.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-col footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <h1 style="color: white; margin-bottom: 5px;">Centro M&eacute;dico<br><span style="color: var(--primary-color);">Diabetes Pilar</span></h1>
+                    </div>
+                    <p style="margin-top:20px; font-size:15px; max-width:320px; opacity:0.8;">Centro especializado de referencia en el tratamiento integral de la diabetes. Excelencia médica y calidez humana al servicio de tu bienestar.</p>
+                    <div class="footer-social-icons">
+                        <a href="#" class="footer-social-circle"><i data-lucide="globe" style="width: 18px;"></i></a>
+                        <a href="#" class="footer-social-circle"><i data-lucide="share-2" style="width: 18px;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col" style="padding-top:10px;">
+                    <h4 style="color:#4FC3F7; font-size:16px;">NAVEGACI&Oacute;N</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="diabetologos.html">Diabet&oacute;logos</a></li>
+                        <li><a href="diagnostico-por-imagenes.html">Im&aacute;genes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="padding-top:10px;">
+                    <h4 style="color:#4FC3F7; font-size:16px;">NUESTROS SERVICIOS</h4>
+                    <ul>
+                        <li><a href="diabetologia.html">Diabetolog&iacute;a</a></li>
+                        <li><a href="index.html#servicios">Nutrici&oacute;n</a></li>
+                        <li><a href="index.html#servicios">Pie Diab&eacute;tico</a></li>
+                        <li><a href="index.html#servicios">Laboratorio</a></li>
+                        <li><a href="index.html#servicios">Oftalmolog&iacute;a</a></li>
+                        <li><a href="index.html#servicios">Ginecolog&iacute;a</a></li>
+                        <li><a href="index.html#servicios">Gastroenterolog&iacute;a</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact" style="padding-top:10px;">
+                    <h4 style="color:#4FC3F7; font-size:16px;">CONTACTO</h4>
+                    <p><i data-lucide="map-pin" style="color:#4FC3F7; width:18px;"></i> Pilar Centro, Calle Rivadavia 123<br>Provincia de Buenos Aires</p>
+                    <p><i data-lucide="phone" style="color:#4FC3F7; width:18px;"></i> +54 11 4444-5555</p>
+                    <p><i data-lucide="mail" style="color:#4FC3F7; width:18px;"></i> info@diabetespilar.com.ar</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Centro Médico Diabetes Pilar. Excelencia en Cuidado Diabetológico - Creado por HAze ☺</p>
+                <div class="footer-legal">
+                    <a href="index.html#faq">Preguntas Frecuentes</a>
+                    <a href="terminos.html">Aviso Legal</a>
+                    <a href="privacidad.html">Privacidad</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/5491121661818" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 448 512" width="28" height="28" fill="white">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.6-16.5-14.7-27.6-32.8-30.8-38.4-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 34.9 2.2 10.6-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <!-- Service Modal -->
+    <div id="service-modal" class="modal-overlay" onclick="if(event.target === this) closeServiceModal()">
+        <div class="modal-container">
+            <button class="modal-close-btn" onclick="closeServiceModal()">
+                <i data-lucide="x"></i>
+            </button>
+            <div id="modal-content" class="modal-header">
+                <!-- Content injected via JS -->
+            </div>
+            <div id="modal-body" class="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Service Data
+        const serviceData = {
+            'diabetologia': {
+                title: 'Diabetología',
+                subtitle: 'Abordaje Integral y Multidisciplinario',
+                image: 'assets/service-diabetologia-v2.png',
+                description: 'Nuestro servicio tiene como objetivo educar y prevenir complicaciones mediante una atención oportuna y de calidad.',
+                bullets: [
+                    'Evaluación clínica integral y personalizada.',
+                    'Control y seguimiento de factores de riesgo (HTA, Dislipemia).',
+                    'Educación diabetológica avanzada para el empoderamiento del paciente.',
+                    'Incorporación de nuevas tecnologías (Monitoreo continuo, Telemedicina).',
+                    'Plan terapéutico nutricional y farmacológico adaptado.'
+                ]
+            },
+            'cardiologia': {
+                title: 'Cardiología',
+                subtitle: 'Salud Cardiovascular y Vascular Periférica',
+                image: 'assets/service-cardiologia-v2.png',
+                description: 'Somos expertos en el cuidado de personas con riesgo cardiovascular asociado a la diabetes y la obesidad.',
+                bullets: [
+                    'Diagnóstico y tratamiento de enfermedades cardíacas y vasculares.',
+                    'Prevención de complicaciones macrovasculares.',
+                    'Seguimiento especializado en patologías crónicas.',
+                    'Tratamientos preventivos mínimamente invasivos y farmacológicos.'
+                ]
+            },
+            'endocrinologia': {
+                title: 'Endocrinología',
+                subtitle: 'Enfermedades Cardiometabólicas y Metabolismo',
+                image: 'assets/service-endocrinologia-v2.png',
+                description: 'Servicio dedicado al diagnóstico, seguimiento y tratamiento de las principales patologías del sistema endocrino.',
+                bullets: [
+                    'Atención multidisciplinaria centrada en el paciente.',
+                    'Manejo de trastornos de tiroides, glándulas y metabolismo.',
+                    'Evaluación hormonal completa y tratamientos específicos.',
+                    'Asistencia resolutiva y eficiente para mejorar la calidad de vida.'
+                ]
+            },
+            'imagenes': {
+                title: 'Diagnóstico por Imágenes',
+                subtitle: 'Tecnología de Vanguardia en Ecografía',
+                image: 'assets/diagnosticoporimagenes.jpg',
+                description: 'Contamos con un equipo de médicos altamente capacitados en las técnicas de ecografía general y especializada.',
+                bullets: [
+                    'Diagnóstico y seguimiento preciso de múltiples patologías.',
+                    'Equipamiento de alta tecnología para imágenes nítidas.',
+                    'Atención en centros propios y convenios descentralizados.',
+                    'Informes médicos detallados y rápidos.'
+                ]
+            },
+            'traumatologia': {
+                title: 'Traumatología',
+                subtitle: 'Especialistas en Patología Osteoarticular',
+                image: 'assets/traumatologia.jpg',
+                description: 'Enfocados en la prevención, diagnóstico y tratamiento de lesiones que afectan el sistema musculoesquelético.',
+                bullets: [
+                    'Ortopedia general y tratamiento de lesiones deportivas.',
+                    'Manejo ortopédico integral del Pie Diabético.',
+                    'Prevención de fracturas y cuidado de la salud ósea.',
+                    'Rehabilitación funcional y seguimiento post-operatorio.'
+                ]
+            },
+            'oftalmologia': {
+                title: 'Oftalmología',
+                subtitle: 'Salud Visual Integral',
+                image: 'assets/diagnosticoporimagenes.jpg',
+                description: 'Prevenimos y tratamos complicaciones visuales asociadas a la diabetes y afecciones generales del ojo.',
+                bullets: [
+                    'Controles de fondo de ojo rutinarios.',
+                    'Diagnóstico temprano de retinopatía diabética.',
+                    'Detección y tratamiento de cataratas.',
+                    'Cuidado especializado para personas con riesgo oftalmológico.'
+                ]
+            },
+            'ginecologia': {
+                title: 'Ginecología',
+                subtitle: 'Atención Ginecológica Especializada',
+                image: 'assets/diagnosticoporimagenes.jpg',
+                description: 'Cuidado integral para la salud de la mujer, desde consultas de rutina hasta seguimiento en pacientes diabéticas.',
+                bullets: [
+                    'Controles ginecológicos y PAP.',
+                    'Consultas preconcepcionales en pacientes con diabetes.',
+                    'Manejo de menopausia y alteraciones hormonales.',
+                    'Asesoría en salud reproductiva.'
+                ]
+            },
+            'gastroenterologia': {
+                title: 'Gastroenterología',
+                subtitle: 'Salud del Sistema Digestivo',
+                image: 'assets/diagnosticoporimagenes.jpg',
+                description: 'Diagnóstico y tratamiento de las enfermedades del aparato digestivo con un enfoque integral.',
+                bullets: [
+                    'Evaluación de alteraciones digestivas crónicas.',
+                    'Diagnóstico de problemas hepáticos y biliares.',
+                    'Tratamiento de afecciones funcionales gastrointestinales.',
+                    'Estudios endoscópicos recomendados.'
+                ]
+            },
+            'piediabetico': {
+                title: 'Pie Diabético',
+                subtitle: 'Prevención y Tratamiento Avanzado',
+                image: 'assets/piediabetico.jpg',
+                description: 'Servicio especializado en la integridad de los miembros inferiores y la prevención de complicaciones severas.',
+                bullets: [
+                    'Curaciones avanzadas de úlceras y heridas complejas.',
+                    'Podología clínica especializada para pacientes de riesgo.',
+                    'Valoración arterial y neurológica periódica (Doppler sónico).',
+                    'Educación intensiva sobre el autocuidado del pie.'
+                ]
+            }
+        };
+
+        function openServiceModal(id) {
+            const data = serviceData[id];
+            if (!data) return;
+
+            const modal = document.getElementById('service-modal');
+            const header = document.getElementById('modal-content');
+            const body = document.getElementById('modal-body');
+
+            // Set text
+            header.innerHTML = `
+                <h1>${data.title}</h1>
+                <div class="modal-subtitle">${data.subtitle}</div>
+            `;
+            
+            let bulletsHtml = '<ul>';
+            data.bullets.forEach(bullet => {
+                bulletsHtml += `<li>${bullet}</li>`;
+            });
+            bulletsHtml += '</ul>';
+
+            body.innerHTML = `
+                <p>${data.description}</p>
+                ${bulletsHtml}
+            `;
+
+            // Activate modal
+            modal.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            
+            // Prevent scrolling on body
+            document.body.style.overflow = 'hidden';
+            
+            // Refresh Lucide for the close icon if needed
+            lucide.createIcons();
+        }
+
+        function closeServiceModal() {
+            const modal = document.getElementById('service-modal');
+            modal.classList.remove('active');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 400);
+            
+            // Restore scrolling
+            document.body.style.overflow = 'auto';
+        }
+
+        // --- Interactive Accordion Logic (Click-Based) ---
+        let currentActiveIndex = 0;
+
+        function handleServiceClick(id, el) {
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            const index = Array.from(accordionItems).indexOf(el);
+
+            if (el.classList.contains('active')) {
+                // If already active, open modal
+                openServiceModal(id);
+            } else {
+                // If not active, expand it
+                accordionItems.forEach(i => i.classList.remove('active'));
+                el.classList.add('active');
+                currentActiveIndex = index;
+            }
+        }
+
+        function nextService(event) {
+            if (event) event.stopPropagation();
+            const items = document.querySelectorAll('.accordion-item');
+            currentActiveIndex = (currentActiveIndex + 1) % items.length;
+            activateByIndex(currentActiveIndex);
+        }
+
+        function prevService(event) {
+            if (event) event.stopPropagation();
+            const items = document.querySelectorAll('.accordion-item');
+            currentActiveIndex = (currentActiveIndex - 1 + items.length) % items.length;
+            activateByIndex(currentActiveIndex);
+        }
+
+        function activateByIndex(index) {
+            const items = document.querySelectorAll('.accordion-item');
+            items.forEach(i => i.classList.remove('active'));
+            items[index].classList.add('active');
+        }
+
+        function initAccordion() {
+            // Click listeners are now handled via inline onclick for better control
+            // This function just ensures we have the correct initial state
+            const items = document.querySelectorAll('.accordion-item');
+            items.forEach((item, idx) => {
+                if (item.classList.contains('active')) {
+                    currentActiveIndex = idx;
+                }
+            });
+        }
+
+        initializePage();
+
+        function initializePage() {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+            initAccordion();
+        }
+
+        // Initialize Swiper
+        const swiper = new Swiper('.hero-carousel', {
+            loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Header Scroll Effect (passive for performance)
+        const headerEl = document.querySelector('header');
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    if (window.scrollY > 50) {
+                        headerEl.classList.add('scrolled');
+                    } else {
+                        headerEl.classList.remove('scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+        // Typewriter Effect
+        const textElement = document.getElementById('typewriter');
+        const phrases = [
+            "tomar el control de", 
+            "estabilizar", 
+            "cuidar", 
+            "vivir mejor con"
+        ];
+        const colors = [
+            "bg-typing-green", 
+            "bg-typing-orange", 
+            "bg-typing-blue", 
+            "bg-typing-green"
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            // Apply color class
+            textElement.className = 'accent-typing ' + colors[phraseIndex];
+
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 40;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 80;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2500; // Pause at the end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 400; // Pause before starting next
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 1000); // Initial delay
+        });
+
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loading-screen');
+            if (loader) {
+                loader.classList.add('fade-out');
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 600);
+            }
+        });
+    </script>
+    <script>
+        window.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            window.scrollBy({
+                top: e.deltaY * 0.6,
+                behavior: 'smooth'
+            });
+        }, { passive: false });
+    </script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetólogos | Diabetes Pilar</title>
+    <meta name="description" content="Atención médica especializada en diabetología. Equipo de profesionales dedicados al control y tratamiento de la diabetes.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .diabetes-hero {
+            padding: 80px 0;
+            background: white;
+        }
+        .diabetes-tag {
+            background: var(--bg-light);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        .factores-section {
+            padding: 100px 0;
+            background: var(--bg-light);
+            position: relative;
+            overflow: hidden;
+        }
+        .factores-bg-text {
+            position: absolute;
+            right: -20px;
+            top: 40px;
+            font-size: 180px;
+            font-weight: 800;
+            color: rgba(0,0,0,0.03);
+            line-height: 1;
+            user-select: none;
+            z-index: 0;
+        }
+        .factores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+            margin-top: 50px;
+        }
+        .factor-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: transform 0.3s ease;
+        }
+        .factor-card:hover { transform: translateY(-5px); }
+        .factor-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(2, 136, 209, 0.1);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+        .decalogo-card {
+            background: var(--primary-color);
+            padding: 50px;
+            border-radius: 24px;
+            color: white;
+        }
+        .decalogo-list { list-style: none; padding: 0; }
+        .decalogo-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        .decalogo-num {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        .eval-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            box-shadow: var(--shadow-soft);
+        }
+        .eval-card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: var(--bg-light);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tratamiento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .trat-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            text-align: center;
+        }
+        .farmacologia-card {
+            background: #EAF4FC;
+            border-radius: 20px;
+            padding: 30px 40px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            border: 1px dashed rgba(2, 136, 209, 0.4);
+        }
+        @media (max-width: 900px) {
+            .tratamiento-grid { grid-template-columns: 1fr; }
+            .diabetes-hero-content { grid-template-columns: 1fr !important; }
+            .split-grid { grid-template-columns: 1fr !important; }
+            .farmacologia-card { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+                <a href="tel:1121661818"><i data-lucide="phone"></i> 11 2166-1818</a>
+                <a href="mailto:pilardiabetes@gmail.com"><i data-lucide="mail"></i> pilardiabetes@gmail.com</a>
+            </div>
+            <div class="top-bar-social">
+                <span>Diabetes Pilar | Diabetología Especializada</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="solid-header">
+        <nav>
+            <a href="index.html" class="logo">
+                <div class="logo-icon"></div>
+                <h1>Centro Médico<br><span>Diabetes Pilar</span></h1>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="index.html#servicios">Nuestros Servicios</a></li>
+                <li><a href="diabetologos.html">Diabetólogos</a></li>
+                <li><a href="index.html#club">Club Nutridia</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+            </ul>
+            <div class="header-actions">
+                <a href="#" class="nav-icon-btn nav-icon-dark"><i data-lucide="shopping-cart"></i></a>
+                <a href="#" class="nav-icon-btn nav-icon-dark"><i data-lucide="user"></i></a>
+                <a href="diabetologos.html" class="btn-consulta-virtual">Consulta Virtual</a>
+            </div>
+            <div class="mobile-menu-btn mobile-menu-dark"><i data-lucide="menu"></i></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="diabetes-hero" style="position: relative; padding: 0; margin: 0; height: 400px; overflow: hidden;">
+            <div style="position: absolute; inset: 0; background: url('assets/service-diabetologia-v2.png') center/cover no-repeat;"></div>
+            <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.55);"></div>
+            <div class="container" style="position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                <h4 style="font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; font-weight: 600; color: rgba(255,255,255,0.8);">Cuidado Especializado</h4>
+                <h1 style="color: white; font-size: 90px; margin-bottom: 20px; font-weight: 800;">Equipo de Diabetólogos</h1>
+                <p style="margin-bottom: 0; font-size: 18px; color: rgba(255,255,255,0.85); max-width: 700px;">Contamos con un equipo médico de excelencia dedicado al tratamiento integral de la diabetes, utilizando protocolos avanzados para mejorar su calidad de vida.</p>
+            </div>
+        </section>
+
+
+
+        <section class="factores-riesgo" style="padding: 100px 0; background: white; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 15px;">Factores de Riesgo y Prevención</h2>
+                <p style="max-width: 600px; margin: 0 auto 50px; color: var(--text-muted);">La detección temprana es fundamental. Evaluamos minuciosamente cada factor para prevenir complicaciones futuras.</p>
+                <div class="factores-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
+                    <div class="factor-card" style="background: #f8fafc; padding: 30px; border-radius: 20px; text-align: center;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #e0f2f1; color: #00897b; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i data-lucide="activity"></i>
+                        </div>
+                        <h5 style="font-weight: 700;">Sedentarismo</h5>
+                    </div>
+                    <div class="factor-card" style="background: #f8fafc; padding: 30px; border-radius: 20px; text-align: center;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #fff3e0; color: #fb8c00; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i data-lucide="scale"></i>
+                        </div>
+                        <h5 style="font-weight: 700;">Sobrepeso</h5>
+                    </div>
+                    <div class="factor-card" style="background: #f8fafc; padding: 30px; border-radius: 20px; text-align: center;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #eef2ff; color: #3949ab; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i data-lucide="dna"></i>
+                        </div>
+                        <h5 style="font-weight: 700;">Genética</h5>
+                    </div>
+                    <div class="factor-card" style="background: #f8fafc; padding: 30px; border-radius: 20px; text-align: center;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #fdf2f2; color: #c53030; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <h5 style="font-weight: 700;">Hipertensión</h5>
+                    </div>
+                    <div class="factor-card" style="background: #f8fafc; padding: 30px; border-radius: 20px; text-align: center;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #f0fdf4; color: #16a34a; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i data-lucide="brain"></i>
+                        </div>
+                        <h5 style="font-weight: 700;">Estrés</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="banner-abordaje-section" style="padding: 60px 0; background: white;">
+            <div class="container">
+                <a href="contacto.html" style="display: block; position: relative; border-radius: 30px; overflow: hidden; text-decoration: none; box-shadow: 0 20px 40px rgba(0,0,0,0.1); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+                    <div style="position: absolute; inset: 0; background-image: url('assets/service-diabetologia-v2.png'); background-size: cover; background-position: center; z-index: 1;"></div>
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(0, 137, 123, 0.95), rgba(0, 137, 123, 0.6)); z-index: 2;"></div>
+                    <div style="position: relative; z-index: 3; padding: 60px; display: flex; align-items: center; justify-content: space-between; min-height: 250px;">
+                        <h2 style="color: white; font-size: 36px; font-weight: 800; max-width: 650px; line-height: 1.3; margin: 0;">ABORDAJE INTEGRAL Y MULTIDISCIPLINARIO DEL PACIENTE DIABÉTICO</h2>
+                        <span style="background: white; color: var(--primary-color); padding: 15px 35px; border-radius: 50px; font-weight: 800; font-size: 18px; display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">Más información <i data-lucide="arrow-right" style="width: 20px;"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-col footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <h1 style="color: white; margin-bottom: 5px;">Centro M&eacute;dico<br><span style="color: var(--primary-color);">Diabetes Pilar</span></h1>
+                    </div>
+                    <p style="margin-top:20px; font-size:15px; max-width:320px; opacity:0.8;">Centro especializado de referencia en el tratamiento integral de la diabetes. Excelencia médica y calidez humana al servicio de tu bienestar.</p>
+                    <div class="footer-social-icons">
+                        <a href="#" class="footer-social-circle"><i data-lucide="globe" style="width: 18px;"></i></a>
+                        <a href="#" class="footer-social-circle"><i data-lucide="share-2" style="width: 18px;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col" style="padding-top:10px;">
+                    <h4 style="color:#4FC3F7; font-size:16px;">NAVEGACI&Oacute;N</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="diabetologos.html">Diabet&oacute;logos</a></li>
+                        <li><a href="diagnostico-por-imagenes.html">Im&aacute;genes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="padding-top:10px;">
+                    <h4 style="color:#4FC3F7; font-size:16px;">NUESTROS SERVICIOS</h4>
+                    <ul>
+                        <li><a href="diabetologia.html">Diabetolog&iacute;a</a></li>
+                        <li><a href="index.html#servicios">Nutrici&oacute;n</a></li>
+                        <li><a href="index.html#servicios">Pie Diab&eacute;tico</a></li>
+                        <li><a href="index.html#servicios">Laboratorio</a></li>
+                        <li><a href="index.html#servicios">Oftalmolog&iacute;a</a></li>
+                        <li><a href="index.html#servicios">Ginecolog&iacute;a</a></li>
+                        <li><a href="index.html#servicios">Gastroenterolog&iacute;a</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact" style="padding-top:10px;">
+                    <h4 style="color:#4FC3F7; font-size:16px;">CONTACTO</h4>
+                    <p><i data-lucide="map-pin" style="color:#4FC3F7; width:18px;"></i> Pilar Centro, Calle Rivadavia 123<br>Provincia de Buenos Aires</p>
+                    <p><i data-lucide="phone" style="color:#4FC3F7; width:18px;"></i> +54 11 4444-5555</p>
+                    <p><i data-lucide="mail" style="color:#4FC3F7; width:18px;"></i> info@diabetespilar.com.ar</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Centro Médico Diabetes Pilar. Excelencia en Cuidado Diabetológico - Creado por HAze ☺</p>
+                <div class="footer-legal">
+                    <a href="index.html#faq">Preguntas Frecuentes</a>
+                    <a href="terminos.html">Aviso Legal</a>
+                    <a href="privacidad.html">Privacidad</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5491121661818" class="whatsapp-float" target="_blank">
+        <svg viewBox="0 0 448 512" width="28" height="28" fill="white">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.6-16.5-14.7-27.6-32.8-30.8-38.4-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 34.9 2.2 10.6-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <script>
+        lucide.createIcons();
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.setAttribute('data-lucide', navLinks.classList.contains('active') ? 'x' : 'menu');
+                lucide.createIcons();
+            });
+        }
+    </script>
+</body>
+</html>
+
