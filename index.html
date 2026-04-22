@@ -70,17 +70,17 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide hero-slide">
-                    <div class="hero-bg" style="background-image: url('assets/NUEVOHERO1.jpg');"></div>
+                    <div class="hero-bg" style="background-image: url('assets/hero1.jpg');"></div>
                     <div class="hero-overlay"></div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="swiper-slide hero-slide">
-                    <div class="hero-bg" style="background-image: url('assets/NUEVOHERO2.jpg');"></div>
+                    <div class="hero-bg" style="background-image: url('assets/hero2.png');"></div>
                     <div class="hero-overlay"></div>
                 </div>
                 <!-- Slide 3 -->
                 <div class="swiper-slide hero-slide">
-                    <div class="hero-bg" style="background-image: url('assets/NUEVOHERO3.jpg');"></div>
+                    <div class="hero-bg" style="background-image: url('assets/hero3.png');"></div>
                     <div class="hero-overlay"></div>
                 </div>
             </div>
@@ -89,8 +89,8 @@
             <div class="hero-static-overlay">
                 <div class="container hero-container">
                     <div class="hero-content-inner">
-                        <h1 class="hero-title">Te ayudamos a <span id="typewriter" class="accent-typing"></span><span class="typing-cursor">|</span><br>tu diabetes</h1>
-                        <p class="hero-subtitle">Medicina centrada en el paciente desde el 2010</p>
+                        <h1 class="hero-title"><span id="typewriter" class="accent-typing" style="transition: opacity 0.4s ease-in-out;"></span></h1>
+                        <p class="hero-subtitle" style="transition: opacity 0.4s ease-in-out;">Medicina centrada en el paciente desde el 2010</p>
                     </div>
                 </div>
             </div>
@@ -703,6 +703,25 @@
             initAccordion();
         }
 
+        // Hero Content Data (Sync with slides)
+        const heroData = [
+            {
+                title: "Te ayudamos a <br>tomar el control de tu diabetes",
+                subtitle: "Todo lo que necesitas en un solo lugar"
+            },
+            {
+                title: "La atención que necesitas <br>con la comodidad que mereces",
+                subtitle: "Teleconsulta especializada en diabetes"
+            },
+            {
+                title: "Un plan para cada <br>etapa de tu vida",
+                subtitle: "Medicina centrada en el paciente desde el 2010"
+            }
+        ];
+
+        const textElement = document.getElementById('typewriter');
+        const subtitleElement = document.querySelector('.hero-subtitle');
+
         // Initialize Swiper
         const swiper = new Swiper('.hero-carousel', {
             loop: true,
@@ -722,6 +741,24 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            on: {
+                init: function () {
+                    const realIndex = this.realIndex;
+                    textElement.innerHTML = heroData[realIndex].title;
+                    subtitleElement.innerHTML = heroData[realIndex].subtitle;
+                },
+                slideChange: function () {
+                    const realIndex = this.realIndex;
+                    textElement.style.opacity = 0;
+                    subtitleElement.style.opacity = 0;
+                    setTimeout(() => {
+                        textElement.innerHTML = heroData[realIndex].title;
+                        subtitleElement.innerHTML = heroData[realIndex].subtitle;
+                        textElement.style.opacity = 1;
+                        subtitleElement.style.opacity = 1;
+                    }, 300);
+                }
+            }
         });
 
         // Mobile Menu Toggle
@@ -755,56 +792,6 @@
                 ticking = true;
             }
         }, { passive: true });
-        // Typewriter Effect
-        const textElement = document.getElementById('typewriter');
-        const phrases = [
-            "tomar el control de", 
-            "estabilizar", 
-            "cuidar", 
-            "vivir mejor con"
-        ];
-        const colors = [
-            "bg-typing-green", 
-            "bg-typing-orange", 
-            "bg-typing-blue", 
-            "bg-typing-green"
-        ];
-        let phraseIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typeSpeed = 100;
-
-        function type() {
-            const currentPhrase = phrases[phraseIndex];
-            
-            // Apply color class
-            textElement.className = 'accent-typing ' + colors[phraseIndex];
-
-            if (isDeleting) {
-                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
-                charIndex--;
-                typeSpeed = 40;
-            } else {
-                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
-                charIndex++;
-                typeSpeed = 80;
-            }
-
-            if (!isDeleting && charIndex === currentPhrase.length) {
-                isDeleting = true;
-                typeSpeed = 2500; // Pause at the end
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                phraseIndex = (phraseIndex + 1) % phrases.length;
-                typeSpeed = 400; // Pause before starting next
-            }
-
-            setTimeout(type, typeSpeed);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(type, 1000); // Initial delay
-        });
 
         // Loading Screen
         window.addEventListener('load', () => {
