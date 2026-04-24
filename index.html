@@ -21,7 +21,7 @@
 <body>
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
-        <img src="assets/logo-white.png" alt="Diabetes Pilar" class="loading-logo">
+        <img src="assets/nuevologoblanco.png" alt="Diabetes Pilar" class="loading-logo">
     </div>
 
     <!-- Top Bar -->
@@ -42,14 +42,13 @@
         <nav>
             <a href="index.html" class="logo">
                 <div class="logo-icon"></div>
-                <h1>Centro Médico<br><span>Diabetes Pilar</span></h1>
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                <li><a href="#servicios">Nuestros Servicios</a></li>
                 <li><a href="diabetologos.html">Diabetólogos</a></li>
-                <li><a href="#club">Club Nutridia</a></li>
+                <li><a href="index.html#club">Club Nutridia</a></li>
+                <li><a href="index.html#eventos">Eventos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
             </ul>
@@ -128,7 +127,7 @@
                 <span class="info-tag">*Seguro de salud</span>
             </div>
             <div class="particulars-notice" style="text-align: center; margin-top: 20px; font-weight: 500;">
-                ADMINISTRACIÓN: Virrey Arredondo 2698 Piso 3 Dpto. C - (B1426) Ciudad Autónoma de Buenos Aires.
+                PARTICULARES (Arancel Hospitalarios) - Club Nutridia 100% - Prepagas y Obras Sociales (Con reintegro - Copago)
             </div>
         </section>
 
@@ -170,6 +169,16 @@
                                 </div>
                             </div>
 
+                            <!-- Nutrición -->
+                            <div class="accordion-item" data-service="nutricion" onclick="handleServiceClick('nutricion', this)">
+                                <img src="assets/service-nutricion-v2.png" alt="Nutrición" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Nutrición</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+
                             <!-- Cardiología -->
                             <div class="accordion-item" data-service="cardiologia" onclick="handleServiceClick('cardiologia', this)">
                                 <img src="assets/service-cardiologia-v2.png" alt="Cardiología" loading="lazy">
@@ -182,7 +191,7 @@
 
                             <!-- Endocrinología -->
                             <div class="accordion-item" data-service="endocrinologia" onclick="handleServiceClick('endocrinologia', this)">
-                                <img src="assets/service-endocrinologia-v2.png" alt="Endocrinología" loading="lazy">
+                                <img src="assets/ENDOCRINOLOGIANUEVO.png" alt="Endocrinología" loading="lazy">
                                 <div class="accordion-overlay"></div>
                                 <span class="accordion-caption">Endocrinología</span>
                                 <div class="accordion-expand-content">
@@ -190,42 +199,21 @@
                                 </div>
                             </div>
 
-                            <!-- Diagnóstico por Imágenes -->
-                            <div class="accordion-item" data-service="imagenes" onclick="handleServiceClick('imagenes', this)">
-                                <img src="assets/diagnosticoporimagenes.jpg" alt="Diagnóstico" loading="lazy">
-                                <div class="accordion-overlay"></div>
-                                <span class="accordion-caption">Imágenes</span>
-                                <div class="accordion-expand-content">
-                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- Traumatología -->
-                            <div class="accordion-item" data-service="traumatologia" onclick="handleServiceClick('traumatologia', this)">
-                                <img src="assets/traumatologia.jpg" alt="Traumatología" loading="lazy">
-                                <div class="accordion-overlay"></div>
-                                <span class="accordion-caption">Traumatología</span>
-                                <div class="accordion-expand-content">
-                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- Pie Diabético -->
+                            <!-- Traumatología y Pie Diabético -->
                             <div class="accordion-item" data-service="piediabetico" onclick="handleServiceClick('piediabetico', this)">
-                                <img src="assets/piediabetico.jpg" alt="Pie Diabético" loading="lazy">
+                                <img src="assets/PIEDIABETICONUEVO.jpeg" alt="Pie Diabético" loading="lazy">
                                 <div class="accordion-overlay"></div>
                                 <span class="accordion-caption">Pie Diabético</span>
                                 <div class="accordion-expand-content">
                                     <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
                                 </div>
-
                             </div>
 
-                            <!-- Oftalmología -->
-                            <div class="accordion-item" data-service="oftalmologia" onclick="handleServiceClick('oftalmologia', this)">
-                                <img src="assets/diagnosticoporimagenes.jpg" alt="Oftalmología" loading="lazy">
+                            <!-- Imágenes -->
+                            <div class="accordion-item" data-service="imagenes" onclick="handleServiceClick('imagenes', this)">
+                                <img src="assets/diagnosticoporimagenes.jpg" alt="Imágenes" loading="lazy">
                                 <div class="accordion-overlay"></div>
-                                <span class="accordion-caption">Oftalmología</span>
+                                <span class="accordion-caption">Imágenes</span>
                                 <div class="accordion-expand-content">
                                     <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
                                 </div>
@@ -245,11 +233,87 @@
                             <div class="accordion-item" data-service="gastroenterologia" onclick="handleServiceClick('gastroenterologia', this)">
                                 <img src="assets/diagnosticoporimagenes.jpg" alt="Gastroenterología" loading="lazy">
                                 <div class="accordion-overlay"></div>
-                                <span class="accordion-caption">Gastro</span>
+                                <span class="accordion-caption">Gastroenterología</span>
                                 <div class="accordion-expand-content">
                                     <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
                                 </div>
                             </div>
+
+                            <!-- Urología -->
+                            <div class="accordion-item" data-service="urologia" onclick="handleServiceClick('urologia', this)">
+                                <img src="assets/diagnosticoporimagenes.jpg" alt="Urología" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Urología</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Laboratorio -->
+                            <div class="accordion-item" data-service="laboratorio" onclick="handleServiceClick('laboratorio', this)">
+                                <img src="assets/diagnosticoporimagenes.jpg" alt="Laboratorio" loading="lazy">
+                                <div class="accordion-overlay"></div>
+                                <span class="accordion-caption">Laboratorio</span>
+                                <div class="accordion-expand-content">
+                                    <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Redesigned ¿Por qué elegirnos? Section -->
+        <section id="porque-elegirnos" style="padding: 100px 0; background: var(--bg-white);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+                    <!-- Left: Large Photo -->
+                    <div style="position: relative; border-radius: 30px; overflow: hidden; height: 600px; box-shadow: var(--shadow-xl);">
+                        <img src="assets/elegirnos.jpg" alt="¿Por qué elegirnos?" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.4));"></div>
+                    </div>
+                    
+                    <!-- Right: Content -->
+                    <div>
+                        <h2 style="font-size: 42px; margin-bottom: 50px; color: var(--primary-color);">¿Por qué elegirnos?</h2>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 40px;">
+                            <!-- Item 1 -->
+                            <div style="display: flex; gap: 25px; align-items: flex-start;">
+                                <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: var(--primary-color);">01.</div>
+                                <div>
+                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700;">Centrado en el paciente</h3>
+                                    <p style="font-size: 15px; color: var(--text-muted); margin: 0;">Brindamos atención medica ambulatoria integral y de calidad, en todas las etapas de la vida para así lograr el bienestar del paciente y su familia.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 2 -->
+                            <div style="display: flex; gap: 25px; align-items: flex-start;">
+                                <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: var(--primary-color);">02.</div>
+                                <div>
+                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700;">Atención Personalizada</h3>
+                                    <p style="font-size: 15px; color: var(--text-muted); margin: 0;">Los profesionales y el personal le brindaran una experiencia única en la atención, distinguiéndonos por la calidez y el trato preferencial.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 3 -->
+                            <div style="display: flex; gap: 25px; align-items: flex-start;">
+                                <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: var(--primary-color);">03.</div>
+                                <div>
+                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700;">Estamos cerca suyo</h3>
+                                    <p style="font-size: 15px; color: var(--text-muted); margin: 0;">Contamos con una amplia Red de Servicios Médicos, Laboratorio e Imágenes permitiendo una mejor accesibilidad para cada necesidad.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 4 -->
+                            <div style="display: flex; gap: 25px; align-items: flex-start;">
+                                <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: var(--primary-color);">04.</div>
+                                <div>
+                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700;">Respuesta inmediata</h3>
+                                    <p style="font-size: 15px; color: var(--text-muted); margin: 0;">Turnos programados virtual o presencial con horarios flexibles adaptados a la necesidad del paciente.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -309,7 +373,7 @@
         <div class="nutridia-cross cross-4">✚</div>
     </div>
     <!-- Family photo with green blend -->
-    <div class="nutridia-family-bg" style="background-image: url('assets/noticiaclubnutridia.jpg');"></div>
+    <div class="nutridia-family-bg" style="background-image: url('assets/fondonutridianuevo.png');"></div>
 
     <div class="container nutridia-banner-container">
 
@@ -354,6 +418,62 @@
     </div>
 </section>
 
+        <!-- Eventos en nuestro centro -->
+        <section id="eventos" style="padding: 80px 0; background: #f0f7ff;">
+            <div class="container">
+                <div class="section-title center-title">
+                    <h2>Eventos de Nuestro Centro</h2>
+                    <p class="subtitle" style="max-width: 800px; margin: 0 auto;">Un abordaje integral a una necesidad Biopsicosocial centrado en el paciente y la familia</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <!-- Event 1 -->
+                    <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(139, 195, 74, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #8BC34A;">
+                            <i data-lucide="apple" style="width: 28px;"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px; font-size: 20px; color: var(--primary-color);">Nutrición Saludable</h3>
+                        <p style="font-size: 14px; margin-bottom: 15px;">Un plan de alimentación saludable y equilibrada que lo ayuda a controlar su peso, que incluye una variedad de alimentos que quizás no lo haya considerado de acuerdo con sus gustos costumbres y capacidad socioeconómicas y condición clínica.</p>
+                        <p style="font-weight: 700; color: #8BC34A; font-size: 13px; margin-bottom: 20px;">UNA SOLA COMIDA PARA TODA LA FAMILIA.</p>
+                        <a href="contacto.html" class="btn-saber-mas" style="display: inline-block; padding: 8px 20px; border-radius: 20px; background: rgba(2, 136, 209, 0.1); color: var(--primary-color); font-weight: 600; text-decoration: none; font-size: 14px; margin-top: auto; width: fit-content; align-self: center;">Solicitar Información</a>
+                    </div>
+                    
+                    <!-- Event 2 -->
+                    <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(2, 136, 209, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--primary-color);">
+                            <i data-lucide="activity" style="width: 28px;"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px; font-size: 20px; color: var(--primary-color);">Ejercicio Físico</h3>
+                        <p style="font-size: 14px; margin-bottom: 15px;">El Ejercicio físico es una parte importante de nuestras vidas que, sumada a la dieta, ya que está demostrado que estimula el metabolismo y aumenta la masa muscular y la pérdida de peso.</p>
+                        <p style="font-weight: 700; color: var(--primary-color); font-size: 13px; margin-bottom: 20px;">MEJORANDO LA SENSACION DE BIENESTAR</p>
+                        <a href="contacto.html" class="btn-saber-mas" style="display: inline-block; padding: 8px 20px; border-radius: 20px; background: rgba(2, 136, 209, 0.1); color: var(--primary-color); font-weight: 600; text-decoration: none; font-size: 14px; margin-top: auto; width: fit-content; align-self: center;">Solicitar Información</a>
+                    </div>
+                    
+                    <!-- Event 3 -->
+                    <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(255, 152, 0, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #FF9800;">
+                            <i data-lucide="smile" style="width: 28px;"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px; font-size: 20px; color: var(--primary-color);">Cambio de comportamiento</h3>
+                        <p style="font-size: 14px; margin-bottom: 15px;">La modificación de los comportamientos que contribuyen al sedentarismo y una mala alimentación que llevan al desarrollo de sobrepeso u obesidad y depresión es una forma de prevenir y detener la aparición de enfermedades crónicas como la obesidad, la diabetes y depresión.</p>
+                        <p style="font-weight: 700; color: #FF9800; font-size: 13px; margin-bottom: 20px;">PONE TU MENTE EN POSITIVO</p>
+                        <a href="contacto.html" class="btn-saber-mas" style="display: inline-block; padding: 8px 20px; border-radius: 20px; background: rgba(2, 136, 209, 0.1); color: var(--primary-color); font-weight: 600; text-decoration: none; font-size: 14px; margin-top: auto; width: fit-content; align-self: center;">Solicitar Información</a>
+                    </div>
+                    
+                    <!-- Event 4 -->
+                    <div style="background: white; border-radius: 20px; padding: 40px 30px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(156, 39, 176, 0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #9C27B0;">
+                            <i data-lucide="book-open" style="width: 28px;"></i>
+                        </div>
+                        <h3 style="margin-bottom: 15px; font-size: 20px; color: var(--primary-color);">Talleres de Educación</h3>
+                        <p style="font-size: 14px; margin-bottom: 15px;">La educación ayuda a generar conciencia de la importancia del cambio de estilo de vida y el autocuidado. Las evidencias demuestran que los pequeños cambios de forma paulatina y no los grandes cambios de forma brusca, es la manera de obtener resultados duraderos (empoderamiento).</p>
+                        <p style="font-weight: 700; color: #9C27B0; font-size: 13px; margin-bottom: 20px;">TOMAR EL CONTROL</p>
+                        <a href="contacto.html" class="btn-saber-mas" style="display: inline-block; padding: 8px 20px; border-radius: 20px; background: rgba(2, 136, 209, 0.1); color: var(--primary-color); font-weight: 600; text-decoration: none; font-size: 14px; margin-top: auto; width: fit-content; align-self: center;">Solicitar Información</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Locations -->
         <section id="sedes" class="locations-section">
             <div class="container">
@@ -397,7 +517,7 @@
                 </div>
 
                 <div class="particulars-notice-footer">
-                    ADMINISTRACIÓN: Virrey Arredondo 2698 Piso 3 Dpto. C - (B1426) Ciudad Autónoma de Buenos Aires.
+                    PARTICULARES (Arancel Hospitalarios) - Club Nutridia 100% - Prepagas y Obras Sociales (Con reintegro - Copago)
                 </div>
             </div>
         </section>
@@ -411,7 +531,6 @@
                 <div class="footer-col footer-brand">
                     <div class="logo">
                         <div class="logo-icon"></div>
-                        <h1 style="color: white; margin-bottom: 5px;">Centro M&eacute;dico<br><span style="color: var(--primary-color);">Diabetes Pilar</span></h1>
                     </div>
                     <p style="margin-top:20px; font-size:15px; max-width:320px; opacity:0.8;">Centro especializado de referencia en el tratamiento integral de la diabetes. Excelencia médica y calidez humana al servicio de tu bienestar.</p>
                     <div class="footer-social-icons">
@@ -424,27 +543,18 @@
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="porque-elegirnos.html">Por qué elegirnos</a></li>
+                        <li><a href="index.html#eventos">Eventos</a></li>
                         <li><a href="diabetologos.html">Diabet&oacute;logos</a></li>
-                        <li><a href="diagnostico-por-imagenes.html">Im&aacute;genes</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col" style="padding-top:10px;">
-                    <h4 style="color:#4FC3F7; font-size:16px;">NUESTROS SERVICIOS</h4>
-                    <ul>
-                        <li><a href="diabetologia.html">Diabetolog&iacute;a</a></li>
-                        <li><a href="index.html#servicios">Nutrici&oacute;n</a></li>
-                        <li><a href="index.html#servicios">Pie Diab&eacute;tico</a></li>
-                        <li><a href="index.html#servicios">Laboratorio</a></li>
-                        <li><a href="index.html#servicios">Oftalmolog&iacute;a</a></li>
-                        <li><a href="index.html#servicios">Ginecolog&iacute;a</a></li>
-                        <li><a href="index.html#servicios">Gastroenterolog&iacute;a</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-contact" style="padding-top:10px;">
                     <h4 style="color:#4FC3F7; font-size:16px;">CONTACTO</h4>
-                    <p><i data-lucide="map-pin" style="color:#4FC3F7; width:18px;"></i> Pilar Centro, Calle Rivadavia 123<br>Provincia de Buenos Aires</p>
-                    <p><i data-lucide="phone" style="color:#4FC3F7; width:18px;"></i> +54 11 4444-5555</p>
-                    <p><i data-lucide="mail" style="color:#4FC3F7; width:18px;"></i> info@diabetespilar.com.ar</p>
+                    <p><i data-lucide="map-pin" style="color:#4FC3F7; width:18px;"></i> Víctor Vergani 575, Pilar<br>Italia 1184 Piso 2, San Miguel</p>
+                    <p><i data-lucide="phone" style="color:#4FC3F7; width:18px;"></i> 11 2166-1818 | 11 2470-6777</p>
+                    <p><i data-lucide="mail" style="color:#4FC3F7; width:18px;"></i> pilardiabetes@gmail.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -488,111 +598,124 @@
         const serviceData = {
             'diabetologia': {
                 title: 'Diabetología',
-                subtitle: 'Abordaje Integral y Multidisciplinario',
+                subtitle: 'Abordaje integral del paciente',
                 image: 'assets/service-diabetologia-v2.png',
-                description: 'Nuestro servicio tiene como objetivo educar y prevenir complicaciones mediante una atención oportuna y de calidad.',
+                description: 'Nuestro servicio de Diabetología ambulatorio tiene como objetivo educar y prevenir la aparición de enfermedades crónicas, ofreciendo una atención oportuna e integral que permita disminuir las complicaciones de la diabetes.',
                 bullets: [
-                    'Evaluación clínica integral y personalizada.',
-                    'Control y seguimiento de factores de riesgo (HTA, Dislipemia).',
-                    'Educación diabetológica avanzada para el empoderamiento del paciente.',
-                    'Incorporación de nuevas tecnologías (Monitoreo continuo, Telemedicina).',
-                    'Plan terapéutico nutricional y farmacológico adaptado.'
+                    'Perfil clínico - Cambio de estilo de vida',
+                    'Educación diabetológica - Medicación',
+                    'Plan de tratamiento - Automonitoreo',
+                    'Alimentación saludable - Autocontrol',
+                    'Ejercicio físico y empoderamiento'
+                ]
+            },
+            'nutricion': {
+                title: 'Nutrición',
+                subtitle: 'Plan de Alimentación personalizado',
+                image: 'assets/service-nutricion-v2.png',
+                description: 'Nuestro servicio de Nutrición cuenta con nutricionistas clínicas con gran experiencia en el manejo de pacientes diabéticos y enfermedades crónicas asociadas.',
+                bullets: [
+                    'Plan de Alimentación personalizado',
+                    'Índice Glucémico - Carga Glucémica',
+                    'Planificación de las comidas',
+                    'Control de Peso y Educación Alimentaria',
+                    'Recetas e Interpretación de Etiquetado Nutricional'
                 ]
             },
             'cardiologia': {
                 title: 'Cardiología',
-                subtitle: 'Salud Cardiovascular y Vascular Periférica',
+                subtitle: 'Cardiología ambulatoria y Vascular Periférica',
                 image: 'assets/service-cardiologia-v2.png',
-                description: 'Somos expertos en el cuidado de personas con riesgo cardiovascular asociado a la diabetes y la obesidad.',
+                description: 'Nuestro servicio de Cardiología ambulatoria y Vascular Periférica reúne a expertos en el cuidado de pacientes con riesgo cardiovascular asociado a la diabetes y obesidad.',
                 bullets: [
-                    'Diagnóstico y tratamiento de enfermedades cardíacas y vasculares.',
-                    'Prevención de complicaciones macrovasculares.',
-                    'Seguimiento especializado en patologías crónicas.',
-                    'Tratamientos preventivos mínimamente invasivos y farmacológicos.'
+                    'Electrocardiograma - Ergometría 12 derivaciones',
+                    'Eco Doppler cardíaco - Holter 24 horas',
+                    'MAPA Presurometría 24 horas - Control de marcapasos',
+                    'Eco Doppler de Miembros inferiores',
+                    'Eco Doppler de Vasos de cuello'
                 ]
             },
             'endocrinologia': {
                 title: 'Endocrinología',
-                subtitle: 'Enfermedades Cardiometabólicas y Metabolismo',
-                image: 'assets/service-endocrinologia-v2.png',
-                description: 'Servicio dedicado al diagnóstico, seguimiento y tratamiento de las principales patologías del sistema endocrino.',
+                subtitle: 'Enfermedades Cardiometabólicas',
+                image: 'assets/ENDOCRINOLOGIANUEVO.png',
+                description: 'Nuestro servicio de Endocrinología ambulatorio aborda Enfermedades Cardiometabólicas. Se dedica al diagnóstico, seguimiento y tratamiento de las principales enfermedades endocrinológicas.',
                 bullets: [
-                    'Atención multidisciplinaria centrada en el paciente.',
-                    'Manejo de trastornos de tiroides, glándulas y metabolismo.',
-                    'Evaluación hormonal completa y tratamientos específicos.',
-                    'Asistencia resolutiva y eficiente para mejorar la calidad de vida.'
+                    'Punción tiroidea bajo control ecográfico',
+                    'Densitometría ósea',
+                    'Ecografía tiroidea',
+                    'Eco Doppler tiroideo'
+                ]
+            },
+            'piediabetico': {
+                title: 'Traumatología y Pie Diabético',
+                subtitle: 'Manejo Integral de la Enfermedad',
+                image: 'assets/piediabetico.png',
+                description: 'Nuestro servicio de Pie diabético ambulatorio aborda el manejo integral de la enfermedad del pie relacionada con la Prevención de las úlceras en el pie.',
+                bullets: [
+                    'Diagnóstico y tratamiento de la infección',
+                    'Clasificación de las úlceras y heridas',
+                    'Diagnóstico y tratamiento de la enfermedad arterial periférica',
+                    'Intervenciones para mejorar la cicatrización',
+                    'Descarga de las úlceras y Neuro-osteoartropatía Aguda'
                 ]
             },
             'imagenes': {
                 title: 'Diagnóstico por Imágenes',
-                subtitle: 'Tecnología de Vanguardia en Ecografía',
+                subtitle: 'Ecografía General y Doppler',
                 image: 'assets/diagnosticoporimagenes.jpg',
-                description: 'Contamos con un equipo de médicos altamente capacitados en las técnicas de ecografía general y especializada.',
+                description: 'Nuestro servicio de Ecografía General cuenta con un equipo de médicos altamente capacitados en esta técnica, para el diagnóstico y seguimiento de cada caso.',
                 bullets: [
-                    'Diagnóstico y seguimiento preciso de múltiples patologías.',
-                    'Equipamiento de alta tecnología para imágenes nítidas.',
-                    'Atención en centros propios y convenios descentralizados.',
-                    'Informes médicos detallados y rápidos.'
-                ]
-            },
-            'traumatologia': {
-                title: 'Traumatología',
-                subtitle: 'Especialistas en Patología Osteoarticular',
-                image: 'assets/traumatologia.jpg',
-                description: 'Enfocados en la prevención, diagnóstico y tratamiento de lesiones que afectan el sistema musculoesquelético.',
-                bullets: [
-                    'Ortopedia general y tratamiento de lesiones deportivas.',
-                    'Manejo ortopédico integral del Pie Diabético.',
-                    'Prevención de fracturas y cuidado de la salud ósea.',
-                    'Rehabilitación funcional y seguimiento post-operatorio.'
-                ]
-            },
-            'oftalmologia': {
-                title: 'Oftalmología',
-                subtitle: 'Salud Visual Integral',
-                image: 'assets/diagnosticoporimagenes.jpg',
-                description: 'Prevenimos y tratamos complicaciones visuales asociadas a la diabetes y afecciones generales del ojo.',
-                bullets: [
-                    'Controles de fondo de ojo rutinarios.',
-                    'Diagnóstico temprano de retinopatía diabética.',
-                    'Detección y tratamiento de cataratas.',
-                    'Cuidado especializado para personas con riesgo oftalmológico.'
+                    'Ecografía Hepatobiliopancreática y tiroidea',
+                    'Ecografía Vesico-prostática y de partes blandas',
+                    'Ecografía ginecológica y renal',
+                    'Ecografía mamaria y testicular',
+                    'Ecografía transvaginal y completa de abdomen'
                 ]
             },
             'ginecologia': {
                 title: 'Ginecología',
-                subtitle: 'Atención Ginecológica Especializada',
+                subtitle: 'Salud Integral de la Mujer',
                 image: 'assets/diagnosticoporimagenes.jpg',
-                description: 'Cuidado integral para la salud de la mujer, desde consultas de rutina hasta seguimiento en pacientes diabéticas.',
+                description: 'Nuestro servicio de Ginecología ofrece atención integral para la salud de la mujer, con enfoque en prevención y tratamiento de patologías ginecológicas.',
                 bullets: [
-                    'Controles ginecológicos y PAP.',
-                    'Consultas preconcepcionales en pacientes con diabetes.',
-                    'Manejo de menopausia y alteraciones hormonales.',
-                    'Asesoría en salud reproductiva.'
+                    'PAP y Colposcopía',
+                    'Control ginecológico anual',
+                    'Menopausia y climaterio',
+                    'Anticoncepción'
                 ]
             },
             'gastroenterologia': {
                 title: 'Gastroenterología',
-                subtitle: 'Salud del Sistema Digestivo',
+                subtitle: 'Salud Digestiva',
                 image: 'assets/diagnosticoporimagenes.jpg',
-                description: 'Diagnóstico y tratamiento de las enfermedades del aparato digestivo con un enfoque integral.',
+                description: 'Nuestro servicio de Gastroenterología se dedica al diagnóstico y tratamiento de enfermedades del aparato digestivo y órganos asociados.',
                 bullets: [
-                    'Evaluación de alteraciones digestivas crónicas.',
-                    'Diagnóstico de problemas hepáticos y biliares.',
-                    'Tratamiento de afecciones funcionales gastrointestinales.',
-                    'Estudios endoscópicos recomendados.'
+                    'Consulta especializada',
+                    'Endoscopía digestiva (derivada)',
+                    'Control de enfermedades inflamatorias intestinales'
                 ]
             },
-            'piediabetico': {
-                title: 'Pie Diabético',
-                subtitle: 'Prevención y Tratamiento Avanzado',
-                image: 'assets/piediabetico.jpg',
-                description: 'Servicio especializado en la integridad de los miembros inferiores y la prevención de complicaciones severas.',
+            'urologia': {
+                title: 'Urología',
+                subtitle: 'Salud Urológica Integral',
+                image: 'assets/diagnosticoporimagenes.jpg',
+                description: 'Nuestro servicio de Urología brinda atención especializada en el diagnóstico y tratamiento de patologías del sistema urinario y reproductor masculino.',
                 bullets: [
-                    'Curaciones avanzadas de úlceras y heridas complejas.',
-                    'Podología clínica especializada para pacientes de riesgo.',
-                    'Valoración arterial y neurológica periódica (Doppler sónico).',
-                    'Educación intensiva sobre el autocuidado del pie.'
+                    'Consulta especializada',
+                    'Control prostático',
+                    'Patología litiásica'
+                ]
+            },
+            'laboratorio': {
+                title: 'Laboratorio',
+                subtitle: 'Análisis Clínicos',
+                image: 'assets/diagnosticoporimagenes.jpg',
+                description: 'Contamos con un servicio de laboratorio de análisis clínicos para el apoyo diagnóstico y seguimiento de nuestros pacientes.',
+                bullets: [
+                    'Análisis clínicos de rutina',
+                    'Perfil metabólico y endocrinológico',
+                    'Marcadores tumorales'
                 ]
             }
         };
@@ -706,7 +829,7 @@
         // Hero Content Data (Sync with slides)
         const heroData = [
             {
-                title: "Te ayudamos a <br>tomar el control de tu diabetes",
+                title: "Tu clínica de diabetes y nutrición",
                 subtitle: "Todo lo que necesitas en un solo lugar"
             },
             {
