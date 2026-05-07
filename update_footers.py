@@ -22,7 +22,7 @@ combined_footer = """
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
                         <li><a href="diabetologos.html">Diabet&oacute;logos</a></li>
-                        <li><a href="diagnostico-por-imagenes.html">Im&aacute;genes</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
                     </ul>
                 </div>
                 <div class="footer-col footer-contact" style="padding-top:10px;">
