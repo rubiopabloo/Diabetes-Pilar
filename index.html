@@ -57,8 +57,11 @@
                 <a href="#" class="nav-icon-btn nav-icon-dark"><i data-lucide="user"></i></a>
                 <a href="#" onclick="openTurnosModal(); return false;" class="btn-consulta-virtual">Consulta Virtual</a>
             </div>
-            <div class="mobile-menu-btn mobile-menu-dark">
-                <i data-lucide="menu"></i>
+            <div class="mobile-header-actions">
+                <a href="consulta-virtual.html" class="mobile-consulta-btn"><i data-lucide="video"></i> Turnos</a>
+                <div class="mobile-menu-btn mobile-menu-dark">
+                    <i data-lucide="menu"></i>
+                </div>
             </div>
         </nav>
     </header>
@@ -298,7 +301,7 @@
         </section>
         
         <!-- Redesigned ¿Por qué elegirnos? Section -->
-        <section id="porque-elegirnos" style="padding: 100px 0; background: var(--bg-white);">
+        <section id="porque-elegirnos" style="padding: 100px 0; background: #0e1b2a; position: relative; overflow: hidden;">
             <div class="container">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
                     <!-- Left: Large Photo -->
@@ -316,8 +319,8 @@
                             <div style="display: flex; gap: 25px; align-items: flex-start;">
                                 <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: var(--primary-color);">01.</div>
                                 <div>
-                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700;">Centrado en el paciente</h3>
-                                    <p style="font-size: 15px; color: var(--text-muted); margin: 0;">Brindamos atención medica ambulatoria integral y de calidad, en todas las etapas de la vida para así lograr el bienestar del paciente y su familia.</p>
+                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700; color: white;">Centrado en el paciente</h3>
+                                    <p style="font-size: 15px; color: rgba(255,255,255,0.6); margin: 0;">Brindamos atención medica ambulatoria integral y de calidad, en todas las etapas de la vida para así lograr el bienestar del paciente y su familia.</p>
                                 </div>
                             </div>
                             
@@ -325,8 +328,8 @@
                             <div style="display: flex; gap: 25px; align-items: flex-start;">
                                 <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: var(--primary-color);">02.</div>
                                 <div>
-                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700;">Atención Personalizada</h3>
-                                    <p style="font-size: 15px; color: var(--text-muted); margin: 0;">Los profesionales y el personal le brindaran una experiencia única en la atención, distinguiéndonos por la calidez y el trato preferencial.</p>
+                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700; color: white;">Atención Personalizada</h3>
+                                    <p style="font-size: 15px; color: rgba(255,255,255,0.6); margin: 0;">Los profesionales y el personal le brindaran una experiencia única en la atención, distinguiéndonos por la calidez y el trato preferencial.</p>
                                 </div>
                             </div>
                             
@@ -334,8 +337,8 @@
                             <div style="display: flex; gap: 25px; align-items: flex-start;">
                                 <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: var(--primary-color);">03.</div>
                                 <div>
-                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700;">Estamos cerca suyo</h3>
-                                    <p style="font-size: 15px; color: var(--text-muted); margin: 0;">Contamos con una amplia Red de Servicios Médicos, Laboratorio e Imágenes permitiendo una mejor accesibilidad para cada necesidad.</p>
+                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700; color: white;">Estamos cerca suyo</h3>
+                                    <p style="font-size: 15px; color: rgba(255,255,255,0.6); margin: 0;">Contamos con una amplia Red de Servicios Médicos, Laboratorio e Imágenes permitiendo una mejor accesibilidad para cada necesidad.</p>
                                 </div>
                             </div>
                             
@@ -343,8 +346,8 @@
                             <div style="display: flex; gap: 25px; align-items: flex-start;">
                                 <div style="flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; border: 2px solid var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: var(--primary-color);">04.</div>
                                 <div>
-                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700;">Respuesta inmediata</h3>
-                                    <p style="font-size: 15px; color: var(--text-muted); margin: 0;">Turnos programados virtual o presencial con horarios flexibles adaptados a la necesidad del paciente.</p>
+                                    <h3 style="margin-bottom: 8px; font-size: 20px; font-weight: 700; color: white;">Respuesta inmediata</h3>
+                                    <p style="font-size: 15px; color: rgba(255,255,255,0.6); margin: 0;">Turnos programados virtual o presencial con horarios flexibles adaptados a la necesidad del paciente.</p>
                                 </div>
                             </div>
                         </div>
@@ -555,41 +558,17 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer-minimal">
         <div class="container">
-            <div class="footer-main">
-                <div class="footer-col footer-brand">
-                    <div class="logo">
-                        <div class="logo-icon"></div>
-                    </div>
-                    <p style="margin-top:20px; font-size:15px; max-width:320px; opacity:0.8;">Centro especializado de referencia en el tratamiento integral de la diabetes. Excelencia médica y calidez humana al servicio de tu bienestar.</p>
-                    <div class="footer-social-icons">
-                        <a href="#" class="footer-social-circle"><i data-lucide="globe" style="width: 18px;"></i></a>
-                        <a href="#" class="footer-social-circle"><i data-lucide="share-2" style="width: 18px;"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col" style="padding-top:10px;">
-                    <h4 style="color:#4FC3F7; font-size:16px;">NAVEGACI&Oacute;N</h4>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                        <li><a href="porque-elegirnos.html">Por qué elegirnos</a></li>
-                        <li><a href="index.html#eventos">Eventos</a></li>
-                        <li><a href="diabetologos.html">Diabet&oacute;logos</a></li>
-                        <li><a href="noticias.html">Noticias</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col footer-contact" style="padding-top:10px;">
-                    <h4 style="color:#4FC3F7; font-size:16px;">CONTACTO</h4>
-                    <p><i data-lucide="map-pin" style="color:#4FC3F7; width:18px;"></i> Víctor Vergani 575, Pilar<br>Italia 1184 Piso 2, San Miguel</p>
-                    <p><i data-lucide="phone" style="color:#4FC3F7; width:18px;"></i> 11 2166-1818 | 11 2470-6777</p>
-                    <p><i data-lucide="mail" style="color:#4FC3F7; width:18px;"></i> pilardiabetes@gmail.com</p>
+            <div class="footer-minimal-top">
+                <div class="footer-minimal-contact">
+                    <p><i data-lucide="map-pin"></i> Víctor Vergani 575, Pilar &nbsp;|&nbsp; Italia 1184 Piso 2, San Miguel</p>
+                    <p><i data-lucide="phone"></i> 11 2166-1818 &nbsp;|&nbsp; 11 2470-6777 &nbsp;&nbsp; <i data-lucide="mail"></i> pilardiabetes@gmail.com</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Centro Médico Diabetes Pilar. Excelencia en Cuidado Diabetológico - Creado por HAze ☺</p>
-                <div class="footer-legal">
+            <div class="footer-minimal-bottom">
+                <span>&copy; 2026 Diabetes Pilar &mdash; Creado por HAze ☺</span>
+                <div class="footer-minimal-links">
                     <a href="index.html#faq">Preguntas Frecuentes</a>
                     <a href="terminos.html">Aviso Legal</a>
                     <a href="privacidad.html">Privacidad</a>

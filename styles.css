@@ -3891,3 +3891,231 @@ footer {
         height: 300px;
     }
 }
+
+/* ================================================================
+   MOBILE HEADER ACTIONS — Circle Hamburger + Consulta Virtual
+   ================================================================ */
+
+.mobile-header-actions {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Hide old mobile-menu-btn that's not inside .mobile-header-actions */
+    nav > .mobile-menu-btn {
+        display: none !important;
+    }
+
+    .mobile-consulta-btn {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        letter-spacing: 0.3px;
+        white-space: nowrap;
+        transition: background 0.2s ease;
+    }
+    .mobile-consulta-btn i,
+    .mobile-consulta-btn svg {
+        width: 14px;
+        height: 14px;
+    }
+    .mobile-consulta-btn:hover {
+        background: #0277bd;
+    }
+
+    /* On non-scrolled glass header (white icons) */
+    header.glass-header:not(.scrolled) .mobile-consulta-btn {
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .mobile-header-actions .mobile-menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.06);
+        border: 1.5px solid rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .mobile-header-actions .mobile-menu-btn:hover {
+        background: rgba(0,0,0,0.1);
+    }
+
+    /* On non-scrolled glass header (white text) */
+    header.glass-header:not(.scrolled) .mobile-header-actions .mobile-menu-btn {
+        background: rgba(255,255,255,0.15);
+        border-color: rgba(255,255,255,0.3);
+    }
+    header.glass-header:not(.scrolled) .mobile-header-actions .mobile-menu-btn i,
+    header.glass-header:not(.scrolled) .mobile-header-actions .mobile-menu-btn svg {
+        color: white;
+    }
+}
+
+/* ================================================================
+   HIDE CAROUSEL ARROWS ON MOBILE
+   ================================================================ */
+
+@media (max-width: 768px) {
+    .hero-carousel .swiper-button-next,
+    .hero-carousel .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
+
+/* ================================================================
+   POR QUÉ ELEGIRNOS — Dark section decorative
+   ================================================================ */
+
+#porque-elegirnos::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    right: -120px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(2,136,209,0.15) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+#porque-elegirnos::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(79,195,247,0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+#porque-elegirnos > .container {
+    position: relative;
+    z-index: 1;
+}
+#porque-elegirnos h2 {
+    color: #4FC3F7 !important;
+}
+
+/* ================================================================
+   MINIMAL FOOTER
+   ================================================================ */
+
+.footer-minimal {
+    background: #0a1628;
+    color: rgba(255,255,255,0.7);
+    padding: 0;
+}
+
+.footer-minimal-top {
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-minimal-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 30px;
+    text-align: center;
+}
+
+.footer-minimal-contact p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+}
+
+.footer-minimal-contact i,
+.footer-minimal-contact svg {
+    width: 14px;
+    height: 14px;
+    color: #4FC3F7;
+    flex-shrink: 0;
+}
+
+.footer-minimal-bottom {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-minimal-bottom span {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+}
+
+.footer-minimal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+}
+
+.footer-minimal-links a {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-minimal-links a:hover {
+    color: #4FC3F7;
+}
+
+@media (max-width: 768px) {
+    .footer-minimal-top {
+        padding: 24px 0;
+    }
+    .footer-minimal-contact {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+    .footer-minimal-contact p {
+        font-size: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .footer-minimal-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 16px 0;
+        gap: 10px;
+    }
+    .footer-minimal-links {
+        justify-content: center;
+        gap: 4px 14px;
+    }
+    .footer-minimal-links a {
+        font-size: 11px;
+    }
+}
