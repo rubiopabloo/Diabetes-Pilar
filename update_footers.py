@@ -66,29 +66,50 @@ combined_footer = """
     </footer>
 """
 
+# Regex patterns
+# 1. Match existing dual footer structure (the one we want to update)
+pattern_dual = r'(?s)\s*<!-- Desktop Footer -->.*?<footer class="footer-minimal">.*?</footer>'
+
+# 2. Match original footer structure (if it's an old file)
+pattern_original = r'(?s)(?:\s*<!-- Footer -->\s*)?<footer>\s*<div class="container">\s*<div class="footer-main">.*?</footer>'
+
+# 3. Match minimal footer (fallback, should be handled carefully to avoid duplication)
+pattern_minimal = r'(?s)(?:\s*<!-- Footer -->\s*)?<footer class="footer-minimal">.*?</footer>'
+
+def update_file(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    new_content = content
+    
+    # Priority 1: Update the dual structure if it already exists
+    if re.search(pattern_dual, content):
+        new_content = re.sub(pattern_dual, combined_footer, content)
+        status = "Updated (Dual structure)"
+    # Priority 2: Replace original footer
+    elif re.search(pattern_original, content):
+        new_content = re.sub(pattern_original, combined_footer, content)
+        status = "Updated (Original structure)"
+    # Priority 3: Replace minimal footer ONLY if dual structure is NOT present
+    elif re.search(pattern_minimal, content):
+        # Double check that we don't have a footer-desktop around that we missed
+        if '<footer class="footer-desktop">' not in content:
+            new_content = re.sub(pattern_minimal, combined_footer, content)
+            status = "Updated (Minimal structure)"
+        else:
+            status = "SKIPPED: Minimal footer found but desktop footer also exists (potential duplication risk)"
+    else:
+        status = "NO MATCH"
+
+    if new_content != content:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        return status
+    return f"No change needed ({status})"
+
 for root, dirs, files in os.walk('.'):
     for file in files:
-        if file.endswith('.html'):
+        if file.endswith('.html') and 'componente' not in file:
             filepath = os.path.join(root, file)
-            with open(filepath, 'r', encoding='utf-8') as f:
-                content = f.read()
-
-            # Pattern for original footer (which doesn't have class="footer-desktop" yet)
-            pattern_original = r'(?s)(?:\s*<!-- Footer -->\s*)?<footer>\s*<div class="container">\s*<div class="footer-main">.*?</footer>'
-            
-            # Pattern for minimal footer only (in case it's like index.html)
-            pattern_minimal = r'(?s)(?:\s*<!-- Footer -->\s*)?<footer class="footer-minimal">.*?</footer>'
-
-            new_content = content
-            if re.search(pattern_original, content):
-                new_content = re.sub(pattern_original, combined_footer, content)
-                print(f"Updated (from original): {file}")
-            elif re.search(pattern_minimal, content):
-                new_content = re.sub(pattern_minimal, combined_footer, content)
-                print(f"Updated (from minimal): {file}")
-            else:
-                print(f"NO MATCH: {file}")
-
-            if new_content != content:
-                with open(filepath, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
+            result = update_file(filepath)
+            print(f"{file}: {result}")
