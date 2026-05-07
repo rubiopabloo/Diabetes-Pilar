@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-<style>header.glass-header { top: 40px; } header.glass-header.scrolled { top: 0; } .top-bar { position: absolute; z-index: 1001; width: 100%; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }</style>
+<style>header.glass-header { top: 0; } header.glass-header.scrolled { top: 0; } .top-bar { position: absolute; z-index: 1001; width: 100%; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }</style>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -55,7 +55,7 @@
             <div class="header-actions">
                 <a href="#" class="nav-icon-btn nav-icon-dark"><i data-lucide="shopping-cart"></i></a>
                 <a href="#" class="nav-icon-btn nav-icon-dark"><i data-lucide="user"></i></a>
-                <a href="diabetologos.html" class="btn-consulta-virtual">Consulta Virtual</a>
+                <a href="#" onclick="openTurnosModal(); return false;" class="btn-consulta-virtual">Consulta Virtual</a>
             </div>
             <div class="mobile-menu-btn mobile-menu-dark">
                 <i data-lucide="menu"></i>
@@ -69,17 +69,17 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide hero-slide">
-                    <div class="hero-bg" style="background-image: url('assets/hero1.jpg');"></div>
+                    <div class="hero-bg" style="background-image: url('assets/hero1.jpeg');"></div>
                     <div class="hero-overlay"></div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="swiper-slide hero-slide">
-                    <div class="hero-bg" style="background-image: url('assets/hero2.png');"></div>
+                    <div class="hero-bg" style="background-image: url('assets/hero2.jpeg');"></div>
                     <div class="hero-overlay"></div>
                 </div>
                 <!-- Slide 3 -->
                 <div class="swiper-slide hero-slide">
-                    <div class="hero-bg" style="background-image: url('assets/hero3.png');"></div>
+                    <div class="hero-bg" style="background-image: url('assets/hero3.jpeg');"></div>
                     <div class="hero-overlay"></div>
                 </div>
             </div>
@@ -126,8 +126,40 @@
                 <p><strong>SEDE San Miguel:</strong> Italia 1184 Piso 2 (08 a 20 hs)</p>
                 <span class="info-tag">*Seguro de salud</span>
             </div>
-            <div class="particulars-notice" style="text-align: center; margin-top: 20px; font-weight: 500;">
-                PARTICULARES (Arancel Hospitalarios) - Club Nutridia 100% - Prepagas y Obras Sociales (Con reintegro - Copago)
+            <!-- Turnos Inmediatos Bar -->
+            <div class="turnos-inmediatos-bar">
+                <div class="turnos-inmediatos-inner">
+                    <div class="turnos-inmediatos-title">
+                        <i data-lucide="zap"></i>
+                        <h3>Turnos Inmediatos</h3>
+                    </div>
+                    <div class="turnos-inmediatos-sedes">
+                        <div class="turnos-sede-item">
+                            <i data-lucide="map-pin"></i>
+                            <span><strong>SEDE Pilar:</strong> <a href="tel:+5491121661818">11 2166-1818</a></span>
+                        </div>
+                        <div class="turnos-sede-item">
+                            <i data-lucide="map-pin"></i>
+                            <span><strong>SEDE San Miguel:</strong> <a href="tel:+5491124704777">11 2470-4777</a></span>
+                        </div>
+                    </div>
+                    <a href="#" onclick="openTurnosModal(); return false;" class="btn-turnos-info">Más información <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Asesoramiento Comercial -->
+            <div class="asesoramiento-comercial-bar">
+                <div class="asesoramiento-bar-inner">
+                    <div class="asesoramiento-bar-content">
+                        <div class="asesoramiento-bar-title">
+                            <i data-lucide="headset"></i>
+                            <h3>Asesoramiento Comercial</h3>
+                        </div>
+                        <p class="asesoramiento-bar-text">PARTICULARES (Arancel Hospitalarios) · Club Nutridia 100% · Prepagas y Obras Sociales (Con reintegro - Copago)</p>
+                        <p class="asesoramiento-bar-desc">Si necesitas conocer más sobre nuestra cobertura de salud, planes, servicios adicionales y nuestra cartilla de prestadores médicos, contactate con nuestros asesores comerciales.</p>
+                    </div>
+                    <a href="contacto.html" class="btn-asesoramiento-bar"><i data-lucide="phone"></i> Contacto Comercial</a>
+                </div>
             </div>
         </section>
 
@@ -239,11 +271,11 @@
                                 </div>
                             </div>
 
-                            <!-- Urología -->
-                            <div class="accordion-item" data-service="urologia" onclick="handleServiceClick('urologia', this)">
-                                <img src="assets/diagnosticoporimagenes.jpg" alt="Urología" loading="lazy">
+                            <!-- Dermatología -->
+                            <div class="accordion-item" data-service="dermatologia" onclick="handleServiceClick('dermatologia', this)">
+                                <img src="assets/diagnosticoporimagenes.jpg" alt="Dermatología" loading="lazy">
                                 <div class="accordion-overlay"></div>
-                                <span class="accordion-caption">Urología</span>
+                                <span class="accordion-caption">Dermatología</span>
                                 <div class="accordion-expand-content">
                                     <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
                                 </div>
@@ -477,7 +509,7 @@
         <!-- Locations -->
         <section id="sedes" class="locations-section">
             <div class="container">
-                <div class="section-title center-title">
+                <div class="section-title">
                     <h2>Nuestras Sedes</h2>
                     <p class="subtitle">Estamos cerca tuyo con la mejor tecnología médica.</p>
                 </div>
@@ -516,9 +548,7 @@
                     </div>
                 </div>
 
-                <div class="particulars-notice-footer">
-                    PARTICULARES (Arancel Hospitalarios) - Club Nutridia 100% - Prepagas y Obras Sociales (Con reintegro - Copago)
-                </div>
+
             </div>
         </section>
 
@@ -700,15 +730,16 @@
                     'Control de enfermedades inflamatorias intestinales'
                 ]
             },
-            'urologia': {
-                title: 'Urología',
-                subtitle: 'Salud Urológica Integral',
+            'dermatologia': {
+                title: 'Dermatología',
+                subtitle: 'Salud de la Piel',
                 image: 'assets/diagnosticoporimagenes.jpg',
-                description: 'Nuestro servicio de Urología brinda atención especializada en el diagnóstico y tratamiento de patologías del sistema urinario y reproductor masculino.',
+                description: 'Nuestro servicio de Dermatología brinda atención especializada en el diagnóstico y tratamiento de enfermedades de la piel, pelo y uñas, con especial énfasis en las manifestaciones cutáneas asociadas a la diabetes y enfermedades metabólicas.',
                 bullets: [
-                    'Consulta especializada',
-                    'Control prostático',
-                    'Patología litiásica'
+                    'Consulta dermatológica especializada',
+                    'Dermatosis asociadas a diabetes',
+                    'Control de lesiones cutáneas',
+                    'Prevención y tratamiento de patologías de la piel'
                 ]
             },
             'oftalmologia': {
@@ -939,13 +970,17 @@
         });
     </script>
     <script>
-        window.addEventListener('wheel', function(e) {
-            e.preventDefault();
-            window.scrollBy({
-                top: e.deltaY * 0.6,
-                behavior: 'smooth'
-            });
-        }, { passive: false });
+        // Only apply custom smooth scroll on desktop (non-touch) devices
+        if (!('ontouchstart' in window) && !navigator.maxTouchPoints) {
+            window.addEventListener('wheel', function(e) {
+                e.preventDefault();
+                window.scrollBy({
+                    top: e.deltaY * 0.6,
+                    behavior: 'smooth'
+                });
+            }, { passive: false });
+        }
     </script>
+    <script src="turnos-modal.js"></script>
 </body>
 </html>
