@@ -10,7 +10,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--primary-color);
+    background: #0288D1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,20 +35,10 @@ html {
 }
 
 :root {
-    --primary-color: #0288D1; /* Azul principal */
-    --primary-dark: #01579B;   /* Azul oscuro */
-    --primary-light: #4FC3F7;  /* Celeste / Azul claro */
-    --primary-bg: #E1F5FE;     /* Fondo azul muy claro */
-    
-    --secondary-color: #8BC34A; /* Verde principal */
-    --secondary-dark: #558B2F;  /* Verde oscuro */
-    
-    --accent-color: #F57C00;    /* Naranja principal */
-    --accent-dark: #E65100;     /* Naranja oscuro */
-    
-    --dark-bg: #0e1b2a;         /* Fondo azul noche */
-    --footer-bg: #0a1628;       /* Fondo footer */
-    
+    --primary-color: #0288D1; /* Azul corporativo */
+    --primary-dark: #01579B;
+    --secondary-color: #8BC34A; /* Verde corporativo */
+    --accent-color: #F57C00; /* Naranja corporativo */
     --bg-light: #F8FAFC;
     --bg-white: #FFFFFF;
     --text-dark: #1E293B;
@@ -117,7 +107,7 @@ a {
 }
 
 .text-celeste {
-    color: var(--primary-light) !important;
+    color: #4FC3F7 !important;
 }
 
 .container {
@@ -563,7 +553,7 @@ nav {
 }
 
 .accent-blue {
-    color: var(--primary-light) !important;
+    color: #4FC3F7 !important;
     font-weight: 800;
 }
 
@@ -959,7 +949,7 @@ nav {
 }
 
 .nav-arrow:hover {
-    background: var(--primary-color); /* Darker celeste */
+    background: #0277bd; /* Darker celeste */
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(2, 136, 209, 0.4);
 }
@@ -1071,9 +1061,9 @@ nav {
     font-size: 18px;
 }
 
-.member-card.pharmacy .card-header { background: var(--primary-bg); }
-.member-card.laboratory .card-header { background: var(--primary-bg); }
-.member-card.dietetics .card-header { background: var(--primary-bg); }
+.member-card.pharmacy .card-header { background: #E1F5FE; }
+.member-card.laboratory .card-header { background: #E1F5FE; }
+.member-card.dietetics .card-header { background: #E1F5FE; }
 
 .card-body {
     padding: 40px;
@@ -1415,7 +1405,7 @@ nav {
 .nutridia-banner {
     position: relative;
     overflow: hidden;
-    background: var(--secondary-dark);
+    background: #5B8C2F;
     padding: 0;
     min-height: 400px;
     scroll-margin-top: var(--nav-height);
@@ -1469,7 +1459,7 @@ nav {
 .nutridia-cross {
     position: absolute;
     font-size: 40px;
-    color: var(--accent-color);
+    color: #D4A429;
     z-index: 2;
     animation: floatCross 4s ease-in-out infinite;
 }
@@ -1513,7 +1503,7 @@ nav {
 }
 
 .highlight-yellow {
-    color: var(--accent-color);
+    color: #F5C200;
     font-style: italic;
 }
 
@@ -1554,7 +1544,7 @@ nav {
     display: inline-block;
     padding: 14px 28px;
     background: white;
-    color: var(--secondary-dark);
+    color: #5B8C2F;
     font-size: 16px;
     font-weight: 700;
     border-radius: 50px;
@@ -1566,7 +1556,7 @@ nav {
 }
 
 .btn-nutridia:hover {
-    background: var(--accent-color);
+    background: #D4A429;
     color: white !important;
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -2034,7 +2024,7 @@ footer h1, footer h2, footer h3, footer h4, footer p, footer li, footer a, foote
 
 /* --- Contact Form Footer Section --- */
 .contact-footer-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, #0288D1 0%, #01579B 100%);
     padding: 80px 0;
     color: white;
 }
@@ -2445,7 +2435,7 @@ section[id] {
 .contact-form-bar {
     width: 4px;
     height: 22px;
-    background: var(--primary-color);
+    background: #0288D1;
     border-radius: 4px;
     flex-shrink: 0;
 }
@@ -2493,7 +2483,7 @@ section[id] {
 .contact-compact-form input:focus,
 .contact-compact-form select:focus,
 .contact-compact-form textarea:focus {
-    border-color: var(--primary-color);
+    border-color: #0288D1;
     box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.1);
 }
 
@@ -2550,7 +2540,7 @@ section[id] {
 }
 
 .contact-submit-btn:hover {
-    background: var(--primary-dark);
+    background: #01579B;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(2, 136, 209, 0.3);
 }
@@ -2879,7 +2869,7 @@ header.glass-header:not(.scrolled) .mobile-menu-btn i {
     color: white !important;
 }
 .btn-consulta-virtual {
-    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+    background: linear-gradient(135deg, #4FC3F7, #0288D1);
     color: white !important;
     padding: 10px 22px;
     border-radius: 50px;
@@ -2916,9 +2906,9 @@ header.glass-header:not(.scrolled) .mobile-menu-btn i {
     gap: 8px;
 }
 .cf-tag-btn.tag-active {
-    background: var(--primary-color);
+    background: #0288D1;
     color: white;
-    border-color: var(--primary-color);
+    border-color: #0288D1;
 }
 .contact-cta-group {
     display: flex;
@@ -2927,8 +2917,8 @@ header.glass-header:not(.scrolled) .mobile-menu-btn i {
 }
 .contact-submit-btn.email-btn {
     background: white;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: #0288D1;
+    border: 2px solid #0288D1;
 }
 .contact-submit-btn.email-btn:hover {
     background: #f0f9ff;
@@ -3087,7 +3077,7 @@ footer {
     align-items: center;
 }
 
-.text-celeste { color: var(--primary-light) !important; }
+.text-celeste { color: #4FC3F7 !important; }
 
 
 /* ===== MOBILE SERVICES — Clean Grid (replaces accordion) ===== */
@@ -3545,7 +3535,7 @@ footer {
 /* ===== Turnos Inmediatos Bar ===== */
 .turnos-inmediatos-bar {
     margin-top: 30px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, #0288D1 0%, #01579B 100%);
     border-radius: 20px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -3621,7 +3611,7 @@ footer {
 .turnos-sede-item i {
     width: 16px;
     height: 16px;
-    color: var(--primary-light);
+    color: #4FC3F7;
     flex-shrink: 0;
 }
 .turnos-sede-item a {
@@ -3663,7 +3653,7 @@ footer {
 /* ===== Asesoramiento Comercial Bar ===== */
 .asesoramiento-comercial-bar {
     margin-top: 20px;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #558B2F 100%);
+    background: linear-gradient(135deg, #7CB342 0%, #558B2F 100%);
     border-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -3943,7 +3933,7 @@ footer {
         height: 14px;
     }
     .mobile-consulta-btn:hover {
-        background: var(--primary-color);
+        background: #0277bd;
     }
 
     /* On non-scrolled glass header (white icons) */
@@ -3994,61 +3984,13 @@ footer {
 }
 
 /* ================================================================
-   POR QUÉ ELEGIRNOS — Dark section decorative (MOBILE ONLY)
-   ================================================================ */
-
-@media (max-width: 768px) {
-    #porque-elegirnos {
-        background: var(--dark-bg) !important;
-        color: rgba(255, 255, 255, 0.8) !important;
-    }
-    #porque-elegirnos::before {
-        content: '';
-        position: absolute;
-        top: -120px;
-        right: -120px;
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(2,136,209,0.15) 0%, transparent 70%);
-        pointer-events: none;
-        z-index: 0;
-    }
-    #porque-elegirnos::after {
-        content: '';
-        position: absolute;
-        bottom: -80px;
-        left: -80px;
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(79,195,247,0.1) 0%, transparent 70%);
-        pointer-events: none;
-        z-index: 0;
-    }
-    #porque-elegirnos > .container {
-        position: relative;
-        z-index: 1;
-    }
-    #porque-elegirnos h2 {
-        color: var(--primary-light) !important;
-    }
-    #porque-elegirnos h3 {
-        color: white !important;
-    }
-    #porque-elegirnos p {
-        color: rgba(255,255,255,0.7) !important;
-    }
-}
-
-/* ================================================================
    MINIMAL FOOTER
    ================================================================ */
 
 /* Hide minimal footer on desktop */
 .footer-minimal {
     display: none;
-    background: var(--footer-bg);
+    background: #1A232E;
     color: rgba(255,255,255,0.7);
     padding: 0;
 }
@@ -4089,7 +4031,7 @@ footer {
 .footer-minimal-contact svg {
     width: 14px;
     height: 14px;
-    color: var(--primary-light);
+    color: #4FC3F7;
     flex-shrink: 0;
 }
 
@@ -4121,7 +4063,7 @@ footer {
 }
 
 .footer-minimal-links a:hover {
-    color: var(--primary-light);
+    color: #4FC3F7;
 }
 
 @media (max-width: 768px) {
