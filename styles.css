@@ -4023,6 +4023,12 @@ footer {
     #porque-elegirnos h2 {
         color: #4FC3F7 !important;
     }
+    #porque-elegirnos h3 {
+        color: white !important;
+    }
+    #porque-elegirnos p {
+        color: rgba(255,255,255,0.7) !important;
+    }
 }
 
 /* ================================================================
