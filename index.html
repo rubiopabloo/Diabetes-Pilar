@@ -306,7 +306,7 @@
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
                     <!-- Left: Large Photo -->
                     <div style="position: relative; border-radius: 30px; overflow: hidden; height: 600px; box-shadow: var(--shadow-xl);">
-                        <img src="assets/elegirnos.jpg" alt="¿Por qué elegirnos?" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="assets/PORQUEELEGIRNOS.jpeg" alt="¿Por qué elegirnos?" style="width: 100%; height: 100%; object-fit: cover;">
                         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.4));"></div>
                     </div>
                     
@@ -396,12 +396,60 @@
         </section>
 
 <!-- Nutridia Banner Section -->
-<section id="club" style="padding: 60px 0; background: var(--bg-light); display: flex; justify-content: center; align-items: center; scroll-margin-top: var(--nav-height);">
-    <div class="container" style="width: 100%;">
-        <a href="https://nutridia.ar" target="_blank" class="nutridia-promo-banner" style="display: block; width: 100%; border-radius: var(--radius-lg); overflow: hidden; position: relative; cursor: pointer; box-shadow: var(--shadow-xl); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(0,0,0,0.05);">
-            <img src="assets/media_1.jpg" alt="Club Nutridia+ Banner" style="width: 100%; height: auto; display: block; transition: transform 0.6s ease;">
-            <div class="banner-overlay" style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.05) 100%); transition: all 0.4s ease; pointer-events: none;"></div>
-        </a>
+<section id="club" class="nutridia-banner">
+    <!-- Leaf watermark background -->
+    <div class="nutridia-leaf-bg">
+        <img src="assets/nutridia-leaf.png" alt="" class="nutridia-leaf-watermark">
+    </div>
+    <div class="nutridia-banner-bg">
+        <div class="nutridia-cross cross-1">✚</div>
+        <div class="nutridia-cross cross-2">✚</div>
+        <div class="nutridia-cross cross-3">✚</div>
+        <div class="nutridia-cross cross-4">✚</div>
+    </div>
+    <!-- Family photo with green blend -->
+    <div class="nutridia-family-bg" style="background-image: url('assets/fondonutridianuevo.png');"></div>
+
+    <div class="container nutridia-banner-container">
+
+        <!-- LEFT: Text + Logo + CTA -->
+        <div class="nutridia-banner-text">
+            <p class="nutridia-tagline">
+                Llevá tu bienestar al<br>
+                <span class="highlight-yellow">siguiente nivel.</span>
+            </p>
+            <div class="nutridia-logo-block">
+                <img src="assets/nutridia-logo-full.png" alt="Nutridia" class="nutridia-logo-img">
+            </div>
+
+            <a href="https://nutridia.ar" target="_blank" class="btn-nutridia">Quiero Asociarme</a>
+        </div>
+
+        <!-- RIGHT: Benefit Cards -->
+        <div class="nutridia-benefits-list">
+            <div class="nutridia-benefit-card">
+                <div class="nutridia-benefit-icon"><i data-lucide="percent"></i></div>
+                <div class="nutridia-benefit-text">
+                    <h4>Descuentos en Farmacias</h4>
+                    <p>Hasta un 40% off en la red farmacéutica local.</p>
+                </div>
+            </div>
+            <div class="nutridia-benefit-card">
+                <div class="nutridia-benefit-icon"><i data-lucide="calendar-check"></i></div>
+                <div class="nutridia-benefit-text">
+                    <h4>Atención Prioritaria</h4>
+                    <p>Overbooking habilitado y agenda preferencial.</p>
+                </div>
+            </div>
+            <div class="nutridia-benefit-card">
+                <div class="nutridia-benefit-icon"><i data-lucide="gift"></i></div>
+                <div class="nutridia-benefit-text">
+                    <h4>Talleres Gratuitos</h4>
+                    <p>Acceso a clases de cocina saludable y nutricionales.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -934,14 +982,42 @@
             }
         }, { passive: true });
 
-        // Loading Screen
+        // Loading Screen & Entry Popup Modal
         window.addEventListener('load', () => {
             const loader = document.getElementById('loading-screen');
             if (loader) {
                 loader.classList.add('fade-out');
                 setTimeout(() => {
                     loader.style.display = 'none';
+                    // Show entry popup after loader is gone
+                    setTimeout(() => {
+                        const entryPopup = document.getElementById('entry-popup-modal');
+                        if (entryPopup) {
+                            entryPopup.classList.add('active');
+                        }
+                    }, 400);
                 }, 600);
+            } else {
+                setTimeout(() => {
+                    const entryPopup = document.getElementById('entry-popup-modal');
+                    if (entryPopup) {
+                        entryPopup.classList.add('active');
+                    }
+                }, 1000);
+            }
+        });
+
+        function closeEntryPopup() {
+            const entryPopup = document.getElementById('entry-popup-modal');
+            if (entryPopup) {
+                entryPopup.classList.remove('active');
+            }
+        }
+
+        // Close on ESC key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeEntryPopup();
             }
         });
     </script>
@@ -958,134 +1034,14 @@
         }
     </script>
 
-    <!-- Entry Popup Modal -->
-    <div id="entry-popup" class="entry-popup-overlay" style="display: none;" onclick="if(event.target === this) closeEntryPopup()">
+    <!-- Entry Pop-up Modal -->
+    <div id="entry-popup-modal" class="entry-popup-overlay" onclick="if(event.target === this) closeEntryPopup()">
         <div class="entry-popup-container">
-            <button class="entry-popup-close" onclick="closeEntryPopup()" aria-label="Cerrar">
-                <i data-lucide="x"></i>
-            </button>
-            <a href="https://wa.me/5491121661818" target="_blank" class="entry-popup-link">
-                <img src="assets/media_2.jpg" alt="Anuncio Diabetes Pilar" class="entry-popup-img">
-            </a>
+            <button class="entry-popup-close" onclick="closeEntryPopup()">&times;</button>
+            <img src="assets/DIABETESPOPUP.jpeg" alt="Novedades Diabetes Pilar">
         </div>
     </div>
 
-    <style>
-        .entry-popup-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 10000;
-            background: rgba(10, 25, 47, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            padding: 20px;
-            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .entry-popup-overlay.show {
-            opacity: 1;
-        }
-        .entry-popup-container {
-            position: relative;
-            max-width: 600px;
-            width: 100%;
-            background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.35), 0 0 50px rgba(2, 136, 209, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transform: scale(0.92) translateY(20px);
-            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .entry-popup-overlay.show .entry-popup-container {
-            transform: scale(1) translateY(0);
-        }
-        .entry-popup-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.95);
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #1e293b;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 10;
-        }
-        .entry-popup-close:hover {
-            background: #ffffff;
-            color: #0288D1;
-            transform: scale(1.1) rotate(90deg);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        }
-        .entry-popup-link {
-            display: block;
-            width: 100%;
-            overflow: hidden;
-            cursor: pointer;
-        }
-        .entry-popup-img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .entry-popup-link:hover .entry-popup-img {
-            transform: scale(1.025);
-        }
-        @media (max-width: 576px) {
-            .entry-popup-container {
-                border-radius: 16px;
-            }
-            .entry-popup-close {
-                top: 12px;
-                right: 12px;
-                width: 36px;
-                height: 36px;
-            }
-        }
-    </style>
-
-    <script>
-        function closeEntryPopup() {
-            const popup = document.getElementById('entry-popup');
-            if (!popup) return;
-            popup.classList.remove('show');
-            setTimeout(() => {
-                popup.style.display = 'none';
-                document.body.style.overflow = '';
-            }, 400);
-        }
-
-        window.addEventListener('load', () => {
-            // Check if user has already seen popup this session
-            if (!sessionStorage.getItem('hasSeenEntryPopup')) {
-                const popup = document.getElementById('entry-popup');
-                if (!popup) return;
-                
-                // Beautiful entry delay after loading screen is gone
-                setTimeout(() => {
-                    popup.style.display = 'flex';
-                    // Trigger browser layout pass to enable opacity transition
-                    popup.offsetHeight;
-                    popup.classList.add('show');
-                    document.body.style.overflow = 'hidden';
-                    
-                    // Mark as seen for this session
-                    sessionStorage.setItem('hasSeenEntryPopup', 'true');
-                }, 1200);
-            }
-        });
-    </script>
     <script src="turnos-modal.js"></script>
 </body>
 </html>
