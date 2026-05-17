@@ -284,8 +284,14 @@
     // ----- HTML -----
     const modalHTML = `
     <div class="turnos-modal-overlay" id="turnosModalOverlay" onclick="if(event.target===this)closeTurnosModal()">
-        <div class="turnos-modal-container">
-            <button class="turnos-modal-close" onclick="closeTurnosModal()">
+        <div class="turnos-modal-container" style="position:relative;">
+            
+            <!-- PRÓXIMAMENTE OVERLAY -->
+            <div style="position: absolute; inset: 0; z-index: 10; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); background: rgba(255,255,255,0.45); display: flex; align-items: center; justify-content: center; border-radius: 28px;">
+                <div style="background: rgba(2, 136, 209, 0.95); color: white; padding: 15px 40px; border-radius: 50px; font-weight: 800; font-size: clamp(20px, 4vw, 28px); letter-spacing: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); transform: rotate(-5deg); text-align: center;">PRÓXIMAMENTE</div>
+            </div>
+
+            <button class="turnos-modal-close" onclick="closeTurnosModal()" style="z-index: 11;">
                 <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
             <div class="tm-header">
