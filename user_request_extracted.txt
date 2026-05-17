@@ -1,0 +1,9 @@
+<USER_REQUEST>
+Nuevos cambios:
+1- cambia el texto de la pagina de politicas de privacidad por este: 
+Políticas de Privacidad
+Nutridia Company S.A.S. en la página web www.diabetespilar.com con número de identificación 33-71582347-7 con sede en Virrey Arredondo 2698 Piso 3 Dpto. C (B1426) Ciudad Autónoma de Buenos Aires, procesa datos personales facilitados por el Usuario para cumplir y, adicionalmente, confirmar los Términos y Condiciones, para procesar pedidos y envíos online y para la comunicación necesaria durante el periodo de tiempo establecido por la ley.
+
+Diabetes Pilar reconoce la importancia que existe en administrar y proteger correctamente la información de nuestros visitantes. Por este motivo, nuestro sitio cuenta con políticas muy estrictas de privacidad. A continuación, se citan los lineamientos que sigue nuestra empresa Nutridia Company S.A.S. con respecto a los datos personales provistos por los usuarios:
+
+<truncated 30829 bytes>
