@@ -1488,22 +1488,23 @@ nav {
 }
 
 .nutridia-logo-block {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: auto;
+    height: 110px; /* Altura reducida para que los bordes transparentes del logo de 350px se superpongan de forma invisible y eliminen los espacios vacíos */
     position: relative;
     width: 100%;
 }
 
 .nutridia-logo-img {
-    height: 350px;
+    height: 350px; /* Tamaño inmutable solicitado */
     width: auto;
-    position: relative;
-    display: block;
-    margin-left: -40px;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
     pointer-events: none;
     z-index: 4;
 }
@@ -1689,12 +1690,17 @@ nav {
     }
     .nutridia-logo-block {
         justify-content: center;
-        height: auto;
-        margin: 5px auto;
+        height: 90px; /* Altura compacta para superposición de logo absoluto */
+        margin: 0 auto;
+        position: relative;
     }
     .nutridia-logo-img {
         height: 280px;
-        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
     }
     .nutridia-bottom-tagline {
         margin-top: 0;
@@ -1726,6 +1732,9 @@ nav {
 @media (max-width: 767px) {
     .nutridia-top-tagline {
         font-size: 14px;
+    }
+    .nutridia-logo-block {
+        height: 75px; /* Altura súper compacta en móviles para superposición de logo absoluto */
     }
     .nutridia-logo-img {
         height: 240px;
