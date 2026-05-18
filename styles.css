@@ -1406,16 +1406,18 @@ nav {
     position: relative;
     overflow: hidden;
     background: #5B8C2F;
-    padding: 0;
-    min-height: 400px;
+    padding: 60px 0 45px 0;
     scroll-margin-top: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nutridia-leaf-bg {
     position: absolute;
     top: 0;
-    right: 46%;
-    width: 50%;
+    left: 0;
+    width: 40%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -1425,231 +1427,222 @@ nav {
 }
 
 .nutridia-leaf-watermark {
-    height: 100%;
+    height: 120%;
     width: auto;
-    opacity: 0.12;
+    opacity: 0.1;
     object-fit: contain;
     filter: brightness(1.5);
+    transform: rotate(-15deg);
 }
 
 .nutridia-family-bg {
     position: absolute;
     top: 0;
     right: 0;
-    width: 55%;
+    width: 66.7%; /* 2/3 of the banner width */
     height: 100%;
     background-size: cover;
     background-position: center;
     z-index: 1;
-    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.6) 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.6) 100%);
-    opacity: 0.65;
-}
-
-.nutridia-banner-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.nutridia-cross {
-    position: absolute;
-    font-size: 40px;
-    color: #D4A429;
-    z-index: 2;
-    animation: floatCross 4s ease-in-out infinite;
-}
-
-.cross-1 { top: 15%; right: 10%; font-size: 50px; animation-delay: 0s; }
-.cross-2 { top: 35%; right: 6%; font-size: 30px; color: rgba(212, 164, 41, 0.5); animation-delay: 1s; }
-.cross-3 { top: 60%; right: 12%; font-size: 20px; color: rgba(212, 164, 41, 0.3); animation-delay: 2s; }
-.cross-4 { bottom: 15%; right: 18%; font-size: 35px; color: rgba(212, 164, 41, 0.6); animation-delay: 0.5s; }
-
-@keyframes floatCross {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,1) 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,1) 100%);
+    opacity: 0.85; /* Highly prominent family background */
 }
 
 .nutridia-banner-container {
-    padding: 40px 60px;
-    min-height: 200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
     position: relative;
     z-index: 3;
-    gap: 40px;
-}
-
-.nutridia-banner-text {
-    max-width: 420px;
-    align-self: center;
-}
-
-.nutridia-tagline {
-    font-size: 28px;
-    color: white;
-    margin-bottom: 10px;
-    text-transform: none;
-    letter-spacing: 0;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-.highlight-yellow {
-    color: #F5C200;
-    font-style: italic;
-}
-
-.nutridia-logo-block {
-    margin-bottom: 0; /* Removing margin to give absolute logo more breathing room */
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 120px; /* Keep container height fixed to avoid shifting neighbors */
-    position: relative;
+    flex-direction: column;
+    gap: 35px;
+    width: 100%;
 }
 
-.nutridia-logo-img {
-    height: 350px;
-    width: auto;
-    position: absolute;
-    top: 56%;
-    left: -40px; /* Offset to the left to balance the scale */
-    transform: translateY(-50%);
-    pointer-events: none; /* Ensures the logo doesn't block clicks on links */
+.nutridia-banner-main-row {
+    display: grid;
+    grid-template-columns: 38% 62%;
+    width: 100%;
+    align-items: center;
+}
+
+.nutridia-banner-text-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     z-index: 4;
 }
 
-.nutridia-subtitle {
-    font-size: 20px;
-    color: white !important;
-    margin-top: 15px;
-    margin-bottom: 24px;
-    padding-left: 10px; /* Slight shift to align visually with the logo */
-    font-weight: 400;
+.nutridia-top-tagline {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    opacity: 0.95;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    display: block;
 }
 
-.nutridia-subtitle strong {
-    font-weight: 700;
+.nutridia-logo-block {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+}
+
+.nutridia-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nutridia-bottom-tagline {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #ffffff !important;
+    margin: 10px 0 20px 0;
 }
 
 .btn-nutridia {
-    display: inline-block;
-    padding: 14px 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
     background: white;
-    color: #5B8C2F;
-    font-size: 16px;
+    color: #5B8C2F !important;
+    font-size: 15px;
     font-weight: 700;
     border-radius: 50px;
-    text-transform: none;
     text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    margin-top: 36px; /* Pushes button below the large absolute logo */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border: 2px solid transparent;
 }
 
 .btn-nutridia:hover {
     background: #D4A429;
     color: white !important;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
-.nutridia-benefits-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    min-width: 340px;
-    max-width: 420px;
+/* Horizontal Capsule Card Bar */
+.nutridia-horizontal-cards-bar {
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 0 1px 1px rgba(0, 0, 0, 0.03);
+    width: 100%;
+    z-index: 5;
 }
 
-.nutridia-benefit-card {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    padding: 16px 20px;
+.nutridia-horizontal-card {
     display: flex;
     align-items: center;
-    gap: 16px;
-    color: white;
+    gap: 12px;
+    text-align: left;
 }
 
-.nutridia-benefit-icon {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
+.nutridia-card-icon-circle {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background: #eaf3e5;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    color: white;
+    color: #5B8C2F !important;
 }
 
-.nutridia-benefit-text h4 {
-    font-size: 16px;
+.nutridia-card-icon-circle i,
+.nutridia-card-icon-circle svg {
+    width: 20px;
+    height: 20px;
+    stroke: #5B8C2F !important;
+    stroke-width: 2.2;
+}
+
+.nutridia-card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nutridia-card-text h5 {
+    font-size: 13.5px;
     font-weight: 700;
-    margin-bottom: 4px;
-    color: white !important;
-}
-
-.nutridia-benefit-text p {
-    font-size: 13px;
-    opacity: 0.85;
+    color: #5B8C2F !important;
     margin: 0;
-    color: white !important;
+    line-height: 1.2;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 42px;
-        letter-spacing: -1px;
+.nutridia-card-text p {
+    font-size: 11.5px;
+    color: #475569 !important;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.nutridia-card-divider {
+    width: 1px;
+    height: 35px;
+    background: #e2e8f0;
+}
+
+/* Responsive Custom Banner overrides */
+@media (max-width: 1199px) {
+    .nutridia-horizontal-cards-bar {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: 20px;
+        padding: 20px;
+        gap: 20px;
     }
-    .hero-subtitle {
-        font-size: 18px;
+    .nutridia-card-divider {
+        display: none;
     }
-    .hero-container {
-        padding-left: 0 !important;
+}
+
+@media (max-width: 991px) {
+    .nutridia-banner {
+        padding: 50px 0;
     }
-    .container {
-        padding: 0 20px;
+    .nutridia-banner-main-row {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
-    .nutridia-banner-container {
-        flex-direction: column;
-        padding: 40px 24px;
+    .nutridia-banner-text-side {
+        align-items: center;
         text-align: center;
-    }
-    .nutridia-tagline {
-        font-size: 22px;
     }
     .nutridia-logo-block {
         justify-content: center;
-        height: 100px;
-    }
-    .nutridia-logo-img {
-        height: 250px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .nutridia-benefits-list {
-        min-width: unset;
-        width: 100%;
     }
     .nutridia-family-bg {
         width: 100%;
-        opacity: 0.3;
+        opacity: 0.35;
     }
+}
+
+@media (max-width: 767px) {
+    .nutridia-horizontal-cards-bar {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .nutridia-top-tagline {
+        font-size: 14px;
+    }
+    .nutridia-bottom-tagline {
+        font-size: 16px;
+    }
+}
     .footer-main {
         grid-template-columns: 1fr;
         gap: 40px;
