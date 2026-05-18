@@ -1461,9 +1461,9 @@ nav {
 .nutridia-banner-top-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start; /* Lleva las tarjetas verticales hacia el centro, liberando el extremo derecho */
     align-items: center;
-    gap: 40px;
+    gap: 80px; /* Espacio elegante entre el texto y las tarjetas */
     width: 100%;
 }
 
@@ -1483,7 +1483,7 @@ nav {
     opacity: 0.95;
     text-transform: none;
     letter-spacing: 0.5px;
-    margin-bottom: 0;
+    margin-bottom: 8px; /* Separación elegante del subtítulo superior */
     display: block;
 }
 
@@ -1493,13 +1493,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 145px; /* Ajustado de 110px a 145px para dar el espacio exacto y evitar superposiciones con los taglines */
+    height: 165px; /* Incrementado a 165px para mayor espacio visual y separación de subtítulos */
     position: relative;
     width: 100%;
 }
 
 .nutridia-logo-img {
-    height: 350px; /* Tamaño inmutable solicitado */
+    height: 350px; /* Tamaño inmutable */
     width: auto;
     position: absolute;
     top: 50%;
@@ -1514,8 +1514,8 @@ nav {
     font-weight: 600;
     line-height: 1.4;
     color: #ffffff !important;
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin-top: 8px; /* Separación elegante del subtítulo inferior */
+    margin-bottom: 20px; /* Espacio limpio al botón CTA */
     display: block;
 }
 
