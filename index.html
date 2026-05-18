@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2.0">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
@@ -397,59 +397,65 @@
 
 <!-- Nutridia Banner Section -->
 <section id="club" class="nutridia-banner">
-    <!-- Leaf watermark background -->
-    <div class="nutridia-leaf-bg">
-        <img src="assets/nutridia-leaf.png" alt="" class="nutridia-leaf-watermark">
+    <div class="nutridia-family-bg"></div>
+    <div class="nutridia-banner-overlay"></div>
+    
+    <!-- Large leaf watermark on the left background -->
+    <div class="nutridia-leaf-watermark-bg">
+        <img src="assets/nutridia-leaf.png" alt="" class="nutridia-large-leaf">
     </div>
-    <div class="nutridia-banner-bg">
-        <div class="nutridia-cross cross-1">✚</div>
-        <div class="nutridia-cross cross-2">✚</div>
-        <div class="nutridia-cross cross-3">✚</div>
-        <div class="nutridia-cross cross-4">✚</div>
+
+    <!-- Gold plus accents -->
+    <div class="nutridia-accents">
+        <span class="accent-plus plus-1">+</span>
+        <span class="accent-plus plus-2">+</span>
+        <span class="accent-plus plus-3">+</span>
     </div>
-    <!-- Family photo with green blend -->
-    <div class="nutridia-family-bg" style="background-image: url('assets/fondonutridianuevo.png');"></div>
 
     <div class="container nutridia-banner-container">
-
-        <!-- LEFT: Text + Logo + CTA -->
-        <div class="nutridia-banner-text">
-            <p class="nutridia-tagline">
-                Llevá tu bienestar al<br>
-                <span class="highlight-yellow">siguiente nivel.</span>
-            </p>
-            <div class="nutridia-logo-block">
-                <img src="assets/nutridia-logo-full.png" alt="Nutridia" class="nutridia-logo-img">
+        <!-- LEFT: Logo + Text + CTA -->
+        <div class="nutridia-banner-left">
+            <div class="nutridia-logo-wrapper">
+                <img src="assets/nutridia-logo-full.png" alt="Nutridia Club" class="nutridia-banner-logo">
             </div>
-
-            <a href="https://nutridia.ar" target="_blank" class="btn-nutridia">Quiero Asociarme</a>
+            
+            <p class="nutridia-banner-desc">
+                Unite a Club Nutridia+, la plataforma exclusiva de Diabetes Pilar para la prevención, seguimiento y control integral de tu salud, con acceso a beneficios exclusivos y acompañamiento profesional continuo.
+            </p>
+            
+            <a href="https://nutridia.ar" target="_blank" class="btn-nutridia-white">Quiero Asociarme</a>
         </div>
 
-        <!-- RIGHT: Benefit Cards -->
-        <div class="nutridia-benefits-list">
-            <div class="nutridia-benefit-card">
-                <div class="nutridia-benefit-icon"><i data-lucide="percent"></i></div>
-                <div class="nutridia-benefit-text">
-                    <h4>Descuentos en Farmacias</h4>
+        <!-- RIGHT: Glass Benefit Cards Stack -->
+        <div class="nutridia-benefits-stack">
+            <div class="nutridia-glass-card">
+                <div class="nutridia-glass-icon">
+                    <i data-lucide="percent"></i>
+                </div>
+                <div class="nutridia-glass-text">
+                    <h4>DESCUENTOS EN FARMACIAS</h4>
                     <p>Hasta un 40% off en la red farmacéutica local.</p>
                 </div>
             </div>
-            <div class="nutridia-benefit-card">
-                <div class="nutridia-benefit-icon"><i data-lucide="calendar-check"></i></div>
-                <div class="nutridia-benefit-text">
-                    <h4>Atención Prioritaria</h4>
+            <div class="nutridia-glass-card">
+                <div class="nutridia-glass-icon">
+                    <i data-lucide="calendar-check"></i>
+                </div>
+                <div class="nutridia-glass-text">
+                    <h4>ATENCIÓN PRIORITARIA</h4>
                     <p>Overbooking habilitado y agenda preferencial.</p>
                 </div>
             </div>
-            <div class="nutridia-benefit-card">
-                <div class="nutridia-benefit-icon"><i data-lucide="gift"></i></div>
-                <div class="nutridia-benefit-text">
-                    <h4>Talleres Gratuitos</h4>
+            <div class="nutridia-glass-card">
+                <div class="nutridia-glass-icon">
+                    <i data-lucide="gift"></i>
+                </div>
+                <div class="nutridia-glass-text">
+                    <h4>TALLERES GRATUITOS</h4>
                     <p>Acceso a clases de cocina saludable y nutricionales.</p>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 
