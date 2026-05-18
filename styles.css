@@ -1461,9 +1461,9 @@ nav {
 .nutridia-banner-top-row {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* Lleva las tarjetas verticales hacia el centro, liberando el extremo derecho */
+    justify-content: flex-start; /* Lleva las tarjetas hacia el centro-derecha, liberando el extremo derecho */
     align-items: center;
-    gap: 80px; /* Espacio elegante entre el texto y las tarjetas */
+    gap: 140px; /* Incrementado a 140px para evitar superposición con el logo */
     width: 100%;
 }
 
