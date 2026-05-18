@@ -1442,7 +1442,7 @@ nav {
     width: 66.7%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: right center; /* Anclado al extremo derecho para que la cara de la mujer nunca se tape */
     z-index: 1;
     mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,1) 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,1) 100%);
@@ -1461,9 +1461,9 @@ nav {
 .nutridia-banner-top-row {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* Lleva las tarjetas hacia el centro-derecha, liberando el extremo derecho */
+    justify-content: space-between; /* Corre las tarjetas completamente al extremo derecho del contenedor */
     align-items: center;
-    gap: 140px; /* Incrementado a 140px para evitar superposición con el logo */
+    gap: 40px;
     width: 100%;
 }
 
