@@ -1406,7 +1406,7 @@ nav {
     position: relative;
     overflow: hidden;
     background: #5B8C2F;
-    padding: 80px 0;
+    padding: 40px 0;
     scroll-margin-top: var(--nav-height);
     display: flex;
     align-items: center;
@@ -1439,14 +1439,14 @@ nav {
     position: absolute;
     top: 0;
     right: 0;
-    width: 66.7%; /* 2/3 of the banner width */
+    width: 66.7%;
     height: 100%;
     background-size: cover;
     background-position: center;
     z-index: 1;
     mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,1) 100%);
     -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 15%, rgba(0,0,0,1) 100%);
-    opacity: 0.85; /* Highly prominent family background */
+    opacity: 0.85;
 }
 
 .nutridia-banner-container {
@@ -1454,7 +1454,7 @@ nav {
     z-index: 3;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 25px;
     width: 100%;
 }
 
@@ -1483,27 +1483,27 @@ nav {
     opacity: 0.95;
     text-transform: none;
     letter-spacing: 0.5px;
-    margin-bottom: 60px; /* Trae el lema superior cerca del logo */
+    margin-bottom: 0;
     display: block;
 }
 
 .nutridia-logo-block {
-    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 240px; /* Incrementado para dar espacio natural al logo absolute sin solapar */
+    height: auto;
     position: relative;
     width: 100%;
 }
 
 .nutridia-logo-img {
-    height: 350px; /* Mantiene estrictamente el tamaño original solicitado */
+    height: 350px;
     width: auto;
-    position: absolute;
-    top: 50%;
-    left: -40px;
-    transform: translateY(-50%);
+    position: relative;
+    display: block;
+    margin-left: -40px;
     pointer-events: none;
     z-index: 4;
 }
@@ -1513,8 +1513,8 @@ nav {
     font-weight: 600;
     line-height: 1.4;
     color: #ffffff !important;
-    margin-top: 70px; /* Trae el lema inferior cerca del logo */
-    margin-bottom: 20px; /* Más cerca del botón CTA */
+    margin-top: 0;
+    margin-bottom: 15px;
     display: block;
 }
 
@@ -1669,15 +1669,15 @@ nav {
 
 @media (max-width: 991px) {
     .nutridia-banner {
-        padding: 60px 0;
+        padding: 30px 0;
     }
     .nutridia-banner-container {
         flex-direction: column;
-        gap: 40px;
+        gap: 25px;
     }
     .nutridia-banner-top-row {
         flex-direction: column;
-        gap: 40px;
+        gap: 25px;
     }
     .nutridia-banner-text-side {
         align-items: center;
@@ -1685,19 +1685,20 @@ nav {
         max-width: 100%;
     }
     .nutridia-top-tagline {
-        margin-bottom: 50px;
+        margin-bottom: 0;
     }
     .nutridia-logo-block {
         justify-content: center;
-        height: 180px;
+        height: auto;
+        margin: 5px auto;
     }
     .nutridia-logo-img {
         height: 280px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: 0 auto;
     }
     .nutridia-bottom-tagline {
-        margin-top: 60px;
+        margin-top: 0;
+        margin-bottom: 15px;
     }
     .nutridia-benefits-vertical-list {
         min-width: unset;
@@ -1725,17 +1726,12 @@ nav {
 @media (max-width: 767px) {
     .nutridia-top-tagline {
         font-size: 14px;
-        margin-bottom: 45px;
-    }
-    .nutridia-logo-block {
-        height: 150px;
     }
     .nutridia-logo-img {
         height: 240px;
     }
     .nutridia-bottom-tagline {
         font-size: 16px;
-        margin-top: 50px;
     }
 }
     .footer-main {
