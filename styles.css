@@ -1453,6 +1453,13 @@ nav {
     position: relative;
     z-index: 3;
     display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.nutridia-banner-top-row {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -1476,7 +1483,7 @@ nav {
     opacity: 0.95;
     text-transform: none;
     letter-spacing: 0.5px;
-    margin-bottom: 125px; /* Pushes the top tagline high enough to clear the 350px absolute logo */
+    margin-bottom: 60px; /* Trae el lema superior cerca del logo */
     display: block;
 }
 
@@ -1485,16 +1492,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 120px;
+    height: 240px; /* Incrementado para dar espacio natural al logo absolute sin solapar */
     position: relative;
     width: 100%;
 }
 
 .nutridia-logo-img {
-    height: 350px;
+    height: 350px; /* Mantiene estrictamente el tamaño original solicitado */
     width: auto;
     position: absolute;
-    top: 56%;
+    top: 50%;
     left: -40px;
     transform: translateY(-50%);
     pointer-events: none;
@@ -1506,8 +1513,8 @@ nav {
     font-weight: 600;
     line-height: 1.4;
     color: #ffffff !important;
-    margin-top: 130px; /* Pushes the bottom tagline down enough to clear the 350px absolute logo */
-    margin-bottom: 24px;
+    margin-top: 70px; /* Trae el lema inferior cerca del logo */
+    margin-bottom: 20px; /* Más cerca del botón CTA */
     display: block;
 }
 
@@ -1604,14 +1611,73 @@ nav {
     line-height: 1.4;
 }
 
+/* --- Bottom 4 Cards Bar (Screenshot style) --- */
+.nutridia-horizontal-cards-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 25px 40px;
+    width: 100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    z-index: 5;
+    margin-top: 10px;
+}
+
+.nutridia-horizontal-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.nutridia-card-divider {
+    width: 1px;
+    height: 50px;
+    background: rgba(91, 140, 47, 0.15);
+    margin: 0 30px;
+    flex-shrink: 0;
+}
+
+.nutridia-horizontal-card .nutridia-card-text h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #5B8C2F !important;
+    margin: 0 0 3px 0;
+}
+
+.nutridia-horizontal-card .nutridia-card-text p {
+    font-size: 12.5px;
+    color: #475569 !important;
+    margin: 0;
+    line-height: 1.4;
+}
+
 /* Responsive Custom Banner overrides */
+@media (max-width: 1199px) {
+    .nutridia-horizontal-cards-bar {
+        padding: 20px 30px;
+    }
+    .nutridia-card-divider {
+        margin: 0 20px;
+    }
+}
+
 @media (max-width: 991px) {
     .nutridia-banner {
         padding: 60px 0;
     }
     .nutridia-banner-container {
         flex-direction: column;
-        gap: 50px;
+        gap: 40px;
+    }
+    .nutridia-banner-top-row {
+        flex-direction: column;
+        gap: 40px;
     }
     .nutridia-banner-text-side {
         align-items: center;
@@ -1619,11 +1685,11 @@ nav {
         max-width: 100%;
     }
     .nutridia-top-tagline {
-        margin-bottom: 95px;
+        margin-bottom: 50px;
     }
     .nutridia-logo-block {
         justify-content: center;
-        height: 100px;
+        height: 180px;
     }
     .nutridia-logo-img {
         height: 280px;
@@ -1631,7 +1697,7 @@ nav {
         transform: translate(-50%, -50%);
     }
     .nutridia-bottom-tagline {
-        margin-top: 95px;
+        margin-top: 60px;
     }
     .nutridia-benefits-vertical-list {
         min-width: unset;
@@ -1641,22 +1707,35 @@ nav {
         width: 100%;
         opacity: 0.35;
     }
+    .nutridia-horizontal-cards-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        border-radius: 24px;
+        padding: 25px;
+    }
+    .nutridia-card-divider {
+        display: none;
+    }
+    .nutridia-horizontal-card {
+        width: 100%;
+    }
 }
 
 @media (max-width: 767px) {
     .nutridia-top-tagline {
         font-size: 14px;
-        margin-bottom: 85px;
+        margin-bottom: 45px;
     }
     .nutridia-logo-block {
-        height: 80px;
+        height: 150px;
     }
     .nutridia-logo-img {
         height: 240px;
     }
     .nutridia-bottom-tagline {
         font-size: 16px;
-        margin-top: 85px;
+        margin-top: 50px;
     }
 }
     .footer-main {
