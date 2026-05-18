@@ -1493,7 +1493,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 110px; /* Altura reducida para que los bordes transparentes del logo de 350px se superpongan de forma invisible y eliminen los espacios vacíos */
+    height: 145px; /* Ajustado de 110px a 145px para dar el espacio exacto y evitar superposiciones con los taglines */
     position: relative;
     width: 100%;
 }
@@ -1690,7 +1690,7 @@ nav {
     }
     .nutridia-logo-block {
         justify-content: center;
-        height: 90px; /* Altura compacta para superposición de logo absoluto */
+        height: 115px; /* Ajustado de 90px a 115px en tabletas para evitar superposiciones */
         margin: 0 auto;
         position: relative;
     }
@@ -1734,7 +1734,7 @@ nav {
         font-size: 14px;
     }
     .nutridia-logo-block {
-        height: 75px; /* Altura súper compacta en móviles para superposición de logo absoluto */
+        height: 95px; /* Ajustado de 75px a 95px en móviles para evitar superposiciones */
     }
     .nutridia-logo-img {
         height: 240px;
