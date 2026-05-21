@@ -161,7 +161,7 @@
         <div class="contact-right-half">
             <div class="contact-info-card-premium">
                 <div class="contact-info-banner">
-                    <img src="assets/contacto.png" alt="Contacto Diabetes Pilar" class="contact-info-banner-img" loading="eager">
+                    <img src="assets/contacto-v2.jpg" alt="Contacto Diabetes Pilar" class="contact-info-banner-img" loading="eager">
                 </div>
                 <div class="contact-info-content">
                     <div class="contact-float-item">
@@ -420,13 +420,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const consent = localStorage.getItem('cookieConsent');
-            if (consent === 'rejected') {
-                window.close();
-                setTimeout(() => {
-                    window.location.href = "about:blank";
-                }, 100);
-                return;
-            }
             if (!consent) {
                 setTimeout(() => {
                     const banner = document.getElementById('cookie-consent-bar');
@@ -445,12 +438,6 @@
             const banner = document.getElementById('cookie-consent-bar');
             if (banner) {
                 banner.classList.remove('show');
-            }
-            if (!accepted) {
-                window.close();
-                setTimeout(() => {
-                    window.location.href = "about:blank";
-                }, 100);
             }
         }
     </script>

@@ -2527,7 +2527,7 @@ section[id] {
     position: absolute;
     inset: 0;
     background: linear-gradient(to right, rgba(2, 136, 209, 0.92) 0%, rgba(1, 87, 155, 0.96) 100%),
-                url('assets/contacto.png') center/cover no-repeat;
+                url('assets/contacto-v2.jpg') center/cover no-repeat;
     z-index: 0;
     /* bg-layer must not consume a grid column â€” take it out of flow */
     grid-column: 1 / -1;

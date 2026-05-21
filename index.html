@@ -1210,13 +1210,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const consent = localStorage.getItem('cookieConsent');
-            if (consent === 'rejected') {
-                window.close();
-                setTimeout(() => {
-                    window.location.href = "about:blank";
-                }, 100);
-                return;
-            }
             if (!consent) {
                 // Show cookie banner after 1.5 seconds delay for a premium interactive feel
                 setTimeout(() => {
@@ -1237,12 +1230,6 @@
             const banner = document.getElementById('cookie-consent-bar');
             if (banner) {
                 banner.classList.remove('show');
-            }
-            if (!accepted) {
-                window.close();
-                setTimeout(() => {
-                    window.location.href = "about:blank";
-                }, 100);
             }
         }
     </script>
