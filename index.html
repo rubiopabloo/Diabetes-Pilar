@@ -17,6 +17,69 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 <style>header.glass-header { top: 0; } header.glass-header.scrolled { top: 0; } .top-bar { position: absolute; z-index: 1001; width: 100%; background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }</style>
+    <!-- Structured JSON-LD Local SEO Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Diabetes Pilar - Centro de Especialidades Médicas",
+      "alternateName": "Nutridia Company S.A.S.",
+      "url": "https://diabetespilar.com.ar",
+      "logo": "https://diabetespilar.com.ar/assets/NUEVOLOGO.png",
+      "description": "Centro especializado de referencia en el tratamiento integral de la diabetes y especialidades médicas asociadas. Ofrecemos atención en Diabetología, Endocrinología, Cardiología, Nutrición y Diagnóstico por Imágenes.",
+      "telephone": "+54 11 2166-1818",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+54 11 2166-1818",
+          "contactType": "customer service",
+          "availableLanguage": "Spanish"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+54 11 2470-6777",
+          "contactType": "booking",
+          "availableLanguage": "Spanish"
+        }
+      ],
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Víctor Vergani 575",
+          "addressLocality": "Pilar",
+          "addressRegion": "Buenos Aires",
+          "postalCode": "1629",
+          "addressCountry": "AR"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Italia 1184 Piso 2",
+          "addressLocality": "San Miguel",
+          "addressRegion": "Buenos Aires",
+          "postalCode": "1663",
+          "addressCountry": "AR"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/diabetespilar",
+        "https://www.instagram.com/diabetespilar"
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -91,7 +154,7 @@
             <div class="hero-static-overlay">
                 <div class="container hero-container">
                     <div class="hero-content-inner">
-                        <h1 class="hero-title"><span id="typewriter" class="accent-typing" style="transition: opacity 0.4s ease-in-out;"></span></h1>
+                        <h1 class="hero-title"><span id="typewriter" class="accent-typing" style="transition: opacity 0.4s ease-in-out;">Diabetes Pilar - Centro de Especialidades Médicas</span></h1>
                         <p class="hero-subtitle" style="transition: opacity 0.4s ease-in-out;">Medicina centrada en el paciente desde el 2010</p>
                     </div>
                 </div>
@@ -244,11 +307,11 @@
                                 </div>
                             </div>
 
-                            <!-- Imágenes -->
+                            <!-- Diagnóstico por Imágenes -->
                             <div class="accordion-item" data-service="imagenes" onclick="handleServiceClick('imagenes', this)">
-                                <img src="assets/diagnosticoporimagenesnuevo.jpeg" alt="Imágenes" loading="lazy">
+                                <img src="assets/diagnosticoporimagenesnuevo.jpeg" alt="Diagnóstico por Imágenes" loading="lazy">
                                 <div class="accordion-overlay"></div>
-                                <span class="accordion-caption">Imágenes</span>
+                                <span class="accordion-caption">Diagnóstico por Imágenes</span>
                                 <div class="accordion-expand-content">
                                     <button class="btn-saber-mas">Saber más <i data-lucide="arrow-right"></i></button>
                                 </div>
@@ -276,7 +339,7 @@
 
                             <!-- Dermatología -->
                             <div class="accordion-item" data-service="dermatologia" onclick="handleServiceClick('dermatologia', this)">
-                                <img src="assets/diagnosticoporimagenes.jpg" alt="Dermatología" loading="lazy">
+                                <img src="assets/DERMATOLOGIA.jpeg" alt="Dermatología" loading="lazy">
                                 <div class="accordion-overlay"></div>
                                 <span class="accordion-caption">Dermatología</span>
                                 <div class="accordion-expand-content">
@@ -411,8 +474,8 @@
             <!-- LEFT: Logo, Slogans and CTA -->
             <div class="nutridia-banner-text-side">
                 <span class="nutridia-top-tagline">Bienestar que se vive, beneficios que se sienten.</span>
-                <div class="nutridia-logo-block">
-                    <img src="assets/nutridia-logo-full.png" alt="Nutridia" class="nutridia-logo-img">
+                <div class="nutridia-logo-block text-version">
+                    <h2 class="club-nutridia-title"><span class="club-blue">CLUB</span> <span class="nutridia-white">Nutridia</span></h2>
                 </div>
                 <p class="nutridia-bottom-tagline">
                     Sumate y te acompañamos<br>a cuidar de tu salud todos los días.
@@ -624,13 +687,9 @@
                         <div class="logo-icon"></div>
                     </div>
                     <p style="margin-top:20px; font-size:15px; max-width:320px; opacity:0.8;">Centro especializado de referencia en el tratamiento integral de la diabetes. Excelencia m&eacute;dica y calidez humana al servicio de tu bienestar.</p>
-                    <div class="footer-social-icons">
-                        <a href="#" class="footer-social-circle"><i data-lucide="globe" style="width: 18px;"></i></a>
-                        <a href="#" class="footer-social-circle"><i data-lucide="share-2" style="width: 18px;"></i></a>
-                    </div>
                 </div>
                 <div class="footer-col" style="padding-top:10px;">
-                    <h4 style="color:var(--primary-light); font-size:16px;">NAVEGACI&Oacute;N</h4>
+                    <h4 style="color:#4FC3F7; font-size:16px;">NAVEGACI&Oacute;N</h4>
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
@@ -639,20 +698,24 @@
                     </ul>
                 </div>
                 <div class="footer-col footer-contact" style="padding-top:10px;">
-                    <h4 style="color:var(--primary-light); font-size:16px;">CONTACTO</h4>
-                    <p><i data-lucide="map-pin" style="color:var(--primary-light); width:18px;"></i> V&iacute;ctor Vergani 575, Pilar<br>Italia 1184 Piso 2, San Miguel</p>
-                    <p><i data-lucide="phone" style="color:var(--primary-light); width:18px;"></i> 11 2166-1818 | 11 2470-6777</p>
-                    <p><i data-lucide="mail" style="color:var(--primary-light); width:18px;"></i> pilardiabetes@gmail.com</p>
+                    <h4 style="color:#4FC3F7; font-size:16px;">CONTACTO</h4>
+                    <p><i data-lucide="map-pin" style="color:#4FC3F7; width:18px;"></i> V&iacute;ctor Vergani 575, Pilar<br>Italia 1184 Piso 2, San Miguel</p>
+                    <p><i data-lucide="phone" style="color:#4FC3F7; width:18px;"></i> 11 2166-1818 | 11 2470-6777</p>
+                    <p><i data-lucide="mail" style="color:#4FC3F7; width:18px;"></i> pilardiabetes@gmail.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Centro M&eacute;dico Diabetes Pilar. Excelencia en Cuidado Diabetol&oacute;gico - Creado por HAze &#9786;</p>
-                <div class="footer-legal">
-                    <a href="index.html#faq">Preguntas Frecuentes</a>
-                    <a href="terminos.html">Términos y Condiciones</a>
-                    <a href="privacidad.html">Privacidad</a>
-                    <a href="#">Cookies</a>
-                </div>
+                <a href="index.html#faq">Preguntas Frecuentes</a>
+                <span class="footer-sep">|</span>
+                <a href="terminos.html">Términos y Condiciones</a>
+                <span class="footer-sep">|</span>
+                <a href="privacidad.html">Privacidad</a>
+                <span class="footer-sep">|</span>
+                <a href="#">Cookies</a>
+                <span class="footer-sep">|</span>
+                <span>&copy; 2026 Centro M&eacute;dico Diabetes Pilar. Excelencia en Cuidado Diabetol&oacute;gico</span>
+                <span class="footer-sep">|</span>
+                <span>Powered by HAZE</span>
             </div>
         </div>
     </footer>
@@ -667,7 +730,7 @@
                 </div>
             </div>
             <div class="footer-minimal-bottom">
-                <span>&copy; 2026 Diabetes Pilar &mdash; Creado por HAze &#9786;</span>
+                <span>&copy; 2026 Diabetes Pilar &mdash; Powered by HAZE</span>
                 <div class="footer-minimal-links">
                     <a href="index.html#faq">Preguntas Frecuentes</a>
                     <a href="terminos.html">Términos y Condiciones</a>
@@ -677,6 +740,8 @@
             </div>
         </div>
     </footer>
+
+
 
 
 
@@ -710,84 +775,108 @@
         // Service Data
         const serviceData = {
             'diabetologia': {
-                title: 'Diabetología',
+                title: 'Diabetes',
                 subtitle: 'Abordaje integral del paciente',
                 image: 'assets/service-diabetologia-v2.png',
-                description: 'Nuestro servicio de Diabetes tiene como objetivo educar y prevenir la aparición de enfermedades crónicas, ofreciendo una atención oportuna e integral que permita disminuir las complicaciones de la diabetes. Para ello, cuenta con un equipo multidisciplinario articulado de profesionales expertos y comprometidos con cada paciente y la familia.',
-                bullets: [
-                    'Perfil clínico - Cambio de estilo de vida',
-                    'Educación diabetológica - Medicación',
-                    'Plan de tratamiento - Automonitoreo',
-                    'Alimentación saludable - Autocontrol',
-                    'Ejercicio físico y empoderamiento'
+                description: 'Nuestro servicio de Diabetes ambulatorio tiene como objetivo educar y prevenir la aparición de enfermedades crónicas, ofreciendo una atención oportuna e integral que permita disminuir las complicaciones de la diabetes. Para ello, cuenta con un equipo multidisciplinario articulado de profesionales expertos y comprometidos con cada paciente y la familia.',
+                sectionTitle: 'Abordaje integral del paciente',
+                columns: [
+                    ['Perfil clínico', 'Educación', 'Plan de tratamiento', 'Alimentación', 'Ejercicio físico'],
+                    ['Cambio de estilo de vida', 'Medicación', 'Automonitoreo', 'Autocontrol', 'Empoderamiento']
                 ]
             },
             'nutricion': {
                 title: 'Nutrición',
                 subtitle: 'Plan de Alimentación personalizado',
                 image: 'assets/service-nutricion-v2.png',
-                description: 'Nuestro servicio de Nutrición cuenta con nutricionistas clínicas con gran experiencia en el manejo de pacientes diabéticos y enfermedades crónicas asociadas.',
-                bullets: [
-                    'Plan de Alimentación personalizado',
-                    'Índice Glucémico - Carga Glucémica',
-                    'Planificación de las comidas',
-                    'Control de Peso y Educación Alimentaria',
-                    'Recetas e Interpretación de Etiquetado Nutricional'
+                description: 'Nuestro servicio de Nutricion cuenta con nutricionistas clínicas con gran experiencia en el manejo de pacientes diabéticos y enfermedades crónicas asociadas. Están encargadas de evaluar el estado nutricional, entregar un Plan de Alimentación personalizado de acuerdo con las necesidades y preferencias de cada persona, educar sobre los nutrientes, etiquetado nutricional y alimentos aptos para diabéticos; enseñar el conteo de carbohidratos para pacientes que usan insulina, entre otras.',
+                sectionTitle: 'Planificación de las comidas',
+                columns: [
+                    ['Plan de Alimentación', 'Planificación de las comidas', 'Recetas'],
+                    ['Indice Glucemico-Carga Glucémica', 'Control de Peso', 'Interpretación Etiquetado Nutricional']
+                ]
+            },
+            'educacion': {
+                title: 'Educación en Diabetes',
+                subtitle: 'Programa Paciente Experto',
+                image: 'assets/noticiacursosytalleres.jpg',
+                description: 'Uno de los pilares fundamentales del éxito de la prevención, tratamiento y control es la educación. En Diabetes Pilar contamos con nuestro Programa Paciente Experto en Diabetes, dictados por educadores a través de talleres y eventos abiertos a la comunidad sobre el cuidado de la diabetes y sus complicaciones. Se encarga de reforzar las metas de tratamiento y enseñar el buen uso de las herramientas tecnológicas (automonitoreo glicémico). Además, educa sobre: la correcta técnica de administración de insulina y los cuidados de esta, cómo reconocer y manejar una hipoglicemia, y la forma correcta de cuidar de los pies en diabetes.',
+                sectionTitle: 'Programa Paciente Experto en Diabetes',
+                columns: [
+                    ['Monitoreo Glucemico', 'Conocer los Alimentos', 'Reconocer los Síntomas Hipoglucemia', 'Cambio de estilo de vida'],
+                    ['Administración de Insulina', 'Cuidado de los Pies', 'Autocuidado – Empoderamiento']
                 ]
             },
             'cardiologia': {
                 title: 'Cardiología',
                 subtitle: 'Cardiología ambulatoria y Vascular Periférica',
                 image: 'assets/cardiologianuevo.jpeg',
-                description: 'Nuestro servicio de Cardiología ambulatoria y Vascular Periférica, reúne a expertos en el cuidado de las personas con riesgo cardiovascular asociados a la diabetes y obesidad, a traves del diagnóstico, tratamiento, seguimiento y control de enfermedades cardíacas, quienes abordan de forma multidisciplinaria diversas patologías en todas las etapas de la vida: ofreciendo una atención continua a lo largo de la evolución del paciente con tratamientos preventivos, mínimamente invasivos.',
-                bullets: [
-                    'Electrocardiograma - Ergometría 12 derivaciones',
-                    'Eco Doppler cardíaco - Holter 24 horas',
-                    'MAPA Presurometría 24 horas - Control de marcapasos',
-                    'Eco Doppler de Miembros inferiores',
-                    'Eco Doppler de Vasos de cuello'
+                description: 'Nuestro servicio de Cardiología ambulatoria y Vascular Periférica, reúne a expertos en el cuidado de con riesgo cardiovascular asociados a la diabetes y obesidad, para el diagnóstico, tratamiento y seguimiento de enfermedades cardíacas, quienes abordan de forma multidisciplinaria diversas patologías en todas las etapas de la vida: ofreciendo una atención continua a lo largo de la evolución del paciente con tratamientos preventivos, mínimamente invasivos.',
+                sectionTitle: 'Estudios y Pruebas',
+                columns: [
+                    ['Electrocardiograma', 'Eco Doppler cardíaco', 'MAPA Presurometria 24 horas', 'Velocidad de onda de pulso VOP', 'Eco Doppler de Miembros inferiores'],
+                    ['Ergometrina 12 derivaciones', 'Holter 24 horas', 'Control de marcapasos', 'Holter 48 horas', 'Eco Doppler de Vasos de cuello']
                 ]
             },
             'endocrinologia': {
                 title: 'Endocrinología',
                 subtitle: 'Enfermedades Cardiometabólicas',
                 image: 'assets/ENDOCRINOLOGIANUEVO.png',
-                description: `En Diabetes Pilar, el servicio de endocrinología se dedica al estudio y tratamiento de las hormonas y de las glándulas que las producen. Estas sustancias regulan funciones tan importantes como el metabolismo, el peso, el crecimiento, la fertilidad, el estado de ánimo y la energía diaria. Cuando existe un desequilibrio hormonal, pueden aparecer problemas de salud que afectan de forma silenciosa.<br><br>
-                Atendemos de manera integral enfermedades como la diabetes, los trastornos de la tiroides (hipotiroidismo, hipertiroidismo, nódulos), la obesidad y el sobrepeso de origen hormonal. Un enfoque integral al cuidado de salud de la mujer como alteraciones de la menstruación, síndrome de ovario poliquístico, menopausia y andropausia, así como otros trastornos endocrinos que pueden provocar cansancio, cambios bruscos de peso, caída del cabello o alteraciones del sueño.<br><br>
-                Acudir a un endocrinólogo es clave para obtener un diagnóstico preciso y un tratamiento seguro y personalizado. Nuestro equipo combina un enfoque humano y cercano, escuchando tu historia y tus preocupaciones, con el uso de tecnología moderna para el diagnóstico y el seguimiento: analíticas avanzadas, ecografía tiroidea, control digital de la glucosa y herramientas que nos permiten monitorizar tu evolución de forma continua. Diseñamos planes de tratamiento adaptados a tu estilo de vida, con acompañamiento médico y educativo para que entiendas tu enfermedad y puedas tomar decisiones informadas.<br><br>
-                Creemos en una atención de confianza, basada en la comunicación clara y en el respeto a cada paciente. Nuestro objetivo es ayudarte a recuperar y mantener tu equilibrio hormonal, mejorar tus síntomas y prevenir complicaciones a largo plazo, para que puedas disfrutar de una vida más saludable y plena.`,
-                bullets: [
-                    'Equipo con amplia experiencia en patologías endocrinas complejas.',
-                    'Actualización constante en guías clínicas y tratamientos innovadores.',
-                    'Rapidez en la solicitud, realización e interpretación de resultados.',
-                    'Acompañamiento continuo y seguimiento cercano, presencial y/o telemedicina.',
-                    'Enfoque integral, coordinado con otros especialistas cuando es necesario.'
+                description: 'Nuestro servicio de Endocrinología ambulatorio, que aborda Enfermedades Cardio metabólicas. Se dedica al diagnóstico, seguimiento y tratamiento de las principales enfermedades endocrinológicas. Este Servicio ofrece una asistencia de calidad, resolutiva y eficiente centrada en al paciente con enfermedades endocrinológicas.',
+                sectionTitle: 'Procedimientos',
+                columns: [
+                    ['Punción tiroidea bajo control ecográfico', 'Ecografía tiroidea'],
+                    ['Densitometría ósea', 'Eco Doppler tiroideo']
                 ]
             },
+            'neurologia': {
+                title: 'Neurología',
+                subtitle: 'Prevención y Diagnóstico Neurológico',
+                image: 'assets/placeholder.png',
+                description: 'Nuestro servicio de Neurología ambulatorio brinda consultas externas y atención neurológica primaria de prevención, diagnóstico y tratamiento de enfermedades cognitivas o físicas para pacientes con enfermedades neurodegenerativas y pruebas funcionales:',
+                sectionTitle: 'Pruebas Funcionales',
+                columns: [
+                    ['Electromiograma EMG', 'Potenciales evocados'],
+                    ['Electroencefalograma EEG', 'Polisomnografías']
+                ]
+            },
+            'nefrologia': {
+                title: 'Nefrología',
+                subtitle: 'Prevención y Cuidado Renal',
+                image: 'assets/placeholder.png',
+                description: 'Nuestro servicio de Nefrología ambulatorio previene, diagnostica y trata la enfermedad renal crónica que es una afección que indica que los riñones están dañados. Los riñones dañados no pueden mantener la salud corporal. No pueden filtrar la sangre de manera adecuada, y no pueden hacer su función de filtro como deberían. Esto significa que cuando llegue al último estadio de la enfermedad usted necesita un tratamiento como diálisis o un trasplante de riñón. La enfermedad renal no se produce de un día para otro. Se genera lentamente, y en estadios. La mayoría de las personas en los primeros estadios de la enfermedad no presentan síntomas. Es posible que ni siquiera sepan que algo anda mal. Pero si se la detecta y se la trata, la enfermedad renal con frecuencia puede retrasarse o detenerse.'
+            },
             'piediabetico': {
-                title: 'Traumatología y Pie Diabético',
-                subtitle: 'Manejo Integral de la Enfermedad',
-                image: 'assets/piediabetico.png',
-                description: 'Nuestro servicio de Pie diabético ambulatorio aborda el manejo integral de la enfermedad del pie relacionada con la Prevención de las úlceras en el pie.',
-                bullets: [
-                    'Diagnóstico y tratamiento de la infección',
-                    'Clasificación de las úlceras y heridas',
-                    'Diagnóstico y tratamiento de la enfermedad arterial periférica',
-                    'Intervenciones para mejorar la cicatrización',
-                    'Descarga de las úlceras y Neuro-osteoartropatía Aguda'
+                title: 'Pie Diabético',
+                subtitle: 'Abordaje integral del pie en diabetes',
+                image: 'assets/PIEDIABETICONUEVO.jpeg',
+                description: 'Nuestro servicio de Pie diabético ambulatorio aborda el manejo integral de la enfermedad del pie relacionada con la Prevención de las úlceras en el pie en personas con enfermedad vascular periférica asociada a la diabetes y otras enfermedades de los vasos sanguíneos.',
+                sectionTitle: 'Procedimientos y Abordajes',
+                columns: [
+                    ['Diagnóstico y tratamiento de la infección', 'Diagnóstico y tratamiento de la enfermedad arterial periférica', 'Intervenciones para mejorar la cicatrización'],
+                    ['Clasificación de las úlceras y heridas', 'Descarga de las úlceras', 'Neuro-osteoartropatía Aguda de Charcot diabetes']
+                ]
+            },
+            'oftalmologia': {
+                title: 'Oftalmología',
+                subtitle: 'Salud Visual Integral en Diabetes',
+                image: 'assets/oftalmologianuevo.jpeg',
+                description: 'Nuestro servicio de Oftalmología ofrece un manejo integral de patologías oculares asociadas a la diabetes considerando las necesidades individuales de cada paciente. Asimismo, se dispone de nuevas y modernas estrategias diagnósticas y cirugía oftalmológica de alta complejidad en todas las subespecialidades.<br><br>Próximamente ofreceremos un nuevo programa de investigaciones preclínicas y clínicas pertenecen a la especialidad, así como también la implementación de tratamientos innovadores para las cirugías de catarata, refractiva y plástica ocular.',
+                sectionTitle: 'Procedimientos y Estudios',
+                columns: [
+                    ['Fondo de ojo', 'Ecografía ocular y Ecobiometría', 'Ecografía ultrabiomicroscópica UBM', 'Tratamiento ortóptico', 'Campo visual computado y de Goldmann'],
+                    ['Tomografía óptica coherente (OCT)', 'Campo visual', 'Paquimetría corneal', 'Estudio de Estrabismo']
                 ]
             },
             'imagenes': {
                 title: 'Diagnóstico por Imágenes',
-                subtitle: 'Ecografía General y Doppler',
+                subtitle: 'Ecografía General de Alta Tecnología',
                 image: 'assets/diagnosticoporimagenesnuevo.jpeg',
-                description: 'Nuestro servicio de Ecografía General cuenta con un equipo de médicos altamente capacitados en esta técnica, para el diagnóstico y seguimiento de cada caso poniendo a disposición toda la tecnología de ultima generación, a traves de centros propios y descentralizados.',
-                bullets: [
-                    'Ecografía Hepatobiliopancreática y tiroidea',
-                    'Ecografía Vesico-prostática y de partes blandas',
-                    'Ecografía ginecológica y renal',
-                    'Ecografía mamaria y testicular',
-                    'Ecografía transvaginal y completa de abdomen'
+                description: 'Nuestro servicio de Ecografía General cuenta con un equipo de médicos altamente capacitados en esta técnica, para el diagnóstico y seguimiento de cada caso poniendo a disposición toda la tecnología de ultima generación.',
+                sectionTitle: 'Ecografías Disponibles',
+                columns: [
+                    ['Ecografía Hepatobiliopancreatica', 'Ecografía Vesico-prostática', 'Ecografía ginecológica', 'Ecografía mamaria', 'Ecografía transvaginal'],
+                    ['Ecografía tiroidea', 'Ecografía de partes blandas', 'Ecografía renal', 'Ecografía testicular', 'Ecografía completa de abdomen']
                 ]
             },
             'ginecologia': {
@@ -795,11 +884,10 @@
                 subtitle: 'Salud Integral de la Mujer',
                 image: 'assets/ginecologianuevo.jpeg',
                 description: 'Nuestro servicio de Ginecología ofrece atención integral para la salud de la mujer, con enfoque en prevención y tratamiento de patologías ginecológicas.',
-                bullets: [
-                    'PAP y Colposcopía',
-                    'Control ginecológico anual',
-                    'Menopausia y climaterio',
-                    'Anticoncepción'
+                sectionTitle: 'Estudios y Controles',
+                columns: [
+                    ['PAP y Colposcopía', 'Control ginecológico anual'],
+                    ['Menopausia y climaterio', 'Anticoncepción']
                 ]
             },
             'gastroenterologia': {
@@ -807,34 +895,21 @@
                 subtitle: 'Salud Digestiva',
                 image: 'assets/gastronterologianuevo.jpeg',
                 description: 'Nuestro servicio de Gastroenterología se dedica al diagnóstico y tratamiento de enfermedades del aparato digestivo y órganos asociados.',
-                bullets: [
-                    'Consulta especializada',
-                    'Endoscopía digestiva (derivada)',
-                    'Control de enfermedades inflamatorias intestinales'
+                sectionTitle: 'Procedimientos y Controles',
+                columns: [
+                    ['Consulta especializada', 'Control de enfermedades inflamatorias intestinales'],
+                    ['Endoscopía digestiva (derivada)']
                 ]
             },
             'dermatologia': {
                 title: 'Dermatología',
                 subtitle: 'Salud de la Piel',
-                image: 'assets/diagnosticoporimagenes.jpg',
+                image: 'assets/DERMATOLOGIA.jpeg',
                 description: 'Nuestro servicio de Dermatología brinda atención especializada en el diagnóstico y tratamiento de enfermedades de la piel, pelo y uñas, con especial énfasis en las manifestaciones cutáneas asociadas a la diabetes y enfermedades metabólicas.',
-                bullets: [
-                    'Consulta dermatológica especializada',
-                    'Dermatosis asociadas a diabetes',
-                    'Control de lesiones cutáneas',
-                    'Prevención y tratamiento de patologías de la piel'
-                ]
-            },
-            'oftalmologia': {
-                title: 'Oftalmología',
-                subtitle: 'Salud Visual Integral',
-                image: 'assets/oftalmologianuevo.jpeg',
-                description: 'Nuestro servicio de Oftalmología se dedica al cuidado integral de la visión, con tecnología avanzada para el diagnóstico y tratamiento de patologías oculares.',
-                bullets: [
-                    'Examen visual computarizado',
-                    'Fondo de ojo y presión ocular',
-                    'Control de retinopatía diabética',
-                    'Prescripción de lentes'
+                sectionTitle: 'Tratamientos y Controles',
+                columns: [
+                    ['Consulta dermatológica especializada', 'Dermatosis asociadas a diabetes'],
+                    ['Control de lesiones cutáneas', 'Prevención y tratamiento de patologías de la piel']
                 ]
             }
         };
@@ -853,16 +928,30 @@
                 <div class="modal-subtitle">${data.subtitle}</div>
             `;
             
-            let bulletsHtml = '<ul>';
-            data.bullets.forEach(bullet => {
-                bulletsHtml += `<li>${bullet}</li>`;
-            });
-            bulletsHtml += '</ul>';
-
-            body.innerHTML = `
-                <p>${data.description}</p>
-                ${bulletsHtml}
-            `;
+            let bodyHtml = `<p>${data.description}</p>`;
+            
+            if (data.sectionTitle) {
+                bodyHtml += `<h3 style="font-size: 20px; font-weight: 700; margin: 25px 0 15px; color: var(--text-dark);">${data.sectionTitle}</h3>`;
+            }
+            
+            if (data.columns && data.columns.length > 0) {
+                bodyHtml += `<div class="modal-columns-container" style="display: flex; gap: 40px; margin-bottom: 24px; flex-wrap: wrap;">`;
+                data.columns.forEach(col => {
+                    bodyHtml += `<div style="flex: 1; min-width: 240px;"><ul style="list-style: none; padding: 0; margin: 0;">`;
+                    col.forEach(item => {
+                        bodyHtml += `<li>${item}</li>`;
+                    });
+                    bodyHtml += `</ul></div>`;
+                });
+                bodyHtml += `</div>`;
+            } else if (data.bullets && data.bullets.length > 0) {
+                bodyHtml += `<ul style="list-style: none; padding: 0; margin-bottom: 24px;">`;
+                data.bullets.forEach(bullet => {
+                    bodyHtml += `<li>${bullet}</li>`;
+                });
+                bodyHtml += `</ul>`;
+            }
+             body.innerHTML = bodyHtml;
 
             // Activate modal
             modal.style.display = 'flex';
@@ -873,7 +962,7 @@
             // Prevent scrolling on body
             document.body.style.overflow = 'hidden';
             
-            // Refresh Lucide for the close icon if needed
+            // Refresh Lucide for icons if needed
             lucide.createIcons();
         }
 
@@ -1041,28 +1130,30 @@
             }
         }, { passive: true });
 
-        // Loading Screen & Entry Popup Modal
+        // Loading Screen & Entry Popup Modal (strictly showing only once)
         window.addEventListener('load', () => {
             const loader = document.getElementById('loading-screen');
+            
+            const showPopup = () => {
+                const popupShown = localStorage.getItem('entryPopupShown');
+                if (!popupShown) {
+                    const entryPopup = document.getElementById('entry-popup-modal');
+                    if (entryPopup) {
+                        entryPopup.classList.add('active');
+                        localStorage.setItem('entryPopupShown', 'true');
+                    }
+                }
+            };
+
             if (loader) {
                 loader.classList.add('fade-out');
                 setTimeout(() => {
                     loader.style.display = 'none';
                     // Show entry popup after loader is gone
-                    setTimeout(() => {
-                        const entryPopup = document.getElementById('entry-popup-modal');
-                        if (entryPopup) {
-                            entryPopup.classList.add('active');
-                        }
-                    }, 400);
+                    setTimeout(showPopup, 400);
                 }, 600);
             } else {
-                setTimeout(() => {
-                    const entryPopup = document.getElementById('entry-popup-modal');
-                    if (entryPopup) {
-                        entryPopup.classList.add('active');
-                    }
-                }, 1000);
+                setTimeout(showPopup, 1000);
             }
         });
 
@@ -1095,12 +1186,65 @@
 
     <!-- Entry Pop-up Modal -->
     <div id="entry-popup-modal" class="entry-popup-overlay" onclick="if(event.target === this) closeEntryPopup()">
-        <div class="entry-popup-container">
-            <button class="entry-popup-close" onclick="closeEntryPopup()">&times;</button>
+        <div class="entry-popup-container" onclick="window.open('https://wa.me/5491121661818', '_blank')">
+            <button class="entry-popup-close" onclick="event.stopPropagation(); closeEntryPopup()">&times;</button>
             <img src="assets/DIABETESPOPUP.jpeg" alt="Novedades Diabetes Pilar">
         </div>
     </div>
-
     <script src="turnos-modal.js"></script>
+
+    <!-- Cookie Consent Popup -->
+    <div id="cookie-consent-bar" class="cookie-consent-banner">
+        <div class="cookie-consent-content">
+            <i data-lucide="cookie"></i>
+            <p class="cookie-consent-text">
+                Utilizamos cookies para optimizar nuestro sitio web y mejorar su experiencia de navegación. ¿Acepta el uso de cookies?
+            </p>
+        </div>
+        <div class="cookie-consent-actions">
+            <button class="cookie-btn cookie-btn-reject" onclick="handleCookieChoice(false)">Rechazar</button>
+            <button class="cookie-btn cookie-btn-accept" onclick="handleCookieChoice(true)">Aceptar</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const consent = localStorage.getItem('cookieConsent');
+            if (consent === 'rejected') {
+                window.close();
+                setTimeout(() => {
+                    window.location.href = "about:blank";
+                }, 100);
+                return;
+            }
+            if (!consent) {
+                // Show cookie banner after 1.5 seconds delay for a premium interactive feel
+                setTimeout(() => {
+                    const banner = document.getElementById('cookie-consent-bar');
+                    if (banner) {
+                        banner.classList.add('show');
+                        // Ensure Lucide icon inside banner is parsed
+                        if (window.lucide) {
+                            window.lucide.createIcons();
+                        }
+                    }
+                }, 1500);
+            }
+        });
+
+        function handleCookieChoice(accepted) {
+            localStorage.setItem('cookieConsent', accepted ? 'accepted' : 'rejected');
+            const banner = document.getElementById('cookie-consent-bar');
+            if (banner) {
+                banner.classList.remove('show');
+            }
+            if (!accepted) {
+                window.close();
+                setTimeout(() => {
+                    window.location.href = "about:blank";
+                }, 100);
+            }
+        }
+    </script>
 </body>
 </html>

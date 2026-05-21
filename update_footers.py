@@ -11,10 +11,7 @@ combined_footer = """
                         <div class="logo-icon"></div>
                     </div>
                     <p style="margin-top:20px; font-size:15px; max-width:320px; opacity:0.8;">Centro especializado de referencia en el tratamiento integral de la diabetes. Excelencia m&eacute;dica y calidez humana al servicio de tu bienestar.</p>
-                    <div class="footer-social-icons">
-                        <a href="#" class="footer-social-circle"><i data-lucide="globe" style="width: 18px;"></i></a>
-                        <a href="#" class="footer-social-circle"><i data-lucide="share-2" style="width: 18px;"></i></a>
-                    </div>
+
                 </div>
                 <div class="footer-col" style="padding-top:10px;">
                     <h4 style="color:#4FC3F7; font-size:16px;">NAVEGACI&Oacute;N</h4>
@@ -33,13 +30,17 @@ combined_footer = """
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Centro M&eacute;dico Diabetes Pilar. Excelencia en Cuidado Diabetol&oacute;gico - Creado por HAze &#9786;</p>
-                <div class="footer-legal">
-                    <a href="index.html#faq">Preguntas Frecuentes</a>
-                    <a href="terminos.html">Aviso Legal</a>
-                    <a href="privacidad.html">Privacidad</a>
-                    <a href="#">Cookies</a>
-                </div>
+                <a href="index.html#faq">Preguntas Frecuentes</a>
+                <span class="footer-sep">|</span>
+                <a href="terminos.html">Términos y Condiciones</a>
+                <span class="footer-sep">|</span>
+                <a href="privacidad.html">Privacidad</a>
+                <span class="footer-sep">|</span>
+                <a href="#">Cookies</a>
+                <span class="footer-sep">|</span>
+                <span>&copy; 2026 Centro M&eacute;dico Diabetes Pilar. Excelencia en Cuidado Diabetol&oacute;gico</span>
+                <span class="footer-sep">|</span>
+                <span>Powered by HAZE</span>
             </div>
         </div>
     </footer>
@@ -54,10 +55,10 @@ combined_footer = """
                 </div>
             </div>
             <div class="footer-minimal-bottom">
-                <span>&copy; 2026 Diabetes Pilar &mdash; Creado por HAze &#9786;</span>
+                <span>&copy; 2026 Diabetes Pilar &mdash; Powered by HAZE</span>
                 <div class="footer-minimal-links">
                     <a href="index.html#faq">Preguntas Frecuentes</a>
-                    <a href="terminos.html">Aviso Legal</a>
+                    <a href="terminos.html">Términos y Condiciones</a>
                     <a href="privacidad.html">Privacidad</a>
                     <a href="#">Cookies</a>
                 </div>
