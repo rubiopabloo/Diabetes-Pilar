@@ -2514,17 +2514,18 @@ section[id] {
     min-height: calc(100vh - var(--nav-height));
     overflow: hidden;
     background: #f0f4f8;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-/* Background gradient + image covers the full section */
+/* Background gradient covers the full section */
 .contact-bg-layer {
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, #0288D1 0%, #01579B 40%, #0d47a1 100%);
     z-index: 0;
+    grid-column: 1 / -1;
+    grid-row: 1;
 }
 
 /* --- Registration Header --- */
@@ -2570,12 +2571,204 @@ section[id] {
 .registration-cards-container {
     position: relative;
     z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     width: 100%;
-    max-width: 1100px;
-    padding: 32px 40px 50px;
+    padding: 20px 40px 50px;
+}
+
+/* --- Left / Right Split Layout --- */
+.contact-left-half {
+    position: relative;
+    z-index: 1;
+    padding: 50px 30px 50px max(40px, calc((100vw - 1440px) / 2 + 40px));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: 1;
+}
+
+.contact-right-half {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px max(40px, calc((100vw - 1440px) / 2 + 40px)) 50px 30px;
+    grid-column: 2;
+}
+
+/* Premium Image Card */
+.contact-info-card-premium {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-info-card-premium:hover {
+    transform: translateY(-6px);
+    border-color: rgba(2, 136, 209, 0.35);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
+}
+
+.contact-info-banner {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 3px solid var(--primary-color);
+    background: rgba(0,0,0,0.1);
+}
+
+.contact-info-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.contact-info-card-premium:hover .contact-info-banner-img {
+    transform: scale(1.04);
+}
+
+.contact-info-content {
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Contact Info Items */
+.contact-float-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.contact-float-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.contact-float-label {
+    font-size: 11px;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+}
+
+.contact-float-value {
+    font-weight: 700;
+    font-size: 15px;
+    margin: 0;
+    color: white;
+}
+
+/* --- Medical Checkboxes --- */
+.medical-checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.medical-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.medical-checkbox-item:hover {
+    border-color: #cbd5e1;
+    background: #f1f5f9;
+}
+
+.medical-checkbox-item input[type="checkbox"] {
+    display: none;
+}
+
+.medical-checkbox-item .checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 2px solid #cbd5e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.medical-checkbox-item input[type="checkbox"]:checked + .checkbox-custom {
+    background: #0288D1;
+    border-color: #0288D1;
+}
+
+.medical-checkbox-item input[type="checkbox"]:checked + .checkbox-custom::after {
+    content: '';
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    margin-bottom: 2px;
+}
+
+.medical-checkbox-item .item-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.medical-checkbox-item input[type="checkbox"]:checked ~ .item-label {
+    color: #0f172a;
+}
+
+/* Conditionally hidden section */
+.diabetes-type-section {
+    display: none;
+    margin-top: 12px;
+    padding: 12px;
+    background: #f0fdfa;
+    border-radius: 10px;
+    border: 1px dashed #5eead4;
+}
+
+.diabetes-type-section.active {
+    display: block;
+    animation: fadeInDown 0.3s ease forwards;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* --- Individual Card --- */
