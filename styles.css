@@ -2688,7 +2688,7 @@ section[id] {
 /* --- Medical Checkboxes --- */
 .medical-checkbox-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-top: 8px;
 }
