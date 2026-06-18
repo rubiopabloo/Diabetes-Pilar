@@ -2506,348 +2506,437 @@ section[id] {
 }
 
 /* ============================================================
-   CONTACT PAGE â€” True 50/50 split layout
-   Left:  title + form  |  Right: woman image + contact icons
+   CONTACT PAGE – Two-Step Registration Form
    ============================================================ */
 
-/* The section itself is the two-column grid */
 .contact-fullpage {
     position: relative;
     min-height: calc(100vh - var(--nav-height));
     overflow: hidden;
     background: #f0f4f8;
-    /* Two equal columns at full viewport width */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* bg-layer is position:absolute, so main children are columns 1 & 2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Background gradient + image covers the full section */
 .contact-bg-layer {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(2, 136, 209, 0.92) 0%, rgba(1, 87, 155, 0.96) 100%),
-                url('assets/contacto-v2.jpg') center/cover no-repeat;
+    background: linear-gradient(135deg, #0288D1 0%, #01579B 40%, #0d47a1 100%);
     z-index: 0;
-    /* bg-layer must not consume a grid column â€” take it out of flow */
-    grid-column: 1 / -1;
-    grid-row: 1;
 }
 
-/* ---- LEFT HALF ---- */
-.contact-left-half {
+/* --- Registration Header --- */
+.registration-header {
     position: relative;
     z-index: 1;
-    /* Padding-left matches the footer's .container:
-       max-width 1440px centered â†’ left offset = max(40px, (100vw-1440px)/2 + 40px)
-       But since we're inside a 50vw column, we use half of that logic: */
-    padding: 50px 40px 50px max(40px, calc((100vw - 1440px) / 2 + 40px));
-    padding-right: 30px;       /* small gap before the midline */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;   /* vertically center the content */
-    grid-row: 1;
+    text-align: center;
+    padding: 48px 24px 8px;
+    max-width: 700px;
 }
 
-/* Hero Title â€” large, centered horizontally over the left half */
-.contact-hero-title {
-    font-size: 42px;
+.registration-header-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    backdrop-filter: blur(8px);
+}
+
+.registration-header h1 {
+    font-size: 32px;
     font-weight: 800;
     color: white;
-    text-align: left;
-    margin-bottom: 6px;
-    line-height: 1.15;
-    letter-spacing: -1.5px;
-    text-shadow: 0 2px 15px rgba(0,0,0,0.12);
+    margin: 0 0 10px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
 
-/* Subtitle */
-.contact-subtitle {
-    font-size: 22px;
-    font-weight: 700;
-    color: rgba(255,255,255,0.9);
-    margin-bottom: 28px;
-    font-style: italic;
+.registration-header p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.85);
+    margin: 0;
+    line-height: 1.5;
 }
 
-/* Form Card â€” fills the left half (minus its own padding) */
-.contact-form-card {
+/* --- Registration Cards Container --- */
+.registration-cards-container {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 32px 40px 50px;
+}
+
+/* --- Individual Card --- */
+.registration-card {
     background: white;
     border-radius: 20px;
-    padding: 36px 32px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    width: 100%;  /* fills the column content area */
+    padding: 0;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-form-header {
+.registration-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+/* Card Header */
+.registration-card-header {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 22px;
+    padding: 22px 28px;
+    border-bottom: 1px solid #f1f5f9;
 }
 
-.contact-form-bar {
-    width: 4px;
-    height: 22px;
-    background: #0288D1;
+.registration-card-header .step-bar {
+    width: 5px;
+    height: 28px;
     border-radius: 4px;
     flex-shrink: 0;
 }
 
-.contact-form-header h3 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0;
-    color: var(--text-dark);
+.registration-card--step1 .step-bar {
+    background: #0288D1;
 }
 
-/* Compact Form */
-.contact-compact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+.registration-card--step2 .step-bar {
+    background: #00897B;
 }
 
-.contact-compact-form label {
-    display: block;
-    font-size: 10px;
+.registration-card-header .step-label {
+    font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+    margin: 0 0 2px;
+}
+
+.registration-card--step1 .step-label {
+    color: #0288D1;
+}
+
+.registration-card--step2 .step-label {
+    color: #00897B;
+}
+
+.registration-card-header .step-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #1E293B;
+    margin: 0;
+}
+
+/* Card Body */
+.registration-card-body {
+    padding: 24px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- Form Shared Styles --- */
+.reg-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.reg-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-form-group label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748B;
+    margin-bottom: 6px;
     letter-spacing: 0.5px;
 }
 
-.contact-compact-form input,
-.contact-compact-form select,
-.contact-compact-form textarea {
+.reg-form-group label .required-star {
+    color: #ef4444;
+    margin-left: 2px;
+}
+
+.reg-form-group input,
+.reg-form-group select,
+.reg-form-group textarea {
     width: 100%;
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
+    padding: 11px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #e2e8f0;
     background: #f8fafc;
-    color: var(--text-dark);
-    font-size: 13px;
+    color: #1E293B;
+    font-size: 14px;
     font-family: 'Outfit', sans-serif;
     outline: none;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
     box-sizing: border-box;
 }
 
-.contact-compact-form input:focus,
-.contact-compact-form select:focus,
-.contact-compact-form textarea:focus {
+.reg-form-group input:focus,
+.reg-form-group select:focus,
+.reg-form-group textarea:focus {
     border-color: #0288D1;
     box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.1);
+    background: white;
 }
 
-.contact-compact-form textarea {
+.reg-form-group textarea {
     resize: none;
-    min-height: 75px;
+    min-height: 80px;
 }
 
-.contact-form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
+/* --- Phone Input with Flag Prefix --- */
+.phone-input-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 1.5px solid #e2e8f0;
+    background: #f8fafc;
+    overflow: hidden;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Diabetes Toggle */
+.phone-input-wrapper:focus-within {
+    border-color: #0288D1;
+    box-shadow: 0 0 0 3px rgba(2, 136, 209, 0.1);
+    background: white;
+}
+
+.phone-prefix {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 10px 0 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    white-space: nowrap;
+    border-right: 1px solid #e2e8f0;
+    background: #f1f5f9;
+    height: 100%;
+    min-height: 42px;
+    user-select: none;
+}
+
+.phone-prefix .flag-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.phone-input-wrapper input {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 11px 14px;
+    flex: 1;
+    min-width: 0;
+}
+
+/* --- Password Toggle --- */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 44px;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #94a3b8;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+    color: #475569;
+}
+
+/* --- Checkbox Agreement --- */
+.reg-checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.reg-checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    margin-top: 2px;
+    accent-color: #0288D1;
+    cursor: pointer;
+}
+
+.reg-checkbox-group label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #475569;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-bottom: 0;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.reg-checkbox-group label a {
+    color: #0288D1;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.reg-checkbox-group label a:hover {
+    color: #01579B;
+}
+
+/* --- Diabetes Toggle (reuse) --- */
 .contact-diabetes-toggle {
     display: flex;
     background: #f1f5f9;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 3px;
 }
 
 .contact-diabetes-toggle button {
     flex: 1;
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 9px 14px;
+    border-radius: 8px;
     background: transparent;
-    color: var(--text-muted);
+    color: #64748B;
     border: none;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 .contact-diabetes-toggle button.toggle-active {
-    background: var(--primary-color);
+    background: #00897B;
     color: white;
+    box-shadow: 0 2px 8px rgba(0,137,123,0.3);
 }
 
-/* Submit button */
-.contact-submit-btn {
-    background: var(--primary-color);
-    color: white;
-    padding: 13px;
-    border-radius: 8px;
+/* --- CTA Buttons --- */
+.registration-cta-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.registration-cta-group .reg-btn {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 12px;
     border: none;
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-    margin-top: 4px;
-}
-
-.contact-submit-btn:hover {
-    background: #01579B;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(2, 136, 209, 0.3);
-}
-
-.contact-form-note {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 11px;
-    margin-top: 4px;
-}
-
-/* ---- RIGHT HALF ---- */
-.contact-right-half {
-    position: relative;
-    z-index: 1;
-    grid-row: 1;
-    display: flex;
-    align-items: center;      /* Vertically center the premium card */
-    justify-content: center;  /* Horizontally center the premium card */
-    padding-right: max(40px, calc((100vw - 1440px) / 2 + 40px));
-    padding-left: 30px;
-    overflow: visible;
-}
-
-/* Premium Glassmorphic Contact Card */
-.contact-info-card-premium {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 24px;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-    overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact-info-card-premium:hover {
-    transform: translateY(-6px);
-    border-color: rgba(2, 136, 209, 0.35);
-    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.25);
-}
-
-.contact-info-banner {
-    width: 100%;
-    overflow: hidden;
-    border-bottom: 3px solid var(--primary-color);
-    background: rgba(0,0,0,0.1);
-}
-
-.contact-info-banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-}
-
-.contact-info-card-premium:hover .contact-info-banner-img {
-    transform: scale(1.04);
-}
-
-.contact-info-content {
-    padding: 35px 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-/* Contact info icons — legacy support if needed */
-.contact-floating-info {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    align-self: center;
-    padding-left: 30px;
-    flex-shrink: 0;
-}
-
-.contact-float-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.contact-float-icon {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    border-radius: 50%;
-    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    flex-shrink: 0;
+    gap: 8px;
+    transition: all 0.3s ease;
 }
 
-.contact-float-label {
-    font-size: 11px;
-    font-weight: 700;
-    margin: 0 0 2px 0;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
-}
-
-.contact-float-value {
-    font-weight: 700;
-    font-size: 15px;
-    margin: 0;
+.reg-btn--whatsapp {
+    background: #25D366;
     color: white;
 }
 
-/* ---- RESPONSIVE ---- */
+.reg-btn--whatsapp:hover {
+    background: #1eb954;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+}
+
+.reg-btn--email {
+    background: #0288D1;
+    color: white;
+}
+
+.reg-btn--email:hover {
+    background: #01579B;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(2, 136, 209, 0.35);
+}
+
+.reg-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* --- Form Note --- */
+.contact-form-note {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* --- Field Error Animation --- */
+.field-error {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239,68,68,0.15) !important;
+    animation: shakeField 0.4s ease;
+}
+
+@keyframes shakeField {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+/* --- Responsive --- */
 @media (max-width: 1100px) {
-    .contact-hero-title { font-size: 36px; }
-    .contact-left-half { padding: 40px 24px 40px max(24px, calc((100vw - 1440px) / 2 + 24px)); }
+    .registration-header h1 { font-size: 28px; }
+    .registration-cards-container { padding: 28px 24px 40px; gap: 20px; }
 }
 
 @media (max-width: 900px) {
-    .contact-hero-title { font-size: 30px; }
-}
-
-@media (max-width: 768px) {
-    /* Stack vertically on mobile */
-    .contact-fullpage {
+    .registration-cards-container {
         grid-template-columns: 1fr;
+        max-width: 560px;
     }
-    .contact-left-half {
-        padding: 36px 24px 28px;
-        justify-content: flex-start;
-    }
-    .contact-right-half {
-        align-items: center;
-        justify-content: center;
-        padding: 20px 24px 60px;
-        min-height: auto;
-    }
-    .contact-hero-title { font-size: 28px; }
-    .contact-info-card-premium {
-        max-width: 100%;
-    }
+    .registration-header { padding: 36px 20px 4px; }
+    .registration-header h1 { font-size: 26px; }
 }
 
 @media (max-width: 500px) {
-    .contact-hero-title { font-size: 24px; }
-    .contact-form-row { grid-template-columns: 1fr; }
-    .contact-right-half {
-        display: flex;
-        padding: 10px 24px 40px;
-    }
+    .registration-header h1 { font-size: 22px; }
+    .registration-header p { font-size: 14px; }
+    .registration-cards-container { padding: 20px 16px 32px; }
+    .registration-card-body { padding: 20px 20px 24px; }
+    .reg-form-row { grid-template-columns: 1fr; }
+    .registration-cta-group { flex-direction: column; }
 }
 
 

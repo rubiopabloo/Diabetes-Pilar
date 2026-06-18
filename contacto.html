@@ -51,43 +51,128 @@
         <!-- Full Background Image + Gradient -->
         <div class="contact-bg-layer"></div>
 
-        <!-- LEFT HALF: title + form -->
-        <div class="contact-left-half">
-            <h1 class="contact-hero-title">Tu salud es nuestra prioridad</h1>
-            <h3 class="contact-subtitle">Contactanos:</h3>
+        <div class="registration-header">
+            <div class="registration-header-icon">
+                <i data-lucide="user-plus" style="width: 32px; height: 32px; color: white;"></i>
+            </div>
+            <h1>Para poder ayudarte te queremos conocer mas</h1>
+            <p>es importante que complete estos datos y brindarte una atención mas personalizada.</p>
+        </div>
 
-            <div class="contact-form-card">
-                <div class="contact-form-header">
-                    <div class="contact-form-bar"></div>
-                    <h3>Envíanos tu Consulta</h3>
+        <form id="main-contact-form" novalidate style="width: 100%; display: flex; justify-content: center;">
+            <div class="registration-cards-container">
+                <!-- PASO 1 -->
+                <div class="registration-card registration-card--step1">
+                    <div class="registration-card-header">
+                        <div class="step-bar"></div>
+                        <div>
+                            <p class="step-label">Paso 1</p>
+                            <h3 class="step-title">Registro</h3>
+                        </div>
+                    </div>
+                    <div class="registration-card-body">
+                        <div class="reg-form-row">
+                            <div class="reg-form-group">
+                                <label for="cf-nombre">Nombre <span class="required-star">*</span></label>
+                                <input id="cf-nombre" type="text" placeholder="Matías" autocomplete="given-name">
+                            </div>
+                            <div class="reg-form-group">
+                                <label for="cf-apellido">Apellido <span class="required-star">*</span></label>
+                                <input id="cf-apellido" type="text" placeholder="Caire" autocomplete="family-name">
+                            </div>
+                        </div>
+
+                        <div class="reg-form-group">
+                            <label for="cf-dni">DNI <span class="required-star">*</span></label>
+                            <input id="cf-dni" type="text" placeholder="36248752" pattern="[0-9]*" inputmode="numeric">
+                        </div>
+
+                        <div class="reg-form-row">
+                            <div class="reg-form-group">
+                                <label for="cf-tel">Teléfono móvil (Whatsapp) <span class="required-star">*</span></label>
+                                <div class="phone-input-wrapper">
+                                    <div class="phone-prefix">
+                                        <span class="flag-icon">🇦🇷</span> +54 9
+                                    </div>
+                                    <input id="cf-tel" type="tel" autocomplete="tel">
+                                </div>
+                            </div>
+                            <div class="reg-form-group">
+                                <label for="cf-tel-confirm">Confirmar teléfono <span class="required-star">*</span></label>
+                                <div class="phone-input-wrapper">
+                                    <div class="phone-prefix">
+                                        <span class="flag-icon">🇦🇷</span> +54 9
+                                    </div>
+                                    <input id="cf-tel-confirm" type="tel" autocomplete="tel">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reg-form-group">
+                            <label for="cf-password">Contraseña <span class="required-star">*</span></label>
+                            <div class="password-wrapper">
+                                <input id="cf-password" type="password">
+                                <button type="button" class="password-toggle-btn" onclick="togglePassword()">
+                                    <i data-lucide="eye" id="password-eye-icon" style="width: 20px; height: 20px;"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="reg-checkbox-group">
+                            <input type="checkbox" id="cf-terms">
+                            <label for="cf-terms">Estoy de acuerdo con los <a href="terminos.html" target="_blank">Términos de uso y condiciones</a></label>
+                        </div>
+                    </div>
                 </div>
-                
-                <form id="main-contact-form" class="contact-compact-form" novalidate>
-                    <div class="contact-form-row">
-                        <div class="form-group">
-                            <label for="cf-nombre">Nombre *</label>
-                            <input id="cf-nombre" type="text" placeholder="Ej. Juan" autocomplete="given-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="cf-apellido">Apellido *</label>
-                            <input id="cf-apellido" type="text" placeholder="Ej. Pérez" autocomplete="family-name">
+
+                <!-- PASO 2 -->
+                <div class="registration-card registration-card--step2">
+                    <div class="registration-card-header">
+                        <div class="step-bar"></div>
+                        <div>
+                            <p class="step-label">Paso 2</p>
+                            <h3 class="step-title">Registro</h3>
                         </div>
                     </div>
-
-                    <div class="contact-form-row">
-                        <div class="form-group">
-                            <label for="cf-email">Email *</label>
-                            <input id="cf-email" type="email" placeholder="juan.perez@ejemplo.com" autocomplete="email">
+                    <div class="registration-card-body">
+                        <div class="reg-form-group">
+                            <label for="cf-obrasocial">Obra Social <span class="required-star">*</span></label>
+                            <select id="cf-obrasocial">
+                                <option value="" disabled selected>Seleccionar obra social...</option>
+                                <option value="Swiss Medical">Swiss Medical</option>
+                                <option value="OSDE">OSDE</option>
+                                <option value="Galeno">Galeno</option>
+                                <option value="OSECAC">OSECAC</option>
+                                <option value="IOMA">IOMA</option>
+                                <option value="PAMI">PAMI</option>
+                                <option value="Accord Salud">Accord Salud</option>
+                                <option value="Particular">Particular</option>
+                                <option value="Otra">Otra</option>
+                            </select>
                         </div>
-                        <div class="form-group">
-                            <label for="cf-tel">WhatsApp / Teléfono *</label>
-                            <input id="cf-tel" type="tel" placeholder="+54 9 11 ..." autocomplete="tel">
-                        </div>
-                    </div>
 
-                    <div class="contact-form-row">
-                        <div class="form-group">
-                            <label for="cf-motivo">Motivo de consulta *</label>
+                        <div class="reg-form-row">
+                            <div class="reg-form-group">
+                                <label for="cf-afiliado">Nro de Afiliado <span class="required-star">*</span></label>
+                                <input id="cf-afiliado" type="text" placeholder="Ej. 123456789">
+                            </div>
+                            <div class="reg-form-group">
+                                <label for="cf-plan">Plan <span class="required-star">*</span></label>
+                                <input id="cf-plan" type="text" placeholder="Ej. 210 / 310">
+                            </div>
+                        </div>
+
+                        <div class="reg-form-group">
+                            <label>¿Padece Diabetes?</label>
+                            <div class="contact-diabetes-toggle" id="cf-diabetes-toggle">
+                                <button type="button" class="toggle-active" data-val="Sí">SÍ</button>
+                                <button type="button" data-val="No">NO</button>
+                            </div>
+                            <input type="hidden" id="cf-diabetes" value="Sí">
+                        </div>
+
+                        <div class="reg-form-group">
+                            <label for="cf-motivo">Motivo de consulta <span class="required-star">*</span></label>
                             <select id="cf-motivo">
                                 <option value="" disabled selected>Seleccionar motivo...</option>
                                 <option value="Diabetología">Diabetología</option>
@@ -98,96 +183,27 @@
                                 <option value="Turnos generales">Turnos generales</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label>¿Padece Diabetes?</label>
-                            <div class="contact-diabetes-toggle" id="cf-diabetes-toggle">
-                                <button type="button" class="toggle-active" data-val="Sí">SÍ</button>
-                                <button type="button" data-val="No">NO</button>
-                            </div>
-                            <input type="hidden" id="cf-diabetes" value="Sí">
-                        </div>
-                    </div>
 
-                    <div class="form-group" style="margin-top: 15px;">
-                        <label style="font-weight: 600; margin-bottom: 8px; display: block; color: var(--text-dark); font-size: 15px;">Tratamiento Actual (Opcional)</label>
-                        <div class="cf-tags-group">
-                            <div class="cf-tag-btn" onclick="this.classList.toggle('tag-active');">
-                                <i data-lucide="pill" style="width:14px;height:14px;"></i> Medicación Oral
-                            </div>
-                            <div class="cf-tag-btn" onclick="this.classList.toggle('tag-active');">
-                                <i data-lucide="syringe" style="width:14px;height:14px;"></i> Insulina
-                            </div>
-                            <div class="cf-tag-btn" onclick="this.classList.toggle('tag-active');">
-                                <i data-lucide="activity" style="width:14px;height:14px;"></i> Bomba de Insulina
-                            </div>
+                        <div class="reg-form-group">
+                            <label for="cf-mensaje">Cuéntanos brevemente tu caso... (Opcional)</label>
+                            <textarea id="cf-mensaje" placeholder="Escribe aquí..." rows="3"></textarea>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label style="font-weight: 600; margin-bottom: 8px; display: block; color: var(--text-dark); font-size: 15px;">Antecedentes (Opcional)</label>
-                        <div class="cf-tags-group">
-                            <div class="cf-tag-btn" onclick="this.classList.toggle('tag-active');">
-                                <i data-lucide="heart" style="width:14px;height:14px;"></i> Riesgo Cardiovascular
-                            </div>
-                            <div class="cf-tag-btn" onclick="this.classList.toggle('tag-active');">
-                                <i data-lucide="eye" style="width:14px;height:14px;"></i> Oftalmológicos
-                            </div>
-                            <div class="cf-tag-btn" onclick="this.classList.toggle('tag-active');">
-                                <i data-lucide="file-warning" style="width:14px;height:14px;"></i> Renales
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="cf-mensaje">Cuéntanos brevemente tu caso...</label>
-                        <textarea id="cf-mensaje" placeholder="Escribe aquí..." rows="4"></textarea>
-                    </div>
-
-                    <div class="contact-cta-group">
-                        <button type="submit" class="contact-submit-btn" id="cf-submit-btn" style="flex:1;">
-                            <span class="btn-text">WhatsApp</span>
-                            <i data-lucide="send" style="width:18px; vertical-align:middle; margin-left:4px;"></i>
-                        </button>
-                        <button type="button" class="contact-submit-btn email-btn" onclick="sendViaEmail()" style="flex:1;">
-                            <span class="btn-text">Email</span>
-                            <i data-lucide="mail" style="width:18px; vertical-align:middle; margin-left:4px;"></i>
-                        </button>
-                    </div>
-                    <p class="contact-form-note">Completá el formulario y te respondemos a la brevedad.</p>
-                </form>
-            </div>
-        </div>
-
-        <!-- RIGHT HALF: contact info card with banner image -->
-        <div class="contact-right-half">
-            <div class="contact-info-card-premium">
-                <div class="contact-info-banner">
-                    <img src="assets/contacto-v2.jpg" alt="Contacto Diabetes Pilar" class="contact-info-banner-img" loading="eager">
-                </div>
-                <div class="contact-info-content">
-                    <div class="contact-float-item">
-                        <div class="contact-float-icon"><i data-lucide="phone" style="width: 22px; color: #0288D1;"></i></div>
-                        <div>
-                            <p class="contact-float-label">Llámanos</p>
-                            <p class="contact-float-value">11 2166-1818</p>
+                        <div class="registration-cta-group">
+                            <button type="submit" class="reg-btn reg-btn--whatsapp" id="cf-submit-btn">
+                                Enviar por WhatsApp
+                                <i data-lucide="send"></i>
+                            </button>
+                            <button type="button" class="reg-btn reg-btn--email" onclick="sendViaEmail()">
+                                Enviar por Email
+                                <i data-lucide="mail"></i>
+                            </button>
                         </div>
-                    </div>
-                    <div class="contact-float-item">
-                        <div class="contact-float-icon"><i data-lucide="mail" style="width: 22px; color: #0288D1;"></i></div>
-                        <div>
-                            <p class="contact-float-label">Email</p>
-                            <p class="contact-float-value">pilardiabetes@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-float-item">
-                        <div class="contact-float-icon"><i data-lucide="map-pin" style="width: 22px; color: #0288D1;"></i></div>
-                        <div>
-                            <p class="contact-float-label">Visítanos</p>
-                            <p class="contact-float-value">Víctor Vergani 575, Pilar<br> Italia 1184 Piso 2, San Miguel</p>
-                        </div>
+                        <p class="contact-form-note">Completá el formulario y te respondemos a la brevedad.</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
     <!-- Desktop Footer -->
     <footer class="footer-desktop">
@@ -327,13 +343,33 @@
 
         // ── Form validation helper ──
         function validateField(el) {
-            const ok = el.value.trim() !== '' && (el.type !== 'email' || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value));
+            if (el.type === 'checkbox') {
+                const ok = el.checked;
+                if (!ok) el.parentElement.classList.add('field-error');
+                return ok;
+            }
+            
+            const ok = el.value.trim() !== '';
             if (!ok) {
                 el.classList.add('field-error');
-                // Remove error class after animation ends
                 el.addEventListener('input', () => el.classList.remove('field-error'), { once: true });
             }
             return ok;
+        }
+
+        // ── Password Toggle ──
+        function togglePassword() {
+            const pwdInput = document.getElementById('cf-password');
+            const eyeIcon = document.getElementById('password-eye-icon');
+            
+            if (pwdInput.type === 'password') {
+                pwdInput.type = 'text';
+                eyeIcon.setAttribute('data-lucide', 'eye-off');
+            } else {
+                pwdInput.type = 'password';
+                eyeIcon.setAttribute('data-lucide', 'eye');
+            }
+            lucide.createIcons();
         }
 
         // ── Form submit ──
@@ -342,30 +378,46 @@
 
             const nombre  = document.getElementById('cf-nombre');
             const apellido= document.getElementById('cf-apellido');
-            const email   = document.getElementById('cf-email');
+            const dni     = document.getElementById('cf-dni');
             const tel     = document.getElementById('cf-tel');
+            const telConf = document.getElementById('cf-tel-confirm');
+            const pass    = document.getElementById('cf-password');
+            const terms   = document.getElementById('cf-terms');
+            
+            const obraSoc = document.getElementById('cf-obrasocial');
+            const afiliado= document.getElementById('cf-afiliado');
+            const plan    = document.getElementById('cf-plan');
+            const diabetes= document.getElementById('cf-diabetes');
             const motivo  = document.getElementById('cf-motivo');
             const mensaje = document.getElementById('cf-mensaje');
-            const diabetes= document.getElementById('cf-diabetes');
 
-            // Validar
-            const fields  = [nombre, apellido, email, tel, motivo];
-            const allOk   = fields.map(validateField).every(Boolean);
+            // Validar campos obligatorios
+            const fields = [nombre, apellido, dni, tel, telConf, pass, terms, obraSoc, afiliado, plan, motivo];
+            const allOk = fields.map(validateField).every(Boolean);
+            
             if (!allOk) return;
 
-            // Collect Tags
-            const activeTags = Array.from(document.querySelectorAll('.tag-active')).map(t => t.innerText.trim());
-            const tagsText = activeTags.length > 0 ? `\n📋 *Selecciones:* ${activeTags.join(', ')}` : '';
+            // Validar coincidencia de teléfonos
+            if (tel.value.trim() !== telConf.value.trim()) {
+                telConf.classList.add('field-error');
+                alert("Los números de teléfono no coinciden.");
+                return;
+            }
 
             const msg = [
-                `*Nueva consulta — Diabetes Pilar*`,
+                `*Nuevo Registro — Diabetes Pilar*`,
                 ``,
-                `👤 *Nombre:* ${nombre.value.trim()} ${apellido.value.trim()}`,
-                `📧 *Email:* ${email.value.trim()}`,
-                `📱 *Teléfono:* ${tel.value.trim()}`,
-                `🩺 *Motivo:* ${motivo.value}`,
-                `💉 *¿Padece Diabetes?:* ${diabetes.value}`,
-                tagsText,
+                `👤 *DATOS PERSONALES*`,
+                `Nombre: ${nombre.value.trim()} ${apellido.value.trim()}`,
+                `DNI: ${dni.value.trim()}`,
+                `WhatsApp: +54 9 ${tel.value.trim()}`,
+                ``,
+                `🏥 *DATOS MÉDICOS*`,
+                `Obra Social: ${obraSoc.value}`,
+                `Nro Afiliado: ${afiliado.value.trim()}`,
+                `Plan: ${plan.value.trim()}`,
+                `¿Padece Diabetes?: ${diabetes.value}`,
+                `Motivo de consulta: ${motivo.value}`,
                 mensaje.value.trim() ? `📝 *Mensaje:* ${mensaje.value.trim()}` : ''
             ].filter(Boolean).join('\n');
 
@@ -381,9 +433,8 @@
 
             // Reset form
             this.reset();
-            diabetesInput.value = 'Sí';
-            toggleBtns.forEach((b, i) => b.classList.toggle('toggle-active', i === 0));
-            document.querySelectorAll('.tag-active').forEach(t => t.classList.remove('tag-active'));
+            diabetes.value = 'Sí';
+            document.querySelectorAll('#cf-diabetes-toggle button').forEach((b, i) => b.classList.toggle('toggle-active', i === 0));
         });
 
         // ── Form email ──
@@ -394,19 +445,34 @@
                 return;
             }
             
-            const nombre  = document.getElementById('cf-nombre').value.trim();
-            const apellido= document.getElementById('cf-apellido').value.trim();
-            const email   = document.getElementById('cf-email').value.trim();
-            const tel     = document.getElementById('cf-tel').value.trim();
-            const motivo  = document.getElementById('cf-motivo').value;
-            const diabetes= document.getElementById('cf-diabetes').value;
-            const mensaje = document.getElementById('cf-mensaje').value.trim();
+            const nombre  = document.getElementById('cf-nombre');
+            const apellido= document.getElementById('cf-apellido');
+            const dni     = document.getElementById('cf-dni');
+            const tel     = document.getElementById('cf-tel');
+            const telConf = document.getElementById('cf-tel-confirm');
+            const pass    = document.getElementById('cf-password');
+            const terms   = document.getElementById('cf-terms');
             
-            const activeTags = Array.from(document.querySelectorAll('.tag-active')).map(t => t.innerText.trim());
-            const tagsText = activeTags.length > 0 ? `\r\nSelecciones: ${activeTags.join(', ')}` : '';
+            const obraSoc = document.getElementById('cf-obrasocial');
+            const afiliado= document.getElementById('cf-afiliado');
+            const plan    = document.getElementById('cf-plan');
+            const diabetes= document.getElementById('cf-diabetes');
+            const motivo  = document.getElementById('cf-motivo');
+            const mensaje = document.getElementById('cf-mensaje');
 
-            const subject = encodeURIComponent(`Consulta Web: ${nombre} ${apellido} - ${motivo}`);
-            const body = encodeURIComponent(`Nombre: ${nombre} ${apellido}\r\nEmail: ${email}\r\nTeléfono: ${tel}\r\nMotivo: ${motivo}\r\nDiabetes: ${diabetes}${tagsText}\r\n\r\nMensaje:\r\n${mensaje}`);
+            // Validar campos obligatorios
+            const fields = [nombre, apellido, dni, tel, telConf, pass, terms, obraSoc, afiliado, plan, motivo];
+            const allOk = fields.map(validateField).every(Boolean);
+            
+            if (!allOk) return;
+
+            if (tel.value.trim() !== telConf.value.trim()) {
+                alert("Los números de teléfono no coinciden.");
+                return;
+            }
+
+            const subject = encodeURIComponent(`Nuevo Registro Web: ${nombre.value.trim()} ${apellido.value.trim()} - ${motivo.value}`);
+            const body = encodeURIComponent(`DATOS PERSONALES\r\nNombre: ${nombre.value.trim()} ${apellido.value.trim()}\r\nDNI: ${dni.value.trim()}\r\nWhatsApp: +54 9 ${tel.value.trim()}\r\n\r\nDATOS MÉDICOS\r\nObra Social: ${obraSoc.value}\r\nNro Afiliado: ${afiliado.value.trim()}\r\nPlan: ${plan.value.trim()}\r\nDiabetes: ${diabetes.value}\r\nMotivo: ${motivo.value}\r\n\r\nMensaje:\r\n${mensaje.value.trim()}`);
             
             window.location.href = `mailto:info@diabetespilar.com.ar?subject=${subject}&body=${body}`;
         }
