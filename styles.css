@@ -2514,8 +2514,9 @@ section[id] {
     min-height: calc(100vh - var(--nav-height));
     overflow: hidden;
     background: #f0f4f8;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Background gradient covers the full section */
@@ -2524,8 +2525,6 @@ section[id] {
     inset: 0;
     background: linear-gradient(135deg, #0288D1 0%, #01579B 40%, #0d47a1 100%);
     z-index: 0;
-    grid-column: 1 / -1;
-    grid-row: 1;
 }
 
 /* --- Registration Header --- */
@@ -2567,36 +2566,41 @@ section[id] {
     line-height: 1.5;
 }
 
-/* --- Registration Cards Container --- */
-.registration-cards-container {
+/* --- Registration Cards Wrapper --- */
+.contact-cards-wrapper {
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
-    padding: 20px 40px 50px;
-}
-
-/* --- Left / Right Split Layout --- */
-.contact-left-half {
-    position: relative;
-    z-index: 1;
-    padding: 50px 30px 50px max(40px, calc((100vw - 1440px) / 2 + 40px));
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    grid-column: 1;
-}
-
-.contact-right-half {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    padding: 50px max(40px, calc((100vw - 1440px) / 2 + 40px)) 50px 30px;
-    grid-column: 2;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 1040px;
+    padding: 0 30px 50px;
+    margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+    .contact-cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Form steps */
+.form-step {
+    display: none;
+    animation: fadeInStep 0.4s ease forwards;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeInStep {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 /* Premium Image Card */
@@ -2745,6 +2749,8 @@ section[id] {
     display: flex;
     align-items: center;
     gap: 6px;
+    white-space: normal;
+    line-height: 1.2;
 }
 
 .medical-checkbox-item input[type="checkbox"]:checked ~ .item-label {
@@ -2779,6 +2785,8 @@ section[id] {
     box-shadow: 0 15px 50px rgba(0,0,0,0.15);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 480px;
 }
 
 .registration-card:hover {
